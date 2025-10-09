@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undaunted Spirits - Empowering Lives, Creating Equal Opportunities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Language-specific content */
+        [lang="en"] .ua-only,
+        [lang="uk"] .en-only {
+            display: none;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0057B7;
+            line-height: 1.2;
+        }
+        
+        .logo-text-small {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #0057B7;
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            padding: 0.5rem 1rem;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            color: #333;
+        }
+        
+        .lang-switch:hover {
+            background: #e5e5e5;
+        }
+        
+        .lang-switch .active-lang {
+            color: #0057B7;
+        }
+        
+        .donate-btn-nav {
+            background: #FFD700;
+            color: #333;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .donate-btn-nav:hover {
+            background: #FFC700;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,215,0,0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,87,183,0.92), rgba(0,87,183,0.88)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230057B7" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #FFD700;
+            color: #333;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #FFC700;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #0057B7;
+        }
+        
+        /* Impact Stats */
+        .impact-stats {
+            background: #f9f9f9;
+            padding: 4rem 2rem;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0057B7;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        /* Mission Section */
+        .mission {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .mission-content h2 {
+            font-size: 2.5rem;
+            color: #0057B7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mission-content p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .mission-highlight {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-left: 4px solid #0057B7;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        .mission-values {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            background: #0057B7;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .mission-image {
+            background: linear-gradient(135deg, #0057B7, #4A90E2);
+            border-radius: 20px;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        /* Featured Projects */
+        .featured-projects {
+            background: #f9f9f9;
+            padding: 5rem 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #0057B7;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #4A90E2, #0057B7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            padding: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .project-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-content h3 {
+            font-size: 1.4rem;
+            color: #0057B7;
+            margin-bottom: 1rem;
+        }
+        
+        .project-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .project-need {
+            background: #fff3cd;
+            padding: 0.75rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: #856404;
+        }
+        
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 10px;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #FFD700;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s;
+        }
+        
+        .progress-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .project-btn {
+            display: inline-block;
+            background: #0057B7;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .project-btn:hover {
+            background: #004494;
+        }
+        
+        .view-all-projects {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .view-all-projects a {
+            display: inline-block;
+            color: #0057B7;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border: 2px solid #0057B7;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .view-all-projects a:hover {
+            background: #0057B7;
+            color: white;
+        }
+        
+        /* Donation Impact */
+        .donation-impact {
+            background: white;
+            padding: 5rem 2rem;
+        }
+        
+        .impact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .impact-content h2 {
+            font-size: 2.5rem;
+            color: #0057B7;
+            margin-bottom: 2rem;
+        }
+        
+        .impact-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .impact-example {
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .impact-example:hover {
+            background: #f0f7ff;
+            transform: translateY(-5px);
+        }
+        
+        .impact-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+        
+        .impact-description {
+            color: #555;
+            font-size: 1.05rem;
+        }
+        
+        /* How to Help */
+        .how-to-help {
+            padding: 5rem 2rem;
+            background: #f9f9f9;
+        }
+        
+        .help-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        
+        .help-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .help-card:hover {
+            background: #0057B7;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+        
+        .help-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .help-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .help-card p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .help-card .btn-primary {
+            background: #FFD700;
+            color: #333;
+        }
+        
+        .help-card:hover .btn-primary {
+            background: white;
+            color: #0057B7;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #FFD700;
+        }
+        
+        .footer-section p {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #FFD700;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #0057B7;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-description {
+                font-size: 1.1rem;
+            }
+            
+            .mission {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-image {
+                height: 300px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .projects-grid,
+            .help-grid,
+            .impact-examples {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="75" cy="75" r="70" fill="none" stroke="#0057B7" stroke-width="3"/>
+                    <circle cx="75" cy="75" r="67" fill="none" stroke="#0057B7" stroke-width="1"/>
+                    <defs>
+                        <path id="navTopArc" d="M 23,30 A 70,70 0 0,1 127,30" fill="none"/>
+                        <path id="navBottomArc" d="M 25,123 A 70,70 0 0,0 125,123" fill="none"/>
+                    </defs>
+                    <text font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0057B7" letter-spacing="0.5">
+                        <textPath href="#navTopArc" startOffset="50%" text-anchor="middle">
+                            НЕСКОРЕНІ ДУХОМ
+                        </textPath>
+                    </text>
+                    <text font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#0057B7" letter-spacing="0.5">
+                        <textPath href="#navBottomArc" startOffset="50%" text-anchor="middle">
+                            EST. 2018
+                        </textPath>
+                    </text>
+                    <g transform="translate(75, 75)">
+                        <path d="M -35 22 L -18 -8 L -8 3 L 0 -15 L 12 0 L 25 -12 L 38 22 Z" fill="#0057B7" opacity="0.25"/>
+                        <path d="M -40 25 L -22 -3 L -10 8 L 0 -12 L 15 3 L 28 -8 L 42 25 Z" fill="#0057B7" opacity="0.5"/>
+                        <path d="M -32 30 L -15 3 L 0 -20 L 15 3 L 32 30 Z" fill="#0057B7"/>
+                        <g transform="translate(0, -8)">
+                            <circle cx="0" cy="-7" r="4" fill="#FFD700"/>
+                            <path d="M -1 -3 L -6 -11 M 1 -3 L 7 -13" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="0" y1="-3" x2="0" y2="7" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="0" y1="7" x2="-4" y2="14" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="0" y1="7" x2="3" y2="15" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                        </g>
+                        <g transform="translate(0, -20)">
+                            <line x1="0" y1="0" x2="0" y2="10" stroke="#FFD700" stroke-width="2"/>
+                            <path d="M 0 0 L 9 2.5 L 0 5 Z" fill="#FFD700"/>
+                        </g>
+                        <g transform="translate(0, 30)">
+                            <path d="M -32 8 Q -36 0 -30 -3 L -22 4 L -12 14 L 0 20 L 12 14 L 22 4 L 30 -3 Q 36 0 32 8 L 22 15 L 0 26 L -22 15 Z" 
+                                  fill="#FFD700" stroke="#E5C100" stroke-width="1.5" opacity="0.9"/>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <div class="logo-text en-only">Undaunted Spirits</div>
+                    <div class="logo-text ua-only">Нескорені духом</div>
+                    <div class="logo-text-small en-only">Est. 2018, Ternopil</div>
+                    <div class="logo-text-small ua-only">Заснована 2018, Тернопіль</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="en-only">Home</a><a href="#home" class="ua-only">Головна</a></li>
+                <li><a href="#about" class="en-only">About</a><a href="#about" class="ua-only">Про нас</a></li>
+                <li><a href="#projects" class="en-only">Projects</a><a href="#projects" class="ua-only">Проєкти</a></li>
+                <li><a href="#news" class="en-only">News</a><a href="#news" class="ua-only">Новини</a></li>
+                <li><a href="#contact" class="en-only">Contact</a><a href="#contact" class="ua-only">Контакти</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-switch" onclick="toggleLanguage()">
+                    <span class="en-only"><span class="active-lang">EN</span> | UA</span>
+                    <span class="ua-only">EN | <span class="active-lang">UA</span></span>
+                </button>
+                <a href="#donate" class="donate-btn-nav en-only">Donate</a>
+                <a href="#donate" class="donate-btn-nav ua-only">Допомогти</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="en-only">Undaunted Spirits</h1>
+            <h1 class="ua-only">Нескорені духом</h1>
+            
+            <p class="hero-subtitle en-only">Supporting Our Community Through Every Challenge</p>
+            <p class="hero-subtitle ua-only">Підтримуємо нашу спільноту через усі випробування</p>
+            
+            <p class="hero-description en-only">
+                Since 2018, we've been empowering persons with disabilities in Ternopil. Since 2022, we've expanded our mission to support all those affected by war—veterans, displaced families, and communities in need. Together, we remain undaunted.
+            </p>
+            <p class="hero-description ua-only">
+                З 2018 року ми допомагаємо людям з інвалідністю в Тернополі. З 2022 року ми розширили нашу місію, щоб підтримати всіх постраждалих від війни — ветеранів, переміщених сімей та громад, які потребують допомоги. Разом ми залишаємося нескореними.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#donate" class="btn-primary en-only">Make a Difference Today</a>
+                <a href="#donate" class="btn-primary ua-only">Зробіть внесок сьогодні</a>
+                
+                <a href="#projects" class="btn-secondary en-only">See How We Help</a>
+                <a href="#projects" class="btn-secondary ua-only">Дивіться, як ми допомагаємо</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="impact-stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label en-only">Active Members</div>
+                <div class="stat-label ua-only">Активних членів</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label en-only">Years of Service</div>
+                <div class="stat-label ua-only">Років служіння</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1,500+</div>
+                <div class="stat-label en-only">People Supported</div>
+                <div class="stat-label ua-only">Людей підтримано</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label en-only">Spirit & Hope</div>
+                <div class="stat-label ua-only">Дух і надія</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="mission-content">
+            <h2 class="en-only">Our Story & Mission</h2>
+            <h2 class="ua-only">Наша історія та місія</h2>
+            
+            <p class="en-only">
+                Founded in 2018, Undaunted Spirits began with a clear purpose: to create equal opportunities and champion the rights of persons with disabilities across Ternopil and beyond.
+            </p>
+            <p class="ua-only">
+                Заснована в 2018 році, організація "Нескорені духом" почала з чіткою метою: створювати рівні можливості та захищати права людей з інвалідністю в Тернополі та за його межами.
+            </p>
+            
+            <div class="mission-highlight">
+                <p class="en-only"><strong>Since 2022</strong>, as war changed everything for our nation, we answered a new call. We expanded our reach to support veterans, displaced families, and all those whose lives have been disrupted by conflict. Our mission grew, but our spirit remained the same—undaunted, caring, and community-driven.</p>
+                <p class="ua-only"><strong>З 2022 року</strong>, коли війна змінила все для нашої країни, ми відповіли на новий заклик. Ми розширили наш охоплення, щоб підтримати ветеранів, переміщених сімей та всіх тих, чиє життя було порушене конфліктом. Наша місія зросла, але наш дух залишився тим самим — нескореним, турботливим та спрямованим на громаду.</p>
+            </div>
+            
+            <p class="en-only">
+                Today, we provide essential support ranging from medical supplies and rehabilitation equipment to food, sanitary products, and emotional support. We are a community that refuses to be defeated, no matter the challenge.
+            </p>
+            <p class="ua-only">
+                Сьогодні ми надаємо основну підтримку, від медичних матеріалів та реабілітаційного обладнання до їжі, санітарних продуктів та емоційної підтримки. Ми є громадою, яка відмовляється бути переможеною, незалежно від виклику.
+            </p>
+            
+            <div class="mission-values">
+                <div class="value-item">
+                    <div class="value-icon">❤️</div>
+                    <div>
+                        <strong class="en-only">Compassion:</strong><span class="en-only"> Caring for every person with dignity and respect</span>
+                        <strong class="ua-only">Співчуття:</strong><span class="ua-only"> Турбота про кожну людину з гідністю та повагою</span>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <div>
+                        <strong class="en-only">Community:</strong><span class="en-only"> Strength through unity and mutual support</span>
+                        <strong class="ua-only">Спільнота:</strong><span class="ua-only"> Сила через єдність та взаємну підтримку</span>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">💪</div>
+                    <div>
+                        <strong class="en-only">Resilience:</strong><span class="en-only"> Rising to meet every challenge with courage</span>
+                        <strong class="ua-only">Стійкість:</strong><span class="ua-only"> Сміливо зустрічаємо кожен виклик</span>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">✨</div>
+                    <div>
+                        <strong class="en-only">Hope:</strong><span class="en-only"> Believing in brighter tomorrows for all</span>
+                        <strong class="ua-only">Надія:</strong><span class="ua-only"> Віримо в світліше завтра для всіх</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mission-image">
+            <span class="en-only">[Photo placeholder: Community gathering, volunteer activities, or members receiving support]</span>
+            <span class="ua-only">[Місце для фото: Громадські зустрічі, волонтерська діяльність або члени організації отримують підтримку]</span>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <div class="section-header">
+            <h2 class="en-only">Current Projects Making an Impact</h2>
+            <h2 class="ua-only">Поточні проєкти, що створюють вплив</h2>
+            
+            <p class="en-only">Every donation directly supports these vital programs serving our community</p>
+            <p class="ua-only">Кожна пожертва безпосередньо підтримує ці життєво важливі програми для нашої громади</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image en-only">
+                    [Medical & Mobility Equipment]
+                </div>
+                <div class="project-image ua-only">
+                    [Медичне та мобільне обладнання]
+                </div>
+                <div class="project-content">
+                    <h3 class="en-only">Medical Equipment & Mobility Support</h3>
+                    <h3 class="ua-only">Медичне обладнання та підтримка мобільності</h3>
+                    
+                    <p class="en-only">Providing wheelchairs, walkers, canes, and essential mobility aids to persons with disabilities and injured veterans who need them most.</p>
+                    <p class="ua-only">Надання інвалідних візків, ходунків, тростин та необхідних засобів мобільності для людей з інвалідністю та поранених ветеранів, які найбільше їх потребують.</p>
+                    
+                    <div class="project-need">
+                        <strong class="en-only">Current Need:</strong><span class="en-only"> 15 wheelchairs, 20 walkers, 30 canes</span>
+                        <strong class="ua-only">Поточна потреба:</strong><span class="ua-only"> 15 візків, 20 ходунків, 30 тростин</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                    <p class="progress-text en-only">$2,250 raised of $5,000 goal</p>
+                    <p class="progress-text ua-only">$2,250 зібрано з $5,000 мети</p>
+                    
+                    <a href="#donate" class="project-btn en-only">Support This Project</a>
+                    <a href="#donate" class="project-btn ua-only">Підтримати проєкт</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image en-only">
+                    [Frontline Medical Supplies]
+                </div>
+                <div class="project-image ua-only">
+                    [Медичні матеріали для фронту]
+                </div>
+                <div class="project-content">
+                    <h3 class="en-only">Frontline Medical Supplies</h3>
+                    <h3 class="ua-only">Медичні матеріали для фронту</h3>
+                    
+                    <p class="en-only">Delivering critical medicines, bandages, first aid supplies, and medical equipment to troops and field hospitals on the frontlines.</p>
+                    <p class="ua-only">Доставка критичних ліків, бинтів, наборів першої допомоги та медичного обладнання для військових та польових госпіталів на передовій.</p>
+                    
+                    <div class="project-need">
+                        <strong class="en-only">Current Need:</strong><span class="en-only"> First aid kits, tourniquets, antibiotics</span>
+                        <strong class="ua-only">Поточна потреба:</strong><span class="ua-only"> Набори першої допомоги, джгути, антибіотики</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%;"></div>
+                    </div>
+                    <p class="progress-text en-only">$3,000 raised of $5,000 goal</p>
+                    <p class="progress-text ua-only">$3,000 зібрано з $5,000 мети</p>
+                    
+                    <a href="#donate" class="project-btn en-only">Support This Project</a>
+                    <a href="#donate" class="project-btn ua-only">Підтримати проєкт</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image en-only">
+                    [Essential Supplies]
+                </div>
+                <div class="project-image ua-only">
+                    [Основні матеріали]
+                </div>
+                <div class="project-content">
+                    <h3 class="en-only">Essential Living Supplies</h3>
+                    <h3 class="ua-only">Основні матеріали для життя</h3>
+                    
+                    <p class="en-only">Providing food packages, sanitary products, hygiene items, and basic necessities to displaced families and vulnerable community members.</p>
+                    <p class="ua-only">Надання продовольчих пакетів, санітарних продуктів, засобів гігієни та основних потреб переміщеним сім'ям та вразливим членам громади.</p>
+                    
+                    <div class="project-need">
+                        <strong class="en-only">Current Need:</strong><span class="en-only"> Food, hygiene products, warm clothing</span>
+                        <strong class="ua-only">Поточна потреба:</strong><span class="ua-only"> Їжа, засоби гігієни, теплий одяг</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 35%;"></div>
+                    </div>
+                    <p class="progress-text en-only">$1,750 raised of $5,000 goal</p>
+                    <p class="progress-text ua-only">$1,750 зібрано з $5,000 мети</p>
+                    
+                    <a href="#donate" class="project-btn en-only">Support This Project</a>
+                    <a href="#donate" class="project-btn ua-only">Підтримати проєкт</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image en-only">
+                    [Veteran & Family Support]
+                </div>
+                <div class="project-image ua-only">
+                    [Підтримка ветеранів та сімей]
+                </div>
+                <div class="project-content">
+                    <h3 class="en-only">Veteran & Family Rehabilitation</h3>
+                    <h3 class="ua-only">Реабілітація ветеранів та сімей</h3>
+                    
+                    <p class="en-only">Supporting injured veterans and their families with rehabilitation services, counseling, adaptive equipment, and reintegration programs.</p>
+                    <p class="ua-only">Підтримка поранених ветеранів та їхніх сімей реабілітаційними послугами, консультуванням, адаптивним обладнанням та програмами реінтеграції.</p>
+                    
+                    <div class="project-need">
+                        <strong class="en-only">Current Need:</strong><span class="en-only"> Rehabilitation equipment, therapy sessions</span>
+                        <strong class="ua-only">Поточна потреба:</strong><span class="ua-only"> Реабілітаційне обладнання, терапевтичні сесії</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%;"></div>
+                    </div>
+                    <p class="progress-text en-only">$2,500 raised of $5,000 goal</p>
+                    <p class="progress-text ua-only">$2,500 зібрано з $5,000 мети</p>
+                    
+                    <a href="#donate" class="project-btn en-only">Support This Project</a>
+                    <a href="#donate" class="project-btn ua-only">Підтримати проєкт</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all-projects">
+            <a href="#all-projects" class="en-only">View All Projects & Past Impact →</a>
+            <a href="#all-projects" class="ua-only">Переглянути всі проєкти та минулі результати →</a>
+        </div>
+    </section>
+
+    <!-- Donation Impact Section -->
+    <section class="donation-impact">
+        <div class="impact-content">
+            <h2 class="en-only">Your Donation Creates Real Change</h2>
+            <h2 class="ua-only">Ваша пожертва створює реальні зміни</h2>
+            
+            <p style="font-size: 1.15rem; color: #666; margin-bottom: 2rem;" class="en-only">
+                Every contribution, no matter the size, makes a tangible difference in someone's life. Here's what your support can provide:
+            </p>
+            <p style="font-size: 1.15rem; color: #666; margin-bottom: 2rem;" class="ua-only">
+                Кожен внесок, незалежно від розміру, робить відчутну різницю в чиємусь житті. Ось що може забезпечити ваша підтримка:
+            </p>
+            
+            <div class="impact-examples">
+                <div class="impact-example">
+                    <div class="impact-amount">$10</div>
+                    <div class="impact-description en-only">Provides a week's worth of essential hygiene products for a family</div>
+                    <div class="impact-description ua-only">Забезпечує тижневий запас основних засобів гігієни для сім'ї</div>
+                </div>
+                <div class="impact-example">
+                    <div class="impact-amount">$25</div>
+                    <div class="impact-description en-only">Supplies critical medical bandages and first aid for frontline troops</div>
+                    <div class="impact-description ua-only">Надає критичні медичні бинти та першу допомогу для військових на фронті</div>
+                </div>
+                <div class="impact-example">
+                    <div class="impact-amount">$50</div>
+                    <div class="impact-description en-only">Provides a quality cane or walker for someone regaining mobility</div>
+                    <div class="impact-description ua-only">Забезпечує якісну тростину або ходунки для людини, яка відновлює мобільність</div>
+                </div>
+                <div class="impact-example">
+                    <div class="impact-amount">$100</div>
+                    <div class="impact-description en-only">Delivers a month of essential medicines to those in need</div>
+                    <div class="impact-description ua-only">Доставляє місячний запас необхідних ліків тим, хто потребує</div>
+                </div>
+                <div class="impact-example">
+                    <div class="impact-amount">$500</div>
+                    <div class="impact-description en-only">Provides a wheelchair giving someone independence and dignity</div>
+                    <div class="impact-description ua-only">Надає інвалідний візок, даруючи комусь незалежність та гідність</div>
+                </div>
+            </div>
+            <a href="#donate" class="btn-primary en-only" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Donate Now</a>
+            <a href="#donate" class="btn-primary ua-only" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Пожертвувати зараз</a>
+        </div>
+    </section>
+
+    <!-- How to Help -->
+    <section class="how-to-help">
+        <div class="section-header">
+            <h2 class="en-only">How You Can Support Our Community</h2>
+            <h2 class="ua-only">Як ви можете підтримати нашу громаду</h2>
+            
+            <p class="en-only">There are many ways to stand with us and make a difference</p>
+            <p class="ua-only">Є багато способів стати поруч з нами та зробити різницю</p>
+        </div>
+        <div class="help-grid">
+            <div class="help-card">
+                <div class="help-icon">💝</div>
+                <h3 class="en-only">Make a Donation</h3>
+                <h3 class="ua-only">Зробіть пожертву</h3>
+                
+                <p class="en-only">Your financial support directly provides supplies, equipment, and services to those who need them most. Choose which project to support or let us direct funds where they're needed urgently.</p>
+                <p class="ua-only">Ваша фінансова підтримка безпосередньо забезпечує матеріали, обладнання та послуги тим, хто найбільше їх потребує. Виберіть проєкт для підтримки або дозвольте нам направити кошти туди, де вони найбільш потрібні.</p>
+                
+                <a href="#donate" class="btn-primary en-only">Donate Today</a>
+                <a href="#donate" class="btn-primary ua-only">Пожертвувати сьогодні</a>
+            </div>
+            
+            <div class="help-card">
+                <div class="help-icon">🤝</div>
+                <h3 class="en-only">Volunteer Your Time</h3>
+                <h3 class="ua-only">Станьте волонтером</h3>
+                
+                <p class="en-only">Join our community of volunteers helping with events, deliveries, fundraising, and direct support. Your time and compassion create powerful change.</p>
+                <p class="ua-only">Приєднуйтесь до нашої спільноти волонтерів, які допомагають з подіями, доставками, збором коштів та прямою підтримкою. Ваш час та співчуття створюють потужні зміни.</p>
+                
+                <a href="#volunteer" class="btn-primary en-only">Get Involved</a>
+                <a href="#volunteer" class="btn-primary ua-only">Долучитися</a>
+            </div>
+            
+            <div class="help-card">
+                <div class="help-icon">👥</div>
+                <h3 class="en-only">Become a Member</h3>
+                <h3 class="ua-only">Станьте членом</h3>
+                
+                <p class="en-only">Join our 200+ active members working together to support our community. Membership means being part of something larger than ourselves.</p>
+                <p class="ua-only">Приєднуйтесь до наших 200+ активних членів, які працюють разом для підтримки нашої громади. Членство означає бути частиною чогось більшого за нас самих.</p>
+                
+                <a href="#membership" class="btn-primary en-only">Join Us</a>
+                <a href="#membership" class="btn-primary ua-only">Приєднатися</a>
+            </div>
+            
+            <div class="help-card">
+                <div class="help-icon">📢</div>
+                <h3 class="en-only">Share Our Mission</h3>
+                <h3 class="ua-only">Поділіться нашою місією</h3>
+                
+                <p class="en-only">Help us reach more people who can support or benefit from our work. Every share extends our reach and multiplies our impact.</p>
+                <p class="ua-only">Допоможіть нам охопити більше людей, які можуть підтримати або отримати користь від нашої роботи. Кожен репост розширює наш охоплення та примножує наш вплив.</p>
+                
+                <a href="#share" class="btn-primary en-only">Spread the Word</a>
+                <a href="#share" class="btn-primary ua-only">Поширити інформацію</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="en-only">Undaunted Spirits</h3>
+                <h3 class="ua-only">Нескорені духом</h3>
+                
+                <p class="en-only">A community organization supporting persons with disabilities and all those affected by hardship since 2018.</p>
+                <p class="ua-only">Громадська організація, яка підтримує людей з інвалідністю та всіх постраждалих від труднощів з 2018 року.</p>
+                
+                <div class="social-links">
+                    <a href="#facebook" title="Facebook">f</a>
+                    <a href="#instagram" title="Instagram">i</a>
+                    <a href="#youtube" title="YouTube">▶</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="en-only">Quick Links</h3>
+                <h3 class="ua-only">Швидкі посилання</h3>
+                <ul>
+                    <li><a href="#about" class="en-only">About Us</a><a href="#about" class="ua-only">Про нас</a></li>
+                    <li><a href="#projects" class="en-only">Current Projects</a><a href="#projects" class="ua-only">Поточні проєкти</a></li>
+                    <li><a href="#past-projects" class="en-only">Past Projects</a><a href="#past-projects" class="ua-only">Минулі проєкти</a></li>
+                    <li><a href="#news" class="en-only">News & Updates</a><a href="#news" class="ua-only">Новини та оновлення</a></li>
+                    <li><a href="#resources" class="en-only">Member Resources</a><a href="#resources" class="ua-only">Ресурси для членів</a></li>
+                    <li><a href="#contact" class="en-only">Contact</a><a href="#contact" class="ua-only">Контакти</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="en-only">Get Involved</h3>
+                <h3 class="ua-only">Долучитися</h3>
+                <ul>
+                    <li><a href="#donate" class="en-only">Make a Donation</a><a href="#donate" class="ua-only">Зробити пожертву</a></li>
+                    <li><a href="#volunteer" class="en-only">Volunteer</a><a href="#volunteer" class="ua-only">Волонтерство</a></li>
+                    <li><a href="#membership" class="en-only">Membership</a><a href="#membership" class="ua-only">Членство</a></li>
+                    <li><a href="#partner" class="en-only">Partner With Us</a><a href="#partner" class="ua-only">Партнерство</a></li>
+                    <li><a href="#corporate" class="en-only">Corporate Support</a><a href="#corporate" class="ua-only">Корпоративна підтримка</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="en-only">Contact Us</h3>
+                <h3 class="ua-only">Контакти</h3>
+                
+                <p><strong class="en-only">Location:</strong><strong class="ua-only">Місцезнаходження:</strong><br>
+                <span class="en-only">Ternopil, Ukraine</span>
+                <span class="ua-only">Тернопіль, Україна</span></p>
+                
+                <p><strong class="en-only">Email:</strong><strong class="ua-only">Електронна пошта:</strong><br>
+                info@unconqueredspirits.org</p>
+                
+                <p><strong>Facebook:</strong><br>
+                <a href="#">
+                    <span class="en-only">Visit our page</span>
+                    <span class="ua-only">Відвідайте нашу сторінку</span>
+                </a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="en-only">&copy; 2025 Undaunted Spirits (Нескорені духом) - Public Organization. All rights reserved. | Registered 2018, Ternopil</p>
+            <p class="ua-only">&copy; 2025 Нескорені духом (Undaunted Spirits) - Громадська організація. Всі права захищені. | Зареєстровано 2018, Тернопіль</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle functionality
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'en') {
+                html.setAttribute('lang', 'uk');
+                localStorage.setItem('language', 'uk');
+            } else {
+                html.setAttribute('lang', 'en');
+                localStorage.setItem('language', 'en');
+            }
+        }
+        
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang) {
+                document.documentElement.setAttribute('lang', savedLang);
+            }
+        });
+    </script>
+</body>
+</html>
