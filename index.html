@@ -17,13 +17,11 @@
             color: #333;
         }
         
-        /* Language-specific content */
         [lang="en"] .ua-only,
         [lang="uk"] .en-only {
             display: none;
         }
         
-        /* Navigation */
         nav {
             background: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -126,16 +124,11 @@
             box-shadow: 0 4px 12px rgba(255,215,0,0.4);
         }
         
-        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(0,87,183,0.92), rgba(0,87,183,0.88)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230057B7" width="1200" height="600"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(0,87,183,0.92), rgba(0,87,183,0.88));
             color: white;
             padding: 8rem 2rem 6rem;
             text-align: center;
-            position: relative;
         }
         
         .hero-content {
@@ -210,7 +203,6 @@
             color: #0057B7;
         }
         
-        /* Impact Stats */
         .impact-stats {
             background: #f9f9f9;
             padding: 4rem 2rem;
@@ -249,7 +241,6 @@
             color: #666;
         }
         
-        /* Mission Section */
         .mission {
             max-width: 1200px;
             margin: 0 auto;
@@ -321,7 +312,6 @@
             line-height: 1.6;
         }
         
-        /* Featured Projects */
         .featured-projects {
             background: #f9f9f9;
             padding: 5rem 2rem;
@@ -467,7 +457,6 @@
             color: white;
         }
         
-        /* Donation Impact */
         .donation-impact {
             background: white;
             padding: 5rem 2rem;
@@ -516,10 +505,23 @@
             font-size: 1.05rem;
         }
         
-        /* Community Stories */
         .community-stories {
             padding: 5rem 2rem;
             background: white;
+            overflow: hidden;
+        }
+        
+        .stories-carousel-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .stories-carousel {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease;
+            padding: 1rem 0;
         }
         
         .story-card {
@@ -527,11 +529,30 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .story-card.active {
+            flex: 0 0 700px;
+            opacity: 1;
+        }
+        
+        .story-card.preview {
+            flex: 0 0 300px;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        
+        .story-card.preview:hover {
+            opacity: 0.8;
+            transform: translateY(-5px);
         }
         
         .story-header {
-            padding: 2rem 2rem 1rem;
+            padding: 1.5rem 1.5rem 1rem;
             border-bottom: 1px solid #e0e0e0;
         }
         
@@ -542,16 +563,23 @@
         }
         
         .author-initial {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: #0057B7;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .story-card.preview .author-initial {
+            width: 40px;
+            height: 40px;
+            font-size: 1.1rem;
         }
         
         .author-name {
@@ -560,23 +588,55 @@
             color: #333;
         }
         
+        .story-card.preview .author-name {
+            font-size: 0.95rem;
+        }
+        
         .author-role {
             font-size: 0.9rem;
             color: #666;
         }
         
+        .story-card.preview .author-role {
+            font-size: 0.8rem;
+        }
+        
         .story-image {
-            padding: 0;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .story-card.preview .story-image {
+            height: 350px;
         }
         
         .story-image img {
             width: 100%;
-            display: block;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
         
         .story-content {
             padding: 2rem;
             line-height: 1.8;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+        
+        .story-card.preview .story-content {
+            padding: 1.5rem;
+            max-height: 150px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         .story-content p {
@@ -585,7 +645,7 @@
         }
         
         .story-footer {
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
             background: #f9f9f9;
             border-top: 1px solid #e0e0e0;
         }
@@ -595,7 +655,74 @@
             font-size: 0.9rem;
         }
         
-        /* How to Help */
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #0057B7;
+            color: #0057B7;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            z-index: 10;
+            user-select: none;
+        }
+        
+        .carousel-nav:hover {
+            background: #0057B7;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .carousel-nav.disabled:hover {
+            background: rgba(255, 255, 255, 0.95);
+            color: #0057B7;
+            transform: translateY(-50%);
+        }
+        
+        .carousel-nav-prev {
+            left: -25px;
+        }
+        
+        .carousel-nav-next {
+            right: -25px;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .carousel-indicator.active {
+            background: #0057B7;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
         .how-to-help {
             padding: 5rem 2rem;
             background: #f9f9f9;
@@ -650,7 +777,6 @@
             color: #0057B7;
         }
         
-        /* Footer */
         footer {
             background: #1a1a1a;
             color: white;
@@ -701,7 +827,6 @@
         }
         
         .social-links a {
-            display: inline-block;
             width: 40px;
             height: 40px;
             background: #333;
@@ -723,7 +848,16 @@
             color: #999;
         }
         
-        /* Responsive */
+        @media (max-width: 1024px) {
+            .story-card.preview {
+                flex: 0 0 200px;
+            }
+            
+            .story-card.active {
+                flex: 0 0 600px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -758,11 +892,36 @@
             .stat-number {
                 font-size: 2.5rem;
             }
+            
+            .story-card.active,
+            .story-card.preview {
+                flex: 0 0 calc(100vw - 4rem);
+            }
+            
+            .story-card.preview {
+                display: none;
+            }
+            
+            .story-image {
+                height: 400px;
+            }
+            
+            .carousel-nav {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .carousel-nav-prev {
+                left: 10px;
+            }
+            
+            .carousel-nav-next {
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">
@@ -774,14 +933,10 @@
                         <path id="navBottomArc" d="M 25,123 A 70,70 0 0,0 125,123" fill="none"/>
                     </defs>
                     <text font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0057B7" letter-spacing="0.5">
-                        <textPath href="#navTopArc" startOffset="50%" text-anchor="middle">
-                            НЕСКОРЕНІ ДУХОМ
-                        </textPath>
+                        <textPath href="#navTopArc" startOffset="50%" text-anchor="middle">НЕСКОРЕНІ ДУХОМ</textPath>
                     </text>
                     <text font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#0057B7" letter-spacing="0.5">
-                        <textPath href="#navBottomArc" startOffset="50%" text-anchor="middle">
-                            EST. 2018
-                        </textPath>
+                        <textPath href="#navBottomArc" startOffset="50%" text-anchor="middle">EST. 2018</textPath>
                     </text>
                     <g transform="translate(75, 75)">
                         <path d="M -35 22 L -18 -8 L -8 3 L 0 -15 L 12 0 L 25 -12 L 38 22 Z" fill="#0057B7" opacity="0.25"/>
@@ -829,7 +984,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="en-only">Undaunted Spirits</h1>
@@ -855,7 +1009,6 @@
         </div>
     </section>
 
-    <!-- Impact Stats -->
     <section class="impact-stats">
         <div class="stats-container">
             <div class="stat-item">
@@ -881,7 +1034,6 @@
         </div>
     </section>
 
-    <!-- Mission Section -->
     <section class="mission">
         <div class="mission-content">
             <h2 class="en-only">Our Story & Mission</h2>
@@ -943,7 +1095,6 @@
         </div>
     </section>
 
-    <!-- Featured Projects -->
     <section class="featured-projects">
         <div class="section-header">
             <h2 class="en-only">Current Projects Making an Impact</h2>
@@ -954,12 +1105,8 @@
         </div>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image en-only">
-                    [Medical & Mobility Equipment]
-                </div>
-                <div class="project-image ua-only">
-                    [Медичне та мобільне обладнання]
-                </div>
+                <div class="project-image en-only">[Medical & Mobility Equipment]</div>
+                <div class="project-image ua-only">[Медичне та мобільне обладнання]</div>
                 <div class="project-content">
                     <h3 class="en-only">Medical Equipment & Mobility Support</h3>
                     <h3 class="ua-only">Медичне обладнання та підтримка мобільності</h3>
@@ -983,12 +1130,8 @@
             </div>
             
             <div class="project-card">
-                <div class="project-image en-only">
-                    [Frontline Medical Supplies]
-                </div>
-                <div class="project-image ua-only">
-                    [Медичні матеріали для фронту]
-                </div>
+                <div class="project-image en-only">[Frontline Medical Supplies]</div>
+                <div class="project-image ua-only">[Медичні матеріали для фронту]</div>
                 <div class="project-content">
                     <h3 class="en-only">Frontline Medical Supplies</h3>
                     <h3 class="ua-only">Медичні матеріали для фронту</h3>
@@ -1012,12 +1155,8 @@
             </div>
             
             <div class="project-card">
-                <div class="project-image en-only">
-                    [Essential Supplies]
-                </div>
-                <div class="project-image ua-only">
-                    [Основні матеріали]
-                </div>
+                <div class="project-image en-only">[Essential Supplies]</div>
+                <div class="project-image ua-only">[Основні матеріали]</div>
                 <div class="project-content">
                     <h3 class="en-only">Essential Living Supplies</h3>
                     <h3 class="ua-only">Основні матеріали для життя</h3>
@@ -1041,12 +1180,8 @@
             </div>
             
             <div class="project-card">
-                <div class="project-image en-only">
-                    [Veteran & Family Support]
-                </div>
-                <div class="project-image ua-only">
-                    [Підтримка ветеранів та сімей]
-                </div>
+                <div class="project-image en-only">[Veteran & Family Support]</div>
+                <div class="project-image ua-only">[Підтримка ветеранів та сімей]</div>
                 <div class="project-content">
                     <h3 class="en-only">Veteran & Family Rehabilitation</h3>
                     <h3 class="ua-only">Реабілітація ветеранів та сімей</h3>
@@ -1076,7 +1211,6 @@
         </div>
     </section>
 
-    <!-- Donation Impact Section -->
     <section class="donation-impact">
         <div class="impact-content">
             <h2 class="en-only">Your Donation Creates Real Change</h2>
@@ -1121,7 +1255,6 @@
         </div>
     </section>
 
-    <!-- Community Stories -->
     <section class="community-stories">
         <div class="section-header">
             <h2 class="en-only">Voices from Our Community</h2>
@@ -1131,76 +1264,148 @@
             <p class="ua-only">Справжні історії людей, які роблять різницю</p>
         </div>
         
-        <div style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
-            <div class="story-card">
-                <div class="story-header">
-                    <div class="story-author">
-                        <div class="author-initial">S</div>
-                        <div>
-                            <div class="author-name en-only">Svetlana Bychkovska</div>
-                            <div class="author-name ua-only">Світлана Бічковська</div>
-                            <div class="author-role en-only">Chairperson, Undaunted Spirits</div>
-                            <div class="author-role ua-only">Голова, Нескорені духом</div>
+        <div class="stories-carousel-container">
+            <div class="carousel-nav carousel-nav-prev" onclick="navigateStories(-1)">‹</div>
+            <div class="carousel-nav carousel-nav-next" onclick="navigateStories(1)">›</div>
+            
+            <div class="stories-carousel" id="storiesCarousel">
+                <div class="story-card active" data-story="0">
+                    <div class="story-header">
+                        <div class="story-author">
+                            <div class="author-initial">S</div>
+                            <div>
+                                <div class="author-name en-only">Svetlana Bychkovska</div>
+                                <div class="author-name ua-only">Світлана Бічковська</div>
+                                <div class="author-role en-only">Chairperson, Undaunted Spirits</div>
+                                <div class="author-role ua-only">Голова, Нескорені духом</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-image">
+                        <img src="images/community/mariya-handmade-socks.jpg" alt="Mariya Gomzyak with handmade socks">
+                    </div>
+                    
+                    <div class="story-content">
+                        <p class="en-only" style="font-style: italic; margin-bottom: 1rem;">
+                            I express my sincere gratitude to our tireless little bee, Mariya Gomzyak.
+                        </p>
+                        <p class="ua-only" style="font-style: italic; margin-bottom: 1rem;">
+                            Висловлюю щиру вдячність нашій невтомній бджілці, Марії Гомзяк.
+                        </p>
+                        
+                        <p class="en-only">
+                            Mariya is one of us — with steadfast will, unbreakable spirit. No matter how hard it is, overcoming fatigue and phantom pains, she stands strong and helps our boys and girls in the Armed Forces of Ukraine.
+                        </p>
+                        <p class="ua-only">
+                            Марія — одна з нас, з непохитною волею, нескореним духом. Незважаючи на труднощі, долаючи втому та фантомні болі, вона тримається і допомагає нашим хлопцям та дівчатам у Збройних Силах України.
+                        </p>
+                        
+                        <p class="en-only" style="margin-top: 1rem;">
+                            I myself have lost count of how many warm little socks have warmed the feet of our defenders.
+                        </p>
+                        <p class="ua-only" style="margin-top: 1rem;">
+                            Я сама вже збилася з рахунку, скільки теплих шкарпеток зігріли ноги наших захисників.
+                        </p>
+                        
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: #f0f7ff; border-left: 4px solid #FFD700; border-radius: 5px;">
+                            <p class="en-only" style="margin: 0; color: #0057B7; font-weight: 500;">
+                                "Stay strong, Mariya! May God grant you strong health, kindness, and protection for your good mother's heart."
+                            </p>
+                            <p class="ua-only" style="margin: 0; color: #0057B7; font-weight: 500;">
+                                "Тримайся, Маріє! Нехай Бог дасть тобі міцного здоров'я, доброти та захисту твого доброго материнського серця."
+                            </p>
+                        </div>
+                        
+                        <p class="en-only" style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                            My sincere thanks to your son Vitaliy Gomzyak for taking care of you and always helping to deliver your wonderful handiwork.
+                        </p>
+                        <p class="ua-only" style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                            Щира подяка твоєму синові Віталію Гомзяку за турботу про тебе і за те, що завжди допомагає доставляти твої чудові вироби.
+                        </p>
+                    </div>
+                    
+                    <div class="story-footer">
+                        <div class="story-meta">
+                            <span class="en-only">💙 From our community • March 2025</span>
+                            <span class="ua-only">💙 З нашої громади • Березень 2025</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="story-image">
-                    <img src="images/community/mariya-handmade-socks.jpg" 
-                         alt="Mariya Gomzyak sitting in wheelchair with packages of handmade warm socks for Ukrainian soldiers" 
-                         style="width: 100%; border-radius: 10px; display: block;">
-                </div>
-                
-                <div class="story-content">
-                    <p class="en-only" style="font-style: italic; margin-bottom: 1rem;">
-                        I express my sincere gratitude to our tireless little bee, Mariya Gomzyak.
-                    </p>
-                    <p class="ua-only" style="font-style: italic; margin-bottom: 1rem;">
-                        Висловлюю щиру вдячність нашій невтомній бджілці, Марії Гомзяк.
-                    </p>
+                <div class="story-card preview" data-story="1" onclick="goToStory(1)">
+                    <div class="story-header">
+                        <div class="story-author">
+                            <div class="author-initial">V</div>
+                            <div>
+                                <div class="author-name en-only">Volunteer Team</div>
+                                <div class="author-name ua-only">Волонтерська команда</div>
+                                <div class="author-role en-only">Medical Supply Drive</div>
+                                <div class="author-role ua-only">Збір медичних матеріалів</div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <p class="en-only">
-                        Mariya is one of us — with steadfast will, unbreakable spirit. No matter how hard it is, overcoming fatigue and phantom pains, she stands strong and helps our boys and girls in the Armed Forces of Ukraine.
-                    </p>
-                    <p class="ua-only">
-                        Марія — одна з нас, з непохитною волею, нескореним духом. Незважаючи на труднощі, долаючи втому та фантомні болі, вона тримається і допомагає нашим хлопцям та дівчатам у Збройних Силах України.
-                    </p>
+                    <div class="story-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600'%3E%3Crect fill='%234A90E2' width='400' height='600'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3E[Medical Supply Photo]%3C/text%3E%3C/svg%3E" alt="Medical supplies">
+                    </div>
                     
-                    <p class="en-only" style="margin-top: 1rem;">
-                        I myself have lost count of how many warm little socks have warmed the feet of our defenders.
-                    </p>
-                    <p class="ua-only" style="margin-top: 1rem;">
-                        Я сама вже збилася з рахунку, скільки теплих шкарпеток зігріли ноги наших захисників.
-                    </p>
-                    
-                    <div style="margin-top: 1.5rem; padding: 1rem; background: #f0f7ff; border-left: 4px solid #FFD700; border-radius: 5px;">
-                        <p class="en-only" style="margin: 0; color: #0057B7; font-weight: 500;">
-                            "Stay strong, Mariya! May God grant you strong health, kindness, and protection for your good mother's heart."
+                    <div class="story-content">
+                        <p class="en-only">
+                            Thanks to your incredible generosity, we delivered over 500 first aid kits to troops on the eastern front. Each kit contains essential medical supplies that can save lives...
                         </p>
-                        <p class="ua-only" style="margin: 0; color: #0057B7; font-weight: 500;">
-                            "Тримайся, Маріє! Нехай Бог дасть тобі міцного здоров'я, доброти та захисту твого доброго материнського серця."
+                        <p class="ua-only">
+                            Завдяки вашій неймовірній щедрості ми доставили понад 500 аптечок на східний фронт. Кожна аптечка містить життєво важливі медичні матеріали...
                         </p>
                     </div>
                     
-                    <p class="en-only" style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
-                        My sincere thanks to your son Vitaliy Gomzyak for taking care of you and always helping to deliver your wonderful handiwork.
-                    </p>
-                    <p class="ua-only" style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
-                        Щира подяка твоєму синові Віталію Гомзяку за турботу про тебе і за те, що завжди допомагає доставляти твої чудові вироби.
-                    </p>
+                    <div class="story-footer">
+                        <div class="story-meta">
+                            <span class="en-only">💙 Community impact • February 2025</span>
+                            <span class="ua-only">💙 Вплив громади • Лютий 2025</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="story-footer">
-                    <div class="story-meta">
-                        <span class="en-only">💙 From our community</span>
-                        <span class="ua-only">💙 З нашої громади</span>
+                <div class="story-card preview" data-story="2" onclick="goToStory(2)">
+                    <div class="story-header">
+                        <div class="story-author">
+                            <div class="author-initial">O</div>
+                            <div>
+                                <div class="author-name en-only">Olena P.</div>
+                                <div class="author-name ua-only">Олена П.</div>
+                                <div class="author-role en-only">Member since 2019</div>
+                                <div class="author-role ua-only">Член з 2019 року</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600'%3E%3Crect fill='%230057B7' width='400' height='600'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='%23FFD700' text-anchor='middle' dominant-baseline='middle'%3E[Member Story Photo]%3C/text%3E%3C/svg%3E" alt="Member story">
+                    </div>
+                    
+                    <div class="story-content">
+                        <p class="en-only">
+                            When I first joined Undaunted Spirits in 2019, I never imagined how much this community would change my life. The support, friendship, and sense of purpose I found here...
+                        </p>
+                        <p class="ua-only">
+                            Коли я вперше приєдналася до "Нескорених духом" у 2019 році, я ніколи не уявляла, наскільки ця спільнота змінить моє життя. Підтримка, дружба та почуття мети...
+                        </p>
+                    </div>
+                    
+                    <div class="story-footer">
+                        <div class="story-meta">
+                            <span class="en-only">💙 Member story • January 2025</span>
+                            <span class="ua-only">💙 Історія члена • Січень 2025</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="carousel-indicators" id="carouselIndicators"></div>
         </div>
     </section>
 
-    <!-- How to Help -->
     <section class="how-to-help">
         <div class="section-header">
             <h2 class="en-only">How You Can Support Our Community</h2>
@@ -1260,7 +1465,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -1311,7 +1515,7 @@
                 <span class="ua-only">Тернопіль, Україна</span></p>
                 
                 <p><strong class="en-only">Email:</strong><strong class="ua-only">Електронна пошта:</strong><br>
-                info@unconqueredspirits.org</p>
+                neskorenidukhom@ukr.net</p>
                 
                 <p><strong>Facebook:</strong><br>
                 <a href="#">
@@ -1327,7 +1531,6 @@
     </footer>
 
     <script>
-        // Language toggle functionality
         function toggleLanguage() {
             const html = document.documentElement;
             const currentLang = html.getAttribute('lang');
@@ -1341,12 +1544,110 @@
             }
         }
         
-        // Load saved language preference on page load
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('language');
             if (savedLang) {
                 document.documentElement.setAttribute('lang', savedLang);
             }
+            
+            initializeCarousel();
+        });
+        
+        let currentStoryIndex = 0;
+        let totalStories = 0;
+        
+        function initializeCarousel() {
+            const stories = document.querySelectorAll('.story-card');
+            totalStories = stories.length;
+            
+            const indicatorsContainer = document.getElementById('carouselIndicators');
+            indicatorsContainer.innerHTML = '';
+            for (let i = 0; i < totalStories; i++) {
+                const indicator = document.createElement('div');
+                indicator.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
+                indicator.onclick = () => goToStory(i);
+                indicatorsContainer.appendChild(indicator);
+            }
+            
+            updateCarousel();
+        }
+        
+        function navigateStories(direction) {
+            currentStoryIndex += direction;
+            
+            if (currentStoryIndex < 0) {
+                currentStoryIndex = 0;
+                return;
+            }
+            if (currentStoryIndex >= totalStories) {
+                currentStoryIndex = totalStories - 1;
+                return;
+            }
+            
+            updateCarousel();
+        }
+        
+        function goToStory(index) {
+            currentStoryIndex = index;
+            updateCarousel();
+        }
+        
+        function updateCarousel() {
+            const carousel = document.getElementById('storiesCarousel');
+            const stories = document.querySelectorAll('.story-card');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const prevBtn = document.querySelector('.carousel-nav-prev');
+            const nextBtn = document.querySelector('.carousel-nav-next');
+            
+            stories.forEach((story, index) => {
+                story.classList.remove('active', 'preview');
+                
+                if (index === currentStoryIndex) {
+                    story.classList.add('active');
+                } else {
+                    story.classList.add('preview');
+                }
+            });
+            
+            indicators.forEach((indicator, index) => {
+                if (index === currentStoryIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+            
+            const isMobile = window.innerWidth <= 768;
+            let offset;
+            
+            if (isMobile) {
+                const cardWidth = stories[0].offsetWidth + 32;
+                offset = currentStoryIndex * cardWidth;
+            } else {
+                if (currentStoryIndex === 0) {
+                    offset = 0;
+                } else if (currentStoryIndex === totalStories - 1) {
+                    const containerWidth = carousel.parentElement.offsetWidth;
+                    offset = carousel.scrollWidth - containerWidth;
+                } else {
+                    const activeCard = stories[currentStoryIndex];
+                    const containerWidth = carousel.parentElement.offsetWidth;
+                    const cardLeft = activeCard.offsetLeft;
+                    const cardWidth = activeCard.offsetWidth;
+                    offset = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+                }
+            }
+            
+            carousel.style.transform = `translateX(-${offset}px)`;
+            
+            prevBtn.classList.toggle('disabled', currentStoryIndex === 0);
+            nextBtn.classList.toggle('disabled', currentStoryIndex === totalStories - 1);
+        }
+        
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateCarousel, 250);
         });
     </script>
 </body>
