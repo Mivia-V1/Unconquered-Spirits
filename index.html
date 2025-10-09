@@ -516,6 +516,85 @@
             font-size: 1.05rem;
         }
         
+        /* Community Stories */
+        .community-stories {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .story-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .story-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .story-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-initial {
+            width: 60px;
+            height: 60px;
+            background: #0057B7;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .author-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .author-role {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .story-image {
+            padding: 0;
+        }
+        
+        .story-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .story-content {
+            padding: 2rem;
+            line-height: 1.8;
+        }
+        
+        .story-content p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .story-footer {
+            padding: 1rem 2rem;
+            background: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .story-meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
         /* How to Help */
         .how-to-help {
             padding: 5rem 2rem;
@@ -1039,6 +1118,85 @@
             </div>
             <a href="#donate" class="btn-primary en-only" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Donate Now</a>
             <a href="#donate" class="btn-primary ua-only" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Пожертвувати зараз</a>
+        </div>
+    </section>
+
+    <!-- Community Stories -->
+    <section class="community-stories">
+        <div class="section-header">
+            <h2 class="en-only">Voices from Our Community</h2>
+            <h2 class="ua-only">Голоси нашої громади</h2>
+            
+            <p class="en-only">Real stories from the people making a difference</p>
+            <p class="ua-only">Справжні історії людей, які роблять різницю</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+            <div class="story-card">
+                <div class="story-header">
+                    <div class="story-author">
+                        <div class="author-initial">S</div>
+                        <div>
+                            <div class="author-name en-only">Svetlana Bychkovska</div>
+                            <div class="author-name ua-only">Світлана Бічковська</div>
+                            <div class="author-role en-only">Chairperson, Undaunted Spirits</div>
+                            <div class="author-role ua-only">Голова, Нескорені духом</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-image">
+                    <img src="images/community/mariya-handmade-socks.jpg" 
+                         alt="Mariya Gomzyak sitting in wheelchair with packages of handmade warm socks for Ukrainian soldiers" 
+                         style="width: 100%; border-radius: 10px; display: block;">
+                </div>
+                
+                <div class="story-content">
+                    <p class="en-only" style="font-style: italic; margin-bottom: 1rem;">
+                        I express my sincere gratitude to our tireless little bee, Mariya Gomzyak.
+                    </p>
+                    <p class="ua-only" style="font-style: italic; margin-bottom: 1rem;">
+                        Висловлюю щиру вдячність нашій невтомній бджілці, Марії Гомзяк.
+                    </p>
+                    
+                    <p class="en-only">
+                        Mariya is one of us — with steadfast will, unbreakable spirit. No matter how hard it is, overcoming fatigue and phantom pains, she stands strong and helps our boys and girls in the Armed Forces of Ukraine.
+                    </p>
+                    <p class="ua-only">
+                        Марія — одна з нас, з непохитною волею, нескореним духом. Незважаючи на труднощі, долаючи втому та фантомні болі, вона тримається і допомагає нашим хлопцям та дівчатам у Збройних Силах України.
+                    </p>
+                    
+                    <p class="en-only" style="margin-top: 1rem;">
+                        I myself have lost count of how many warm little socks have warmed the feet of our defenders.
+                    </p>
+                    <p class="ua-only" style="margin-top: 1rem;">
+                        Я сама вже збилася з рахунку, скільки теплих шкарпеток зігріли ноги наших захисників.
+                    </p>
+                    
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: #f0f7ff; border-left: 4px solid #FFD700; border-radius: 5px;">
+                        <p class="en-only" style="margin: 0; color: #0057B7; font-weight: 500;">
+                            "Stay strong, Mariya! May God grant you strong health, kindness, and protection for your good mother's heart."
+                        </p>
+                        <p class="ua-only" style="margin: 0; color: #0057B7; font-weight: 500;">
+                            "Тримайся, Маріє! Нехай Бог дасть тобі міцного здоров'я, доброти та захисту твого доброго материнського серця."
+                        </p>
+                    </div>
+                    
+                    <p class="en-only" style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                        My sincere thanks to your son Vitaliy Gomzyak for taking care of you and always helping to deliver your wonderful handiwork.
+                    </p>
+                    <p class="ua-only" style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                        Щира подяка твоєму синові Віталію Гомзяку за турботу про тебе і за те, що завжди допомагає доставляти твої чудові вироби.
+                    </p>
+                </div>
+                
+                <div class="story-footer">
+                    <div class="story-meta">
+                        <span class="en-only">💙 From our community</span>
+                        <span class="ua-only">💙 З нашої громади</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
