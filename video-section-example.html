@@ -1,0 +1,140 @@
+<!-- VIDEO SECTION EXAMPLE -->
+<!-- Copy and paste this into your index.html where you want videos to appear -->
+<!-- For example: after the "mission" section and before "featured-projects" -->
+
+<section class="video-gallery">
+    <div class="section-header">
+        <h2 class="en-only">See Our Impact in Action</h2>
+        <h2 class="ua-only">Подивіться наш вплив у дії</h2>
+        
+        <p class="en-only">Watch stories from our community and see how your support makes a difference</p>
+        <p class="ua-only">Дивіться історії нашої спільноти та бачте, як ваша підтримка робить різницю</p>
+    </div>
+    
+    <div class="videos-grid">
+        <!-- VIDEO 1: Replace VIDEO_ID_HERE with your actual YouTube video ID -->
+        <!-- To get video ID: from https://www.youtube.com/watch?v=ABC123, use ABC123 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                    title="Community Support - Undaunted Spirits"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3 class="en-only">Supporting Our Community</h3>
+                <h3 class="ua-only">Підтримка нашої громади</h3>
+                <p class="en-only">See how we deliver essential supplies to families in need.</p>
+                <p class="ua-only">Подивіться, як ми доставляємо необхідні матеріали сім'ям, які потребують допомоги.</p>
+            </div>
+        </div>
+        
+        <!-- VIDEO 2: Add more videos by copying this structure -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                    title="Volunteer Activities - Undaunted Spirits"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3 class="en-only">Volunteer Stories</h3>
+                <h3 class="ua-only">Історії волонтерів</h3>
+                <p class="en-only">Meet our dedicated volunteers making a difference every day.</p>
+                <p class="ua-only">Познайомтеся з нашими відданими волонтерами, які роблять різницю щодня.</p>
+            </div>
+        </div>
+        
+        <!-- VIDEO 3 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                    title="Impact Stories - Undaunted Spirits"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3 class="en-only">Real Impact Stories</h3>
+                <h3 class="ua-only">Справжні історії впливу</h3>
+                <p class="en-only">Hear directly from those we've helped about their journey.</p>
+                <p class="ua-only">Послухайте безпосередньо від тих, кому ми допомогли, про їхню подорож.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ADD THIS CSS TO YOUR css/styles.css FILE -->
+<!--
+.video-gallery {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.videos-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.video-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.video-info h3 {
+    font-size: 1.3rem;
+    color: #0057B7;
+    margin-bottom: 0.75rem;
+}
+
+.video-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+-->
+
