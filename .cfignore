@@ -1,0 +1,13 @@
+# Cloudflare Pages - Ignore these files during deployment
+.git/
+.gitignore
+README.md
+WEBSITE_PLAN.md
+NEXT_STEPS.md
+VIDEO_GUIDE.md
+CLOUDFLARE-GITHUB-DEPLOY.md
+DEPLOY-COMING-SOON.md
+video-section-example.html
+index-coming-soon.html
+videos/raw/
+

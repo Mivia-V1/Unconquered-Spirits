@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects
+
+# Redirect www to non-www (optional)
+# Cloudflare handles this automatically, but this is a backup
+
+# SPA fallback - serve index.html for all routes
+/* /index.html 200
+
