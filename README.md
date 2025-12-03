@@ -1,7 +1,7 @@
 # Undaunted Spirits Website
-### Нескорені духом
+### Нескорені духом | undauntedspirits.org
 
-Official website for the Undaunted Spirits public organization, supporting persons with disabilities and communities affected by hardship in Ukraine since 2018.
+Official bilingual website for the Undaunted Spirits public organization, supporting persons with disabilities and war-affected communities in Ukraine since 2018.
 
 ---
 
@@ -13,14 +13,28 @@ Official website for the Undaunted Spirits public organization, supporting perso
 - EDRPOU: 42717428
 - Nonprofit Status Code: 0032 (Public Association)
 - Location: Ternopil, Ukraine
+- Email: neskorenidukhom@ukr.net
+- Phone: +380 98 707 0628
 
 ---
 
 ## 🚀 Project Status
 
-**Current Phase:** Foundation & Development  
-**Homepage:** Draft Complete ✅  
-**Bilingual Support:** English & Ukrainian ✅
+**Current Phase:** Full Website Launch Ready  
+**English Homepage:** Complete ✅  
+**Ukrainian Homepage:** Complete ✅  
+**Bilingual Structure:** Separate pages for each language ✅
+
+---
+
+## 🌐 Website Structure
+
+```
+undauntedspirits.org/          → English (default for international donors)
+undauntedspirits.org/ua/       → Ukrainian (Українська)
+
+neskoreni.org                  → Redirects to undauntedspirits.org/ua/
+```
 
 ---
 
@@ -28,18 +42,29 @@ Official website for the Undaunted Spirits public organization, supporting perso
 
 ```
 NGO/
-├── index.html              # Main homepage
+├── index.html                 # English homepage
+├── ua/
+│   └── index.html             # Ukrainian homepage (Українська)
 ├── css/
-│   └── styles.css          # All website styles
+│   └── styles.css             # Shared stylesheet (one file for both languages)
 ├── js/
-│   └── main.js             # JavaScript functionality
+│   └── main.js                # Shared JavaScript (one file for both languages)
 ├── images/
-│   ├── community/          # Community photos
-│   ├── projects/           # Project images
-│   └── team/               # Team member photos
-├── README.md               # This file
-├── WEBSITE_PLAN.md         # Comprehensive development plan
-└── .gitignore             # Git ignore rules
+│   ├── community/             # Community photos
+│   │   └── mariya-handmade-socks.jpg
+│   ├── projects/              # Project images
+│   └── team/                  # Team member photos
+├── pages/                     # Additional pages (future)
+├── videos/                    # Video content
+│   ├── optimized/
+│   └── raw/
+├── subtitles/                 # Video subtitles
+├── _redirects                 # Cloudflare/Netlify redirect rules
+├── README.md                  # This file
+├── WEBSITE_PLAN.md            # Comprehensive development plan
+├── NEXT_STEPS.md              # Development roadmap
+├── DEPLOY-COMING-SOON.md      # Coming soon deployment guide
+└── index-coming-soon.html     # Backup coming soon page
 ```
 
 ---
@@ -47,30 +72,38 @@ NGO/
 ## 🎨 Features
 
 ### Current Features
-- ✅ Bilingual website (English/Ukrainian)
-- ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Modern, accessible UI
-- ✅ Story carousel
-- ✅ Project showcase
-- ✅ Impact statistics
-- ✅ Language persistence (localStorage)
+- ✅ **Bilingual website** (English `/` and Ukrainian `/ua/`)
+- ✅ **Responsive design** (mobile, tablet, desktop)
+- ✅ **Professional navigation** with language switcher
+- ✅ **Hero section** with call-to-action
+- ✅ **Impact statistics** (200+ members, 7 years, 1,500+ people)
+- ✅ **Mission & values section**
+- ✅ **Project showcase** with progress bars
+- ✅ **Donation impact examples** ($10-$500)
+- ✅ **Community stories carousel** (featuring Mariya Gomzyak)
+- ✅ **How to help section** (Donate, Volunteer, Membership, Share)
+- ✅ **Full footer** with contact info & links
+- ✅ **SEO optimized** (hreflang, Open Graph, structured data)
+- ✅ **Smooth scrolling** for anchor links
 
 ### Planned Features
 - 🔄 Donation integration (Stripe, PayPal, LiqPay)
-- 🔄 Contact form
+- 🔄 Contact form with email notifications
 - 🔄 News/Blog section
 - 🔄 Member portal
 - 🔄 Volunteer management
 - 🔄 Event calendar
 - 🔄 Resource center
+- 🔄 Real social media links
 
 ---
 
 ## 🛠️ Technology Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **SEO:** hreflang tags, JSON-LD structured data, Open Graph
 - **Version Control:** Git
-- **Planned Hosting:** GitHub Pages / Netlify / Vercel
+- **Hosting:** Cloudflare Pages (recommended)
 - **Future Payment:** Stripe, PayPal, LiqPay
 
 ---
@@ -79,165 +112,157 @@ NGO/
 
 ### Prerequisites
 - A modern web browser
-- Text editor (VS Code, Sublime, etc.)
+- Text editor (VS Code, Cursor, etc.)
 - Git (for version control)
 
 ### Local Development
 
 1. **Clone the repository:**
 ```bash
-git clone <repository-url>
-cd NGO
+git clone https://github.com/YOUR_USERNAME/undaunted-spirits.git
+cd undaunted-spirits
 ```
 
-2. **Open the website:**
-   - Simply open `index.html` in your web browser
-   - Or use a local server:
-   
+2. **Start a local server:**
 ```bash
 # Using Python 3
-python -m http.server 8000
+python3 -m http.server 8080
 
-# Using Node.js (http-server)
-npx http-server
+# Using Node.js
+npx http-server -p 8080
 
 # Using PHP
-php -S localhost:8000
+php -S localhost:8080
 ```
 
 3. **Access the website:**
-   - Navigate to `http://localhost:8000`
+   - English: `http://localhost:8080`
+   - Ukrainian: `http://localhost:8080/ua/`
 
 ---
 
-## 🌍 Bilingual Support
+## 🌍 Bilingual Implementation
 
-The website supports both English and Ukrainian languages:
+The website uses **separate pages** for each language (better for SEO):
 
-- **Switch Language:** Click the language toggle button in the navigation
-- **Persistence:** Language preference is saved in localStorage
-- **Implementation:** CSS-based visibility toggling
+| Language | URL | File |
+|----------|-----|------|
+| English | `/` | `/index.html` |
+| Ukrainian | `/ua/` | `/ua/index.html` |
 
-### How it works:
+### hreflang Tags (for SEO)
+Both pages include proper language alternate tags:
 ```html
-<p class="en-only">English text</p>
-<p class="ua-only">Ukrainian text</p>
+<link rel="alternate" hreflang="en" href="https://undauntedspirits.org/">
+<link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/">
+<link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/">
 ```
 
-The `lang` attribute on the `<html>` tag controls which language is visible.
+### Shared Resources
+- **CSS:** Both pages use `/css/styles.css`
+- **JavaScript:** Both pages use `/js/main.js`
+- **Images:** Both pages reference `/images/`
 
 ---
 
-## 🎨 Customization
+## 🚀 Deployment
 
-### Colors
-Update the color scheme in `css/styles.css`:
+### Cloudflare Pages (Recommended)
 
-```css
-Primary Blue: #0057B7
-Accent Gold: #FFD700
-Secondary Blue: #4A90E2
+1. **Push to GitHub:**
+```bash
+git add .
+git commit -m "Full bilingual site"
+git push origin main
 ```
 
-### Content
-- **Homepage:** Edit `index.html`
-- **Styles:** Modify `css/styles.css`
-- **Scripts:** Update `js/main.js`
+2. **Connect to Cloudflare Pages:**
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → Pages
+   - Click "Create a project" → "Connect to Git"
+   - Select your GitHub repository
+   - Build settings: Leave empty (static site)
+   - Deploy!
 
-### Images
-Place images in appropriate folders:
-- `images/community/` - Community photos
-- `images/projects/` - Project images
-- `images/team/` - Team member photos
+3. **Configure Custom Domain:**
+   - In Cloudflare Pages → Your project → Custom domains
+   - Add `undauntedspirits.org`
+
+### Secondary Domain Redirect
+Configure `neskoreni.org` to redirect to `undauntedspirits.org/ua/`:
+- **When:** `neskoreni.org/*`
+- **Then:** Redirect to `https://undauntedspirits.org/ua/$1`
+- **Status:** 301 (Permanent Redirect)
 
 ---
 
-## 📝 Content Guidelines
+## 🔧 Maintenance Guide
+
+### Updating Content
+
+**Important:** Changes must be made in **both** language files!
+
+| To Update | English File | Ukrainian File |
+|-----------|--------------|----------------|
+| Homepage | `/index.html` | `/ua/index.html` |
+| Styles | `/css/styles.css` | Same file! |
+| JavaScript | `/js/main.js` | Same file! |
+
+### Adding New Pages
+
+1. Create the English version: `/about.html`
+2. Create the Ukrainian version: `/ua/about.html`
+3. Add hreflang tags to both files
+4. Update navigation in both homepages
 
 ### Adding New Projects
 
-1. Copy an existing project card in `index.html`
-2. Update the content for both languages
-3. Add project image or use placeholder
-4. Update progress bar percentage
-5. Update funding goals
+1. Copy an existing project card in both `index.html` files
+2. Update content (English and Ukrainian)
+3. Add project image to `/images/projects/`
+4. Update progress bar percentage and funding goals
 
-### Adding New Stories
+### Adding New Community Stories
 
-1. Duplicate a story card in the carousel
+1. Duplicate a story card in the carousel (both languages)
 2. Update author information
-3. Add story content (bilingual)
-3. Add image path
-4. The carousel will automatically update
+3. Add image to `/images/community/`
+4. The carousel will automatically update indicators
 
 ---
 
-## 🚀 Deployment Options
+## 🎨 Design System
 
-### Option 1: GitHub Pages (Recommended)
-1. Push code to GitHub
-2. Enable GitHub Pages in repository settings
-3. Select main branch and root folder
-4. Access at `https://username.github.io/repository-name`
+### Colors
+```css
+Primary Blue:    #0057B7  (Ukrainian flag blue)
+Accent Gold:     #FFD700  (Ukrainian flag yellow)
+Secondary Blue:  #4A90E2
+Dark Text:       #333333
+Light Gray:      #f9f9f9
+Footer Dark:     #1a1a1a
+```
 
-### Option 2: Netlify
-1. Connect your GitHub repository
-2. Configure build settings (none needed for static site)
-3. Deploy automatically on push
-4. Custom domain support
-
-### Option 3: Vercel
-1. Import GitHub repository
-2. Configure project
-3. Deploy with automatic updates
+### Typography
+- **Primary Font:** 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+- **Headings:** Bold, blue (#0057B7)
+- **Body:** Regular, dark gray (#333)
 
 ---
 
-## 🔒 Security
+## ✅ Pre-Launch Checklist
 
-- All donation processing through secure third-party providers
-- SSL/HTTPS required for production
-- No sensitive data stored client-side
-- Form validation and protection against spam
-
----
-
-## ♿ Accessibility
-
-This website aims for WCAG 2.1 AA compliance:
-
-- Semantic HTML structure
-- Proper heading hierarchy
-- Keyboard navigation support
-- Sufficient color contrast
-- Alt text for images (to be added)
-- Screen reader compatible
-
----
-
-## 📊 Analytics
-
-Planned analytics integration:
-- Google Analytics 4
-- Facebook Pixel (for ad campaigns)
-- Donation conversion tracking
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-1. **Report Bugs:** Open an issue describing the problem
-2. **Suggest Features:** Share your ideas in issues
-3. **Submit Pull Requests:** 
-   - Fork the repository
-   - Create a feature branch
-   - Make your changes
-   - Submit a pull request
-
-### Translation Help
-Native Ukrainian speakers can help improve translations for accuracy and cultural appropriateness.
+- [x] English homepage complete
+- [x] Ukrainian homepage complete
+- [x] Responsive design tested
+- [x] SEO meta tags added
+- [x] hreflang tags configured
+- [x] Community photo added (Mariya Gomzyak)
+- [ ] Replace remaining placeholder images
+- [ ] Add real social media links
+- [ ] Set up donation integration
+- [ ] Configure neskoreni.org redirect
+- [ ] Set up Google Analytics
+- [ ] Submit sitemap to Google Search Console
 
 ---
 
@@ -248,7 +273,11 @@ Native Ukrainian speakers can help improve translations for accuracy and cultura
 - **Email:** neskorenidukhom@ukr.net
 - **Phone:** +380 98 707 0628
 - **Location:** Ternopil, Ukraine
-- **Facebook:** [Link to be added]
+
+**Leadership:**
+- Svetlana Bychkovska - Chairperson
+- Olga Pavlyshyn - Deputy Head
+- Oksana Sobkiv - Board Member
 
 ---
 
@@ -258,50 +287,11 @@ This website is created for Undaunted Spirits public organization. Content and b
 
 ---
 
-## 🙏 Acknowledgments
-
-- All volunteers and members of Undaunted Spirits
-- Donors and supporters worldwide
-- The Ukrainian community
-
----
-
-## 📅 Roadmap
-
-### Phase 1: Foundation (Weeks 1-4)
-- [x] Homepage design and development
-- [ ] Domain registration
-- [ ] Hosting setup
-- [ ] About page
-- [ ] Contact page
-- [ ] Donation integration
-
-### Phase 2: Content Expansion (Weeks 5-8)
-- [ ] Projects page
-- [ ] News/Blog section
-- [ ] Volunteer page
-- [ ] Membership page
-
-### Phase 3: Advanced Features (Weeks 9-12)
-- [ ] Member portal
-- [ ] Resource center
-- [ ] Event management
-- [ ] Full SEO optimization
-
----
-
-## 📚 Documentation
-
-For detailed development plans and technical specifications, see:
-- [WEBSITE_PLAN.md](WEBSITE_PLAN.md) - Comprehensive development roadmap
-
----
-
-## 💙💛 Slava Ukraini!
+## 💙💛 Слава Україні!
 
 **Together, we remain undaunted.**
 
 ---
 
-**Last Updated:** November 23, 2025  
-**Version:** 1.0.0
+**Last Updated:** December 3, 2025  
+**Version:** 2.0.0

@@ -1,42 +1,36 @@
-// Language Toggle Functionality
-function toggleLanguage() {
-    const html = document.documentElement;
-    const currentLang = html.getAttribute('lang');
-    
-    if (currentLang === 'en') {
-        html.setAttribute('lang', 'uk');
-        localStorage.setItem('language', 'uk');
-    } else {
-        html.setAttribute('lang', 'en');
-        localStorage.setItem('language', 'en');
-    }
-}
+// ===========================================
+// Undaunted Spirits - Main JavaScript
+// Shared across all language versions
+// ===========================================
 
 // Initialize on Page Load
 document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('language');
-    if (savedLang) {
-        document.documentElement.setAttribute('lang', savedLang);
-    }
-    
     initializeCarousel();
+    initializeSmoothScroll();
 });
 
+// ============================================
 // Carousel Functionality
+// ============================================
 let currentStoryIndex = 0;
 let totalStories = 0;
 
 function initializeCarousel() {
     const stories = document.querySelectorAll('.story-card');
+    if (stories.length === 0) return;
+    
     totalStories = stories.length;
     
+    // Create indicators
     const indicatorsContainer = document.getElementById('carouselIndicators');
-    indicatorsContainer.innerHTML = '';
-    for (let i = 0; i < totalStories; i++) {
-        const indicator = document.createElement('div');
-        indicator.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
-        indicator.onclick = () => goToStory(i);
-        indicatorsContainer.appendChild(indicator);
+    if (indicatorsContainer) {
+        indicatorsContainer.innerHTML = '';
+        for (let i = 0; i < totalStories; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
+            indicator.onclick = () => goToStory(i);
+            indicatorsContainer.appendChild(indicator);
+        }
     }
     
     updateCarousel();
@@ -69,6 +63,9 @@ function updateCarousel() {
     const prevBtn = document.querySelector('.carousel-nav-prev');
     const nextBtn = document.querySelector('.carousel-nav-next');
     
+    if (!carousel || stories.length === 0) return;
+    
+    // Update active states
     stories.forEach((story, index) => {
         story.classList.remove('active', 'preview');
         
@@ -79,6 +76,7 @@ function updateCarousel() {
         }
     });
     
+    // Update indicators
     indicators.forEach((indicator, index) => {
         if (index === currentStoryIndex) {
             indicator.classList.add('active');
@@ -87,6 +85,7 @@ function updateCarousel() {
         }
     });
     
+    // Calculate offset
     const isMobile = window.innerWidth <= 768;
     let offset;
     
@@ -108,10 +107,11 @@ function updateCarousel() {
         }
     }
     
-    carousel.style.transform = `translateX(-${offset}px)`;
+    carousel.style.transform = `translateX(-${Math.max(0, offset)}px)`;
     
-    prevBtn.classList.toggle('disabled', currentStoryIndex === 0);
-    nextBtn.classList.toggle('disabled', currentStoryIndex === totalStories - 1);
+    // Update navigation buttons
+    if (prevBtn) prevBtn.classList.toggle('disabled', currentStoryIndex === 0);
+    if (nextBtn) nextBtn.classList.toggle('disabled', currentStoryIndex === totalStories - 1);
 }
 
 // Handle Window Resize
@@ -121,3 +121,62 @@ window.addEventListener('resize', function() {
     resizeTimeout = setTimeout(updateCarousel, 250);
 });
 
+// ============================================
+// Smooth Scroll for Anchor Links
+// ============================================
+function initializeSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// ============================================
+// Utility Functions
+// ============================================
+
+// Animate numbers on scroll (for stats)
+function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value.toLocaleString();
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Intersection Observer for animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.stat-item, .project-card, .help-card').forEach(el => {
+    observer.observe(el);
+});
