@@ -74,6 +74,7 @@ NGO/
 ### Current Features
 - ✅ **Bilingual website** (English `/` and Ukrainian `/ua/`)
 - ✅ **Responsive design** (mobile, tablet, desktop)
+- ✅ **Mobile alignment tuned** (story carousel stacks, images use aspect-ratio)
 - ✅ **Professional navigation** with language switcher
 - ✅ **Hero section** with call-to-action
 - ✅ **Impact statistics** (200+ members, 7 years, 1,500+ people)
