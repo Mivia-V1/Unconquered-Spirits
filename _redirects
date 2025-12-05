@@ -1,2 +1,5 @@
-# Cloudflare Pages redirects
-# For single-page sites, no redirects needed - index.html is served by default
+# Redirect /ua/ to root during maintenance
+/ua/*  /  301
+
+# Main domain redirect (for future when live)
+# neskoreni.org/*  https://undauntedspirits.org/ua/:splat  301

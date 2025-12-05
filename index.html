@@ -2,546 +2,656 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undaunted Spirits | Нескорені духом - Coming Soon</title>
     
     <!-- SEO Meta Tags -->
-    <title>Undaunted Spirits - Supporting Persons with Disabilities in Ukraine</title>
-    <meta name="description" content="Undaunted Spirits (Нескорені духом) is a Ukrainian nonprofit supporting persons with disabilities, veterans, and war-affected communities since 2018. Donate to help provide medical equipment, supplies, and rehabilitation.">
-    <meta name="keywords" content="Ukraine charity, disability support, veterans support, Ternopil, nonprofit, humanitarian aid, donate Ukraine">
+    <meta name="description" content="Undaunted Spirits (Нескорені духом) - A Ukrainian public organization supporting persons with disabilities and communities affected by war since 2018. Based in Ternopil, Ukraine.">
+    <meta name="keywords" content="Ukraine charity, disability support, Ternopil, humanitarian aid, veterans support, Нескорені духом">
     
-    <!-- Canonical & Language Alternates -->
-    <link rel="canonical" href="https://undauntedspirits.org/">
-    <link rel="alternate" hreflang="en" href="https://undauntedspirits.org/">
-    <link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/">
-    <link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/">
-    
-    <!-- Open Graph / Social Media -->
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Undaunted Spirits | Нескорені духом">
+    <meta property="og:description" content="Supporting persons with disabilities and communities affected by hardship in Ukraine since 2018.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Undaunted Spirits - Empowering Lives in Ukraine">
-    <meta property="og:description" content="Supporting persons with disabilities and war-affected communities in Ukraine since 2018.">
-    <meta property="og:url" content="https://undauntedspirits.org/">
-    <meta property="og:site_name" content="Undaunted Spirits">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="uk_UA">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Undaunted Spirits - Supporting Ukraine">
-    <meta name="twitter:description" content="Empowering persons with disabilities and war-affected communities.">
+    <!-- Favicon placeholder - replace with actual favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
     
-    <!-- Structured Data for Organization -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "NGO",
-        "name": "Undaunted Spirits",
-        "alternateName": "Нескорені духом",
-        "url": "https://undauntedspirits.org",
-        "logo": "https://undauntedspirits.org/images/logo.png",
-        "description": "Public organization supporting persons with disabilities and war-affected communities in Ukraine",
-        "foundingDate": "2018-12-22",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ternopil",
-            "addressCountry": "UA"
-        },
-        "email": "neskorenidukhom@ukr.net",
-        "telephone": "+380987070628",
-        "sameAs": [],
-        "nonprofitStatus": "Nonprofit501c3",
-        "areaServed": {
-            "@type": "Country",
-            "name": "Ukraine"
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    </script>
-    
-    <link rel="stylesheet" href="css/styles.css">
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Language Toggle Visibility */
+        html[lang="en"] .ua-only,
+        html[lang="uk"] .en-only {
+            display: none !important;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #0057B7;
+            line-height: 1.2;
+        }
+
+        .logo-text-small {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .lang-switch {
+            padding: 0.5rem 1rem;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            color: #333;
+        }
+
+        .lang-switch:hover {
+            background: #e5e5e5;
+        }
+
+        .lang-switch .active-lang {
+            color: #0057B7;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            background: linear-gradient(135deg, rgba(0,87,183,0.95), rgba(0,87,183,0.85));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+        }
+
+        .content-container {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(255,215,0,0.2);
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 1.15rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .info-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #FFD700;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s;
+            min-width: 300px;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .contact-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+
+        .contact-link .icon {
+            font-size: 1.3rem;
+        }
+
+        .contact-link.primary {
+            background: #FFD700;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-link.primary:hover {
+            background: #FFC700;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.4);
+        }
+
+        /* Phone Button Styles */
+        .phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            font-size: 1.1rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            min-width: 300px;
+            justify-content: center;
+        }
+
+        .phone-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+
+        .phone-btn .icon {
+            font-size: 1.3rem;
+        }
+
+        .phone-btn .phone-text {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .phone-btn .phone-number {
+            display: none;
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        .phone-btn.revealed .phone-text {
+            display: none;
+        }
+
+        .phone-btn.revealed .phone-number {
+            display: inline-block;
+        }
+
+        .phone-btn.revealed {
+            background: rgba(255,215,0,0.2);
+            border: 1px solid rgba(255,215,0,0.5);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Legal Info */
+        .legal-info {
+            background: rgba(0,0,0,0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 2rem;
+        }
+
+        .legal-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-info a {
+            color: #FFD700;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-content a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        .social-placeholder {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Ukrainian Flag Colors Accent */
+        .flag-accent {
+            height: 4px;
+            background: linear-gradient(to right, #0057B7 50%, #FFD700 50%);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-link,
+            .phone-btn {
+                min-width: auto;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .stats-section {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .coming-soon-badge {
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo">
-                <img src="images/logo.png" alt="Undaunted Spirits Logo" class="logo-icon">
+    <div class="flag-accent"></div>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="75" cy="75" r="70" fill="none" stroke="#0057B7" stroke-width="3"/>
+                    <circle cx="75" cy="75" r="67" fill="none" stroke="#0057B7" stroke-width="1"/>
+                    <defs>
+                        <path id="navTopArc" d="M 23,30 A 70,70 0 0,1 127,30" fill="none"/>
+                        <path id="navBottomArc" d="M 25,123 A 70,70 0 0,0 125,123" fill="none"/>
+                    </defs>
+                    <text font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0057B7" letter-spacing="0.5">
+                        <textPath href="#navTopArc" startOffset="50%" text-anchor="middle">НЕСКОРЕНІ ДУХОМ</textPath>
+                    </text>
+                    <text font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#0057B7" letter-spacing="0.5">
+                        <textPath href="#navBottomArc" startOffset="50%" text-anchor="middle">EST. 2018</textPath>
+                    </text>
+                    <g transform="translate(75, 75)">
+                        <path d="M -35 22 L -18 -8 L -8 3 L 0 -15 L 12 0 L 25 -12 L 38 22 Z" fill="#0057B7" opacity="0.25"/>
+                        <path d="M -40 25 L -22 -3 L -10 8 L 0 -12 L 15 3 L 28 -8 L 42 25 Z" fill="#0057B7" opacity="0.5"/>
+                        <path d="M -32 30 L -15 3 L 0 -20 L 15 3 L 32 30 Z" fill="#0057B7"/>
+                        <g transform="translate(0, -8)">
+                            <circle cx="0" cy="-7" r="4" fill="#FFD700"/>
+                            <path d="M -1 -3 L -6 -11 M 1 -3 L 7 -13" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="0" y1="-3" x2="0" y2="7" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="0" y1="7" x2="-4" y2="14" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="0" y1="7" x2="3" y2="15" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                        </g>
+                        <g transform="translate(0, -20)">
+                            <line x1="0" y1="0" x2="0" y2="10" stroke="#FFD700" stroke-width="2"/>
+                            <path d="M 0 0 L 9 2.5 L 0 5 Z" fill="#FFD700"/>
+                        </g>
+                        <g transform="translate(0, 30)">
+                            <path d="M -32 8 Q -36 0 -30 -3 L -22 4 L -12 14 L 0 20 L 12 14 L 22 4 L 30 -3 Q 36 0 32 8 L 22 15 L 0 26 L -22 15 Z" 
+                                  fill="#FFD700" stroke="#E5C100" stroke-width="1.5" opacity="0.9"/>
+                        </g>
+                    </g>
+                </svg>
                 <div>
-                    <div class="logo-text">Undaunted Spirits</div>
-                    <div class="logo-text-small">Est. 2018, Ternopil</div>
+                    <div class="logo-text en-only">Undaunted Spirits</div>
+                    <div class="logo-text ua-only">Нескорені духом</div>
+                    <div class="logo-text-small en-only">Est. 2018, Ternopil, Ukraine</div>
+                    <div class="logo-text-small ua-only">Заснована 2018, Тернопіль, Україна</div>
                 </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="/ua/" class="lang-switch" title="Переключити на українську">
-                    EN | <span class="inactive-lang">UA</span>
-                </a>
-                <a href="#donate" class="donate-btn-nav">Donate</a>
             </div>
+            <button class="lang-switch" onclick="toggleLanguage()">
+                <span class="en-only"><span class="active-lang">EN</span> | UA</span>
+                <span class="ua-only">EN | <span class="active-lang">UA</span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Undaunted Spirits</h1>
-            
-            <p class="hero-subtitle">Direct help. Real impact. 100% volunteer-run.</p>
-            
-            <p class="hero-description">
-                Local volunteers delivering food, medical supplies, and mobility support directly to Ukrainians in need. No bureaucracy. No salaries. Just help.
+    <main>
+        <div class="content-container">
+            <div class="coming-soon-badge">
+                <span class="en-only">🚧 WEBSITE COMING SOON 🚧</span>
+                <span class="ua-only">🚧 САЙТ НЕЗАБАРОМ 🚧</span>
+            </div>
+
+            <h1 class="en-only">Undaunted Spirits</h1>
+            <h1 class="ua-only">Нескорені духом</h1>
+
+            <p class="tagline en-only">Supporting Our Community Through Every Challenge</p>
+            <p class="tagline ua-only">Підтримуємо нашу спільноту через усі випробування</p>
+
+            <p class="description en-only">
+                Since 2018, we've been empowering persons with disabilities in Ternopil, Ukraine. Since 2022, we've expanded our mission to support all those affected by war—veterans, displaced families, and communities in need. Together, we remain undaunted.
             </p>
-            
-            <div class="hero-cta">
-                <a href="#donate" class="btn-primary">Donate Now</a>
-                <a href="#projects" class="btn-secondary">See Real Impact</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="impact-stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Volunteer-Run</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">$0</div>
-                <div class="stat-label">Admin Costs</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">1,500+</div>
-                <div class="stat-label">People Helped</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Years Strong</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mission" id="about">
-        <div class="mission-content">
-            <h2>Our Story & Mission</h2>
-            
-            <p>
-                Founded in 2018, Undaunted Spirits began with a clear purpose: to create equal opportunities and champion the rights of persons with disabilities across Ternopil and beyond.
+            <p class="description ua-only">
+                З 2018 року ми допомагаємо людям з інвалідністю в Тернополі, Україна. З 2022 року ми розширили нашу місію, щоб підтримати всіх постраждалих від війни — ветеранів, переміщених сімей та громад, які потребують допомоги. Разом ми залишаємося нескореними.
             </p>
-            
-            <div class="mission-highlight">
-                <p><strong>Since 2022</strong>, as war changed everything for our nation, we answered a new call. We expanded our reach to support veterans, displaced families, and all those whose lives have been disrupted by conflict. Our mission grew, but our spirit remained the same—undaunted, caring, and community-driven.</p>
-            </div>
-            
-            <p>
-                Today, we provide essential support ranging from medical supplies and rehabilitation equipment to food, sanitary products, and emotional support. We are a community that refuses to be defeated, no matter the challenge.
-            </p>
-            
-            <div class="mission-values">
-                <div class="value-item">
-                    <div class="value-icon">❤️</div>
-                    <div>
-                        <strong>Compassion:</strong> Caring for every person with dignity and respect
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">🤝</div>
-                    <div>
-                        <strong>Community:</strong> Strength through unity and mutual support
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">💪</div>
-                    <div>
-                        <strong>Resilience:</strong> Rising to meet every challenge with courage
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">✨</div>
-                    <div>
-                        <strong>Hope:</strong> Believing in brighter tomorrows for all
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mission-image">
-            <img src="images/community/babusias2.jpg" alt="Community members gathering together">
-        </div>
-    </section>
 
-    <section class="featured-projects" id="projects">
-        <div class="section-header">
-            <h2>Current Projects Making an Impact</h2>
-            <p>Every donation directly supports these vital programs serving our community</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/community/kids-recieving-help1.jpg" alt="Children receiving mobility aid support">
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label en-only">Active Members</div>
+                    <div class="stat-label ua-only">Активних членів</div>
                 </div>
-                <div class="project-content">
-                    <h3>Medical Equipment & Mobility Support</h3>
-                    <p>Wheelchairs. Walkers. Mobility support. Delivered directly to veterans and persons with disabilities who need them today.</p>
-                    <div class="project-need">
-                        <strong>Current Need:</strong> 15 wheelchairs, 20 walkers, 30 canes
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 45%;"></div>
-                    </div>
-                    <p class="progress-text">$2,250 raised of $5,000 goal</p>
-                    <a href="#donate" class="project-btn">Help Now</a>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label en-only">Years of Service</div>
+                    <div class="stat-label ua-only">Років служіння</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,500+</div>
+                    <div class="stat-label en-only">People Supported</div>
+                    <div class="stat-label ua-only">Людей підтримано</div>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/defenders/589335907_2400354673760405_4285800972977427094_n.jpg" alt="Medical supplies for defenders">
-                </div>
-                <div class="project-content">
-                    <h3>Frontline Medical Supplies</h3>
-                    <p>Medicines. Bandages. First aid kits. Delivered directly to troops and field hospitals. No delays.</p>
-                    <div class="project-need">
-                        <strong>Current Need:</strong> First aid kits, tourniquets, antibiotics
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%;"></div>
-                    </div>
-                    <p class="progress-text">$3,000 raised of $5,000 goal</p>
-                    <a href="#donate" class="project-btn">Help Now</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/community/adults-food1.jpg" alt="Food distribution to community members">
-                </div>
-                <div class="project-content">
-                    <h3>Essential Living Supplies</h3>
-                    <p>Food. Hygiene products. Basic necessities. Delivered to displaced families and vulnerable community members.</p>
-                    <div class="project-need">
-                        <strong>Current Need:</strong> Food, hygiene products, warm clothing
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 35%;"></div>
-                    </div>
-                    <p class="progress-text">$1,750 raised of $5,000 goal</p>
-                    <a href="#donate" class="project-btn">Help Now</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/projects/defenders/589116272_2400351960427343_7052327518185898224_n.jpg" alt="Supporting veterans and their families">
-                </div>
-                <div class="project-content">
-                    <h3>Veteran & Family Rehabilitation</h3>
-                    <p>Rehabilitation services. Counseling. Adaptive equipment. Direct support for injured veterans and their families.</p>
-                    <div class="project-need">
-                        <strong>Current Need:</strong> Rehabilitation equipment, therapy sessions
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%;"></div>
-                    </div>
-                    <p class="progress-text">$2,500 raised of $5,000 goal</p>
-                    <a href="#donate" class="project-btn">Help Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="view-all-projects">
-            <a href="#all-projects">View All Projects & Past Impact →</a>
-        </div>
-    </section>
 
-    <section class="donation-impact" id="donate">
-        <div class="impact-content">
-            <h2>Every Donation Becomes Direct Help</h2>
-            
-            <p style="font-size: 1.15rem; color: #666; margin-bottom: 2rem;">
-                We're 100% volunteer-run. That means every dollar you give goes directly to food, medicine, and support—not to salaries or overhead.
-            </p>
-            
-            <div class="impact-examples">
-                <div class="impact-example">
-                    <div class="impact-amount">$10</div>
-                    <div class="impact-description">Provides a week's worth of essential hygiene products for a family</div>
+            <!-- What We Do Cards -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-card-icon">🏥</div>
+                    <h3 class="en-only">Medical Support</h3>
+                    <h3 class="ua-only">Медична підтримка</h3>
+                    <p class="en-only">Wheelchairs, mobility aids, and medical equipment for those who need them most.</p>
+                    <p class="ua-only">Інвалідні візки, засоби мобільності та медичне обладнання для тих, хто найбільше потребує.</p>
                 </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$25</div>
-                    <div class="impact-description">Supplies critical medical bandages and first aid for frontline troops</div>
+                <div class="info-card">
+                    <div class="info-card-icon">🎖️</div>
+                    <h3 class="en-only">Veteran Support</h3>
+                    <h3 class="ua-only">Підтримка ветеранів</h3>
+                    <p class="en-only">Rehabilitation services and support for injured veterans and their families.</p>
+                    <p class="ua-only">Реабілітаційні послуги та підтримка для поранених ветеранів та їхніх сімей.</p>
                 </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$50</div>
-                    <div class="impact-description">Provides a quality cane or walker for someone regaining mobility</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$100</div>
-                    <div class="impact-description">Delivers a month of essential medicines to those in need</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$500</div>
-                    <div class="impact-description">Provides a wheelchair giving someone independence and dignity</div>
+                <div class="info-card">
+                    <div class="info-card-icon">❤️</div>
+                    <h3 class="en-only">Humanitarian Aid</h3>
+                    <h3 class="ua-only">Гуманітарна допомога</h3>
+                    <p class="en-only">Food, hygiene products, and essential supplies for displaced families.</p>
+                    <p class="ua-only">Їжа, засоби гігієни та основні матеріали для переміщених сімей.</p>
                 </div>
             </div>
-            <a href="#donate" class="btn-primary" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Donate Now</a>
-        </div>
-    </section>
 
-    <section class="community-stories">
-        <div class="section-header">
-            <h2>Voices from Our Community</h2>
-            <p>Real stories from the people making a difference</p>
-        </div>
-        
-        <div class="stories-carousel-container">
-            <div class="carousel-nav carousel-nav-prev" onclick="navigateStories(-1)">‹</div>
-            <div class="carousel-nav carousel-nav-next" onclick="navigateStories(1)">›</div>
-            
-            <div class="stories-carousel" id="storiesCarousel">
-                <div class="story-card active" data-story="0">
-                    <div class="story-header">
-                        <div class="story-author">
-                            <div class="author-initial">S</div>
-                            <div>
-                                <div class="author-name">Svetlana Bychkovska</div>
-                                <div class="author-role">Chairperson, Undaunted Spirits</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="story-image">
-                        <img src="images/community/mariya-handmade-socks.jpg" alt="Mariya Gomzyak with handmade socks for soldiers">
-                    </div>
-                    
-                    <div class="story-content">
-                        <p style="font-style: italic; margin-bottom: 1rem;">
-                            I express my sincere gratitude to our tireless little bee, Mariya Gomzyak.
-                        </p>
-                        
-                        <p>
-                            Mariya is one of us — with steadfast will, unbreakable spirit. No matter how hard it is, overcoming fatigue and phantom pains, she stands strong and helps our boys and girls in the Armed Forces of Ukraine.
-                        </p>
-                        
-                        <p style="margin-top: 1rem;">
-                            I myself have lost count of how many warm little socks have warmed the feet of our defenders.
-                        </p>
-                        
-                        <div style="margin-top: 1.5rem; padding: 1rem; background: #f0f7ff; border-left: 4px solid #FFD700; border-radius: 5px;">
-                            <p style="margin: 0; color: #0057B7; font-weight: 500;">
-                                "Stay strong, Mariya! May God grant you strong health, kindness, and protection for your good mother's heart."
-                            </p>
-                        </div>
-                        
-                        <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
-                            My sincere thanks to your son Vitaliy Gomzyak for taking care of you and always helping to deliver your wonderful handiwork.
-                        </p>
-                    </div>
-                    
-                    <div class="story-footer">
-                        <div class="story-meta">
-                            💙 From our community • March 2025
-                        </div>
-                    </div>
-                </div>
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2 class="en-only">📬 Get In Touch</h2>
+                <h2 class="ua-only">📬 Зв'яжіться з нами</h2>
                 
-                <div class="story-card preview" data-story="1" onclick="goToStory(1)">
-                    <div class="story-header">
-                        <div class="story-author">
-                            <div class="author-initial">V</div>
-                            <div>
-                                <div class="author-name">Volunteer Team</div>
-                                <div class="author-role">Medical Supply Drive</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="story-image">
-                        <img src="images/projects/defenders/589724644_2400352033760669_1445010081249893125_n.jpg" alt="Medical supplies delivered to defenders">
-                    </div>
-                    
-                    <div class="story-content">
-                        <p>
-                            Thanks to your incredible generosity, we delivered over 500 first aid kits to troops on the eastern front. Each kit contains essential medical supplies that can save lives...
-                        </p>
-                    </div>
-                    
-                    <div class="story-footer">
-                        <div class="story-meta">
-                            💙 Community impact • February 2025
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-card preview" data-story="2" onclick="goToStory(2)">
-                    <div class="story-header">
-                        <div class="story-author">
-                            <div class="author-initial">O</div>
-                            <div>
-                                <div class="author-name">Olena P.</div>
-                                <div class="author-role">Member since 2019</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="story-image">
-                        <img src="images/community/babusias3.jpg" alt="Community members gathering and supporting each other">
-                    </div>
-                    
-                    <div class="story-content">
-                        <p>
-                            When I first joined Undaunted Spirits in 2019, I never imagined how much this community would change my life. The support, friendship, and sense of purpose I found here...
-                        </p>
-                    </div>
-                    
-                    <div class="story-footer">
-                        <div class="story-meta">
-                            💙 Member story • January 2025
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="carousel-indicators" id="carouselIndicators"></div>
-        </div>
-    </section>
-
-    <section id="partners" class="partners-section">
-        <div class="section-header">
-            <h2>Our Partners</h2>
-            <p>Undaunted Spirits works closely with local communities and institutions to make sure assistance reaches the people who need it most. Here are some of the partners who help us deliver impact on the ground.</p>
-        </div>
-        
-        <div class="partners-grid">
-            <!-- Partner Card 1 -->
-            <article class="partner-card">
-                <div class="partner-card-header">
-                    <h3>Communal Institution "Center for the Provision of Social Services" of the Tovste Settlement Council</h3>
-                    <div class="partner-meta">
-                        <span><span class="meta-icon">🏛️</span> Municipal Social Services Center</span>
-                        <span><span class="meta-icon">📍</span> Tovste, Ternopil Oblast, Ukraine</span>
-                    </div>
-                </div>
-                
-                <div class="partner-card-body">
-                    <p class="partner-description">
-                        A local government social services center serving the Tovste community. The Center supports elderly residents, people with disabilities, large families, and other socially vulnerable groups through social work, care, and targeted assistance.
-                    </p>
-                    
-                    <div class="partner-collaboration">
-                        <h4>Our Partnership</h4>
-                        <p>Undaunted Spirits collaborates with this Center to identify and support the most vulnerable residents of the Tovste community. The Center publicly thanked Undaunted Spirits / NGO "Unconquered in Spirit" for humanitarian aid including clothing, footwear, and hygiene products delivered to pensioners, large families, people with disabilities, and other socially disadvantaged residents.</p>
-                    </div>
-                    
-                    <blockquote class="partner-quote">
-                        <p>"We deeply value our partnership with the Tovste social services team, whose daily work directly improves the lives of people in their community."</p>
-                    </blockquote>
-                </div>
-                
-                <div class="partner-card-footer">
-                    <a href="https://cns.tovstenska-gromada.gov.ua" target="_blank" rel="noopener noreferrer" class="partner-link">
-                        Learn more <span class="link-icon">→</span>
+                <div class="contact-links">
+                    <a href="mailto:info@undauntedspirits.org" class="contact-link primary">
+                        <span class="icon">✉️</span>
+                        <span>info@undauntedspirits.org</span>
                     </a>
+                    
+                    <a href="mailto:svitlana@undauntedspirits.org" class="contact-link">
+                        <span class="icon">👤</span>
+                        <span class="en-only">Svitlana Bychkovska (Chairperson)</span>
+                        <span class="ua-only">Світлана Бічковська (Голова)</span>
+                    </a>
+                    
+                    <button class="phone-btn" id="phoneBtn" onclick="revealPhone()">
+                        <span class="icon">📞</span>
+                        <span class="phone-text en-only">Click to call</span>
+                        <span class="phone-text ua-only">Натисніть, щоб зателефонувати</span>
+                        <span class="phone-number">+380 98 707 0628</span>
+                    </button>
                 </div>
-            </article>
-            
-            <!-- To add more partners, duplicate the <article class="partner-card">...</article> block above -->
-            
-        </div>
-    </section>
+            </div>
 
-    <section class="how-to-help">
-        <div class="section-header">
-            <h2>How You Can Support Our Community</h2>
-            <p>There are many ways to stand with us and make a difference</p>
-        </div>
-        <div class="help-grid">
-            <div class="help-card">
-                <div class="help-icon">💝</div>
-                <h3>Make a Donation</h3>
-                <p>Your financial support directly provides supplies, equipment, and services to those who need them most. Choose which project to support or let us direct funds where they're needed urgently.</p>
-                <a href="#donate" class="btn-primary">Donate Now</a>
-            </div>
-            
-            <div class="help-card">
-                <div class="help-icon">🤝</div>
-                <h3>Volunteer Your Time</h3>
-                <p>Join our community of volunteers helping with events, deliveries, fundraising, and direct support. Your time and compassion create powerful change.</p>
-                <a href="#volunteer" class="btn-primary">Get Involved</a>
-            </div>
-            
-            <div class="help-card">
-                <div class="help-icon">👥</div>
-                <h3>Become a Member</h3>
-                <p>Join our 200+ active members working together to support our community. Membership means being part of something larger than ourselves.</p>
-                <a href="#membership" class="btn-primary">Join Us</a>
-            </div>
-            
-            <div class="help-card">
-                <div class="help-icon">📢</div>
-                <h3>Share Our Mission</h3>
-                <p>Help us reach more people who can support or benefit from our work. Every share extends our reach and multiplies our impact.</p>
-                <a href="#share" class="btn-primary">Spread the Word</a>
+            <!-- Legal Information -->
+            <div class="legal-info">
+                <p class="en-only"><strong>Public Organization "Unconquered Spirits – Persons with Disabilities"</strong></p>
+                <p class="ua-only"><strong>Громадська організація "Нескорені духом – особи з інвалідністю"</strong></p>
+                
+                <p class="en-only">
+                    Registered in Ukraine under EDRPOU 42717428 | Nonprofit status code 0032<br>
+                    Headquarters: Ternopil, Ukraine | Established: December 22, 2018<br>
+                    Controlled by: Main Department of the State Tax Service in Ternopil Region
+                </p>
+                <p class="ua-only">
+                    Зареєстровано в Україні під ЄДРПОУ 42717428 | Код неприбутковості 0032<br>
+                    Головний офіс: Тернопіль, Україна | Заснована: 22 грудня 2018<br>
+                    Контролюючий орган: Головне управління ДПС у Тернопільській області
+                </p>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer id="contact">
+    <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>Undaunted Spirits</h3>
-                <p>A community organization supporting persons with disabilities and all those affected by hardship since 2018.</p>
-                <div class="social-links">
-                    <a href="#facebook" title="Facebook">f</a>
-                    <a href="#instagram" title="Instagram">i</a>
-                    <a href="#youtube" title="YouTube">▶</a>
-                </div>
-            </div>
+            <p class="en-only">&copy; 2025 Undaunted Spirits (Нескорені духом) - Public Organization</p>
+            <p class="ua-only">&copy; 2025 Нескорені духом (Undaunted Spirits) - Громадська організація</p>
             
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#projects">Current Projects</a></li>
-                    <li><a href="#past-projects">Past Projects</a></li>
-                    <li><a href="#news">News & Updates</a></li>
-                    <li><a href="#resources">Member Resources</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Get Involved</h3>
-                <ul>
-                    <li><a href="#donate">Make a Donation</a></li>
-                    <li><a href="#volunteer">Volunteer</a></li>
-                    <li><a href="#membership">Membership</a></li>
-                    <li><a href="#partner">Partner With Us</a></li>
-                    <li><a href="#corporate">Corporate Support</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p><strong>Location:</strong><br>Ternopil, Ukraine</p>
-                <p><strong>Email:</strong><br><a href="mailto:neskorenidukhom@ukr.net">neskorenidukhom@ukr.net</a></p>
-                <p><strong>Phone:</strong><br><a href="tel:+380987070628">+380 98 707 0628</a></p>
-            </div>
-        </div>
-        <div class="footer-bottom">
             <p>
-                &copy; 2025 Undaunted Spirits (Нескорені духом) - Public Organization<br>
-                Public Organization "The Undefeated in Spirit – Persons with Disabilities"<br>
-                Registered in Ukraine under EDRPOU 42717428 | Nonprofit status code 0032 (Public Association)<br>
-                Headquarters: Ternopil, Ukraine<br>
-                Email: <a href="mailto:neskorenidukhom@ukr.net" style="color: #FFD700;">neskorenidukhom@ukr.net</a> | 
-                Phone: <a href="tel:+380987070628" style="color: #FFD700;">+380 98 707 0628</a><br>
-                Controlled by: Main Department of the State Tax Service in Ternopil Region
+                <a href="mailto:info@undauntedspirits.org">info@undauntedspirits.org</a>
+            </p>
+            
+            <p class="social-placeholder en-only">
+                Full website launching soon • Follow us on Facebook for updates
+            </p>
+            <p class="social-placeholder ua-only">
+                Повний сайт незабаром • Слідкуйте за нами на Facebook
             </p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <div class="flag-accent"></div>
+
+    <script>
+        // Language Toggle Functionality
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'en') {
+                html.setAttribute('lang', 'uk');
+                localStorage.setItem('language', 'uk');
+            } else {
+                html.setAttribute('lang', 'en');
+                localStorage.setItem('language', 'en');
+            }
+        }
+
+        // Phone Reveal and Dial Functionality
+        function revealPhone() {
+            const btn = document.getElementById('phoneBtn');
+            
+            if (btn.classList.contains('revealed')) {
+                // Second click - initiate call
+                window.location.href = 'tel:+380987070628';
+            } else {
+                // First click - reveal number
+                btn.classList.add('revealed');
+            }
+        }
+
+        // Initialize on Page Load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang) {
+                document.documentElement.setAttribute('lang', savedLang);
+            }
+        });
+    </script>
 </body>
 </html>
