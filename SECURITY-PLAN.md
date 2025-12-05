@@ -27,40 +27,33 @@ Static sites have a smaller attack surface than dynamic sites, but there are sti
 **Risk:** Low
 **Action:** None needed - already secured
 
-### 2. DNS Security ⚠️ NEEDS REVIEW
-**Current Status:** Unknown
-**Risks:**
-- DNS hijacking
-- Domain spoofing
-- Email spoofing
+### 2. DNS Security ✅ MOSTLY SECURE
+**Current Status:** Configured December 5, 2025
+**Completed:**
+- [x] WWW CNAME record added
+- [x] CAA records added (digicert.com, letsencrypt.org)
 
-**Recommendations:**
-- [ ] Enable DNSSEC on domain
-- [ ] Verify CAA records (Certificate Authority Authorization)
+**Still Needed:**
+- [ ] Enable DNSSEC on domain (requires registrar action)
 - [ ] Lock domain at registrar level
 
-### 3. Email Security ⚠️ CRITICAL
-**Current Status:** Google Workspace configured
-**Risks:**
-- Email spoofing (someone pretending to be you)
-- Phishing attacks using your domain
-- Reputation damage
+### 3. Email Security ✅ CONFIGURED
+**Current Status:** Fully configured December 5, 2025
+**Completed:**
+- [x] SPF record (was already present)
+- [x] DKIM record added (pending Google Workspace verification)
+- [x] DMARC record added (p=quarantine)
 
-**Required DNS Records:**
+**DNS Records Now In Place:**
 ```
-SPF Record:
-Type: TXT
-Name: @
-Value: "v=spf1 include:_spf.google.com ~all"
-
-DKIM Record:
-(Get from Google Workspace Admin → Apps → Google Workspace → Gmail → Authenticate email)
-
-DMARC Record:
-Type: TXT
-Name: _dmarc
-Value: "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@undauntedspirits.org"
+SPF:   v=spf1 include:_spf.google.com ~all
+DKIM:  google._domainkey → v=DKIM1; k=rsa; p=...
+DMARC: _dmarc → v=DMARC1; p=quarantine; rua=mailto:admin@undauntedspirits.org
 ```
+
+**Action Required:**
+- [ ] Verify DKIM is active in Google Workspace Admin (check status)
+- [ ] Test email security at https://mxtoolbox.com/emailhealth/undauntedspirits.org
 
 ### 4. Content Security ⚠️ NEEDS IMPLEMENTATION
 **Current Status:** No Content Security Policy
@@ -195,20 +188,19 @@ Bot Fight Mode: ON (free tier)
 
 #### Domain & DNS Security
 - [ ] **Enable DNSSEC** on your domain registrar
-- [ ] **Add CAA record** to limit certificate issuance:
+- [x] **Add CAA records** to limit certificate issuance ✅ Done Dec 5, 2025
   ```
-  Type: CAA
-  Name: @
-  Value: 0 issue "digicert.com"
-  Value: 0 issue "letsencrypt.org"
+  CAA: 0 issue "digicert.com"
+  CAA: 0 issue "letsencrypt.org"
   ```
+- [x] **Add WWW record** ✅ Done Dec 5, 2025
 - [ ] **Lock domain** at registrar (prevent unauthorized transfers)
 
 #### Email Security
-- [ ] **Verify SPF record** exists and is correct
-- [ ] **Set up DKIM** in Google Workspace
-- [ ] **Add DMARC record** (start with p=none, then p=quarantine)
-- [ ] **Test email security:** https://mxtoolbox.com/
+- [x] **Verify SPF record** exists and is correct ✅ Confirmed Dec 5, 2025
+- [x] **Set up DKIM** in Google Workspace ✅ Done Dec 5, 2025 (pending verification)
+- [x] **Add DMARC record** (p=quarantine) ✅ Done Dec 5, 2025
+- [ ] **Test email security:** https://mxtoolbox.com/ (do after DKIM activates)
 
 #### Repository Security
 - [ ] **Enable 2FA** on all GitHub accounts with access
@@ -415,10 +407,13 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; 
 
 ### Level 1: Basic (Current Target)
 - [x] HTTPS enabled
-- [ ] Email security (SPF, DKIM, DMARC)
+- [x] Email security (SPF, DKIM, DMARC) ✅ Done Dec 5, 2025
+- [x] CAA records configured ✅ Done Dec 5, 2025
+- [x] WWW record configured ✅ Done Dec 5, 2025
 - [ ] 2FA on all accounts
 - [ ] Branch protection on GitHub
 - [ ] Basic Cloudflare security settings
+- [ ] DNSSEC enabled
 
 ### Level 2: Standard (Before Donations)
 - [ ] Security headers implemented
@@ -440,10 +435,12 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; 
 
 ### This Week (Critical)
 1. Enable 2FA on GitHub, Cloudflare, Google Workspace
-2. Verify/add email security records (SPF, DKIM, DMARC)
-3. Enable DNSSEC on domain
+2. ~~Verify/add email security records (SPF, DKIM, DMARC)~~ ✅ Done Dec 5, 2025
+3. Enable DNSSEC on domain (requires registrar action)
 4. Set Cloudflare SSL to Full (Strict)
 5. Add branch protection on `production`
+6. ~~Add CAA records~~ ✅ Done Dec 5, 2025
+7. Verify DKIM is active in Google Workspace
 
 ### This Month (Important)
 1. Add security headers via Cloudflare
@@ -474,8 +471,24 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; 
 
 ---
 
-**Document Version:** 1.0
+**Document Version:** 1.1
 **Created:** December 5, 2025
+**Last Updated:** December 5, 2025
 **Next Review:** January 5, 2026
 **Owner:** Undaunted Spirits Technical Team
+
+---
+
+## 📝 Change Log
+
+### v1.1 - December 5, 2025
+- ✅ Added WWW CNAME record
+- ✅ Added CAA records (digicert.com, letsencrypt.org)
+- ✅ Verified SPF record present
+- ✅ Added DKIM record (pending Google verification)
+- ✅ Added DMARC record (p=quarantine)
+- Updated checklists to reflect completed items
+
+### v1.0 - December 5, 2025
+- Initial security analysis and plan created
 
