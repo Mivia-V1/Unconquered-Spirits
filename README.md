@@ -257,7 +257,11 @@ Footer Dark:     #1a1a1a
 - [x] SEO meta tags added
 - [x] hreflang tags configured
 - [x] Community photo added (Mariya Gomzyak)
-- [ ] Replace remaining placeholder images
+- [x] Replace remaining placeholder images (all photos added with portrait focus)
+- [x] Logo image added to navigation
+- [x] Project card images (4 projects with real photos)
+- [x] Mission section image (community gathering)
+- [x] Community stories carousel images (all 3 stories)
 - [ ] Add real social media links
 - [ ] Set up donation integration
 - [ ] Configure neskoreni.org redirect
@@ -293,5 +297,5 @@ This website is created for Undaunted Spirits public organization. Content and b
 
 ---
 
-**Last Updated:** December 3, 2025  
-**Version:** 2.0.0
+**Last Updated:** December 5, 2025  
+**Version:** 2.1.0
