@@ -581,6 +581,9 @@
 - Strong emotional storytelling
 - Clear calls-to-action
 - Mobile responsive
+- Messaging aligned with Brand TOV (direct help, 100% volunteer-run, $0 admin costs)
+- Stats and donation copy emphasize zero overhead and volunteer-driven impact
+- Mobile alignment tuned (carousel stacks on mobile, images use aspect-ratio)
 - Custom logo and branding
 - Engaging carousel for stories
 - ✅ All real photos added (mission, projects, community stories)
@@ -593,10 +596,11 @@
 - Analytics integration
 - Form functionality
 - Real project data and progress updates
+- Add regular story rotation (per Facebook content plan) and social proof updates
 
 ---
 
-**Document Version:** 1.1  
+**Document Version:** 1.2  
 **Last Updated:** December 5, 2025  
 **Created By:** Development Team  
 **Next Review:** After Phase 1 completion
