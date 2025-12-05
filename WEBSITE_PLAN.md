@@ -8,14 +8,14 @@
 **Organization:** Undaunted Spirits (Нескорені духом)  
 **Type:** Public Organization supporting persons with disabilities and war-affected communities  
 **Founded:** 2018, Ternopil, Ukraine  
-**Current Status:** Homepage Draft Complete  
+**Current Status:** Homepages (EN/UA) live with TOV-aligned messaging and imagery  
 
 ---
 
 ## 📋 Website Structure & Pages
 
 ### Phase 1: Core Pages (Priority 1)
-- [x] **Home Page** - Complete draft with bilingual support (EN/UA)
+- [x] **Home Page** - Live, bilingual (EN/UA), real photos, TOV-aligned hero/stats/donation messaging
 - [ ] **About Us Page**
   - Full organization history
   - Mission, vision, and values
