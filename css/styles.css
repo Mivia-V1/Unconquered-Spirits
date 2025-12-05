@@ -310,9 +310,9 @@ nav {
     color: white;
     font-size: 1.2rem;
     text-align: center;
-    padding: 2rem;
     line-height: 1.6;
     overflow: hidden;
+    padding: 0;
 }
 
 .mission-image img {
@@ -321,7 +321,6 @@ nav {
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
-    padding: 0;
 }
 
 /* Featured Projects */
@@ -378,10 +377,10 @@ nav {
     justify-content: center;
     color: white;
     font-size: 1.1rem;
-    padding: 2rem;
     text-align: center;
     font-weight: 500;
     overflow: hidden;
+    padding: 0;
 }
 
 .project-image img {
@@ -389,7 +388,6 @@ nav {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    padding: 0;
 }
 
 .project-content {
