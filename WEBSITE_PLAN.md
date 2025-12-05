@@ -248,13 +248,12 @@
 ## 🌍 Bilingual Implementation
 
 ### Current Implementation
-- CSS-based language switching (excellent!)
-- LocalStorage for language preference
-- Duplicate content in both languages
+- Separate pages per language for SEO (`/` English, `/ua/` Ukrainian)
+- hreflang tags present
+- Shared CSS/JS assets, duplicate content maintained in both files
 
 ### Enhancements
-- Add `lang` attributes to all text elements for SEO
-- Consider `hreflang` tags for search engines
+- Add `lang` attributes to key text containers for SEO
 - Implement proper RTL support if needed
 - Add automatic language detection based on browser
 - Add language selector in footer for redundancy
