@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages for the Undaunted | Undaunted Spirits</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    :root {
+      --brand-blue: #1e73be;
+      --brand-yellow: #f7c843;
+      --page-max-width: 680px;
+    }
+    body {
+      margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      background: #f7f9fc;
+      color: #0f172a;
+    }
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 48px;
+    }
+    .card {
+      width: 100%;
+      max-width: var(--page-max-width);
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      padding: 24px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    .subtitle {
+      margin: 0 0 16px;
+      font-size: 16px;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+    .context {
+      margin: 0 0 20px;
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.6;
+    }
+    .form-embed {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      min-height: 520px;
+      background: transparent;
+    }
+    .fallback-link {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #1e3a8a;
+    }
+    .fallback-link a {
+      color: #1e3a8a;
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .card {
+        padding: 20px 16px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .subtitle {
+        font-size: 15px;
+      }
+      .context {
+        font-size: 14px;
+      }
+      .form-embed {
+        min-height: 560px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card" aria-labelledby="messages-title">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Undaunted Spirits logo">
+      </div>
+      <h1 id="messages-title">Messages for the Undaunted</h1>
+      <p class="subtitle">A message of hope from you can lift a heart today.</p>
+      <p class="context">
+        People across Ukraine are deeply touched to know the world is thinking of them.
+        Leave a message — or upload a short video — and we will share it with volunteers,
+        families, and frontline communities.
+      </p>
+
+      <!-- Tally embed: replace data-tally-src with your live form URL -->
+      <iframe
+        title="Send a message to Undaunted Spirits"
+        src=""
+        data-tally-src="https://tally.so/r/PLACEHOLDER-FORM-ID"
+        class="form-embed"
+        allow="camera; microphone; display-capture; geolocation"
+      ></iframe>
+
+      <p class="fallback-link">
+        Trouble with the embed?
+        <a href="https://tally.so/r/PLACEHOLDER-FORM-ID" rel="noopener" target="_blank">
+          Open the form in a new tab
+        </a>.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Defer loading the Tally form for faster first paint.
+    document.addEventListener("DOMContentLoaded", function () {
+      const iframe = document.querySelector("[data-tally-src]");
+      if (iframe && !iframe.src) {
+        iframe.src = iframe.dataset.tallySrc;
+      }
+    });
+  </script>
+</body>
+</html>
+
