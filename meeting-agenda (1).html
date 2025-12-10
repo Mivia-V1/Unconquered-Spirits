@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Agenda - Undaunted Spirits</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .header-text h1 {
+            font-size: 28px;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .header-text p {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .bilingual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            align-items: start;
+        }
+        
+        .lang-section h4 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.7;
+            font-weight: 600;
+        }
+        
+        .lang-section p {
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .date-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .column {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px dashed #e2e8f0;
+        }
+        
+        .column-header {
+            margin-bottom: 20px;
+        }
+        
+        .column-header h2 {
+            font-size: 22px;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .column-header p {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .sticky-note {
+            background: linear-gradient(135deg, #e9d5ff 0%, #ddd6fe 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .sticky-note:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+        }
+        
+        .sticky-note h3 {
+            color: #5b21b6;
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .sticky-note ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .sticky-note li {
+            color: #4c1d95;
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .sticky-note li:before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: #7c3aed;
+            font-weight: bold;
+        }
+        
+        .sticky-note.highlight {
+            background: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
+        }
+        
+        .sticky-note.highlight h3 {
+            color: #92400e;
+        }
+        
+        .sticky-note.highlight li {
+            color: #78350f;
+        }
+        
+        .sticky-note.highlight li:before {
+            color: #f59e0b;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 20px;
+            }
+            
+            .column {
+                box-shadow: none;
+                border: 1px solid #e2e8f0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">НД</div>
+            <div class="header-text">
+                <h1>Meeting Agenda / Порядок денний зустрічі</h1>
+                <p>Undaunted Spirits - Нескорені духом</p>
+            </div>
+            <span class="date-badge">Today / Сьогодні</span>
+        </div>
+        
+        <div class="columns">
+            <!-- Column 1: Website Updates -->
+            <div class="column">
+                <div class="column-header">
+                    <h2>🌐 Website Updates / Оновлення веб-сайту</h2>
+                    <p>Current development progress / Поточний прогрес розробки</p>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Development Progress / Прогрес розробки</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Under construction page live</li>
+                                <li>Coming soon section in development</li>
+                                <li>Demo of current work</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Сторінка "в розробці" вже онлайн</li>
+                                <li>Розділ "скоро" у розробці</li>
+                                <li>Демонстрація поточної роботи</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note highlight">
+                    <h3>Payment Integration / Інтеграція платежів</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Fondly platform review</li>
+                                <li>Liqpay application option</li>
+                                <li>Comparison and recommendation</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Огляд платформи Fondly</li>
+                                <li>Варіант застосунку Liqpay</li>
+                                <li>Порівняння та рекомендація</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Next Steps / Наступні кроки</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Content needed from team</li>
+                                <li>Launch target date</li>
+                                <li>Testing phase plan</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Потрібен контент від команди</li>
+                                <li>Планова дата запуску</li>
+                                <li>План етапу тестування</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 2: Marketing & Outreach -->
+            <div class="column">
+                <div class="column-header">
+                    <h2>📢 Marketing & Outreach / Маркетинг та комунікації</h2>
+                    <p>Building our digital presence / Створення нашої цифрової присутності</p>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Content Resources / Контентні ресурси</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Image and video access setup</li>
+                                <li>Photo library organization</li>
+                                <li>Video content strategy</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Налаштування доступу до зображень та відео</li>
+                                <li>Організація фотобібліотеки</li>
+                                <li>Стратегія відеоконтенту</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note highlight">
+                    <h3>Google Grant / Грант Google</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Eligibility review</li>
+                                <li>Application process</li>
+                                <li>Free advertising opportunity</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Перевірка відповідності</li>
+                                <li>Процес подання заявки</li>
+                                <li>Можливість безкоштовної реклами</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Campaign Planning / Планування кампаній</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Messages of Support campaign</li>
+                                <li>Community engagement strategy</li>
+                                <li>Launch coordination</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Кампанія "Послання підтримки"</li>
+                                <li>Стратегія залучення спільноти</li>
+                                <li>Координація запуску</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Social Media / Соціальні мережі</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>YouTube channel setup</li>
+                                <li>Facebook Business Manager</li>
+                                <li>Content calendar planning</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Налаштування каналу YouTube</li>
+                                <li>Facebook Business Manager</li>
+                                <li>Планування контент-календаря</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 3: Team Infrastructure -->
+            <div class="column">
+                <div class="column-header">
+                    <h2>⚙️ Team Infrastructure / Командна інфраструктура</h2>
+                    <p>Setting up collaboration tools / Налаштування інструментів співпраці</p>
+                </div>
+                
+                <div class="sticky-note highlight">
+                    <h3>Email System / Система електронної пошти</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>New email addresses</li>
+                                <li>Group email configuration</li>
+                                <li>Professional communication</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Нові адреси електронної пошти</li>
+                                <li>Налаштування групової пошти</li>
+                                <li>Професійна комунікація</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Notion Team Space / Робочий простір Notion</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Access for Svetlana</li>
+                                <li>Team member permissions</li>
+                                <li>Workspace organization</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Доступ для Світлани</li>
+                                <li>Дозволи для членів команди</li>
+                                <li>Організація робочого простору</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sticky-note">
+                    <h3>Collaboration Workflow / Робочий процес</h3>
+                    <div class="bilingual">
+                        <div class="lang-section">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Document sharing process</li>
+                                <li>Content approval system</li>
+                                <li>Task management setup</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section">
+                            <h4>Українська</h4>
+                            <ul>
+                                <li>Процес обміну документами</li>
+                                <li>Система затвердження контенту</li>
+                                <li>Налаштування управління завданнями</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
