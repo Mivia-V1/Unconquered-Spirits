@@ -1156,3 +1156,856 @@ footer {
         padding: 0 1.5rem 1.5rem;
     }
 }
+
+/* ===========================================
+   About Us Page Styles
+   =========================================== */
+
+/* About Container */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* About Hero */
+.about-hero {
+    background: linear-gradient(135deg, rgba(0,87,183,0.95), rgba(0,87,183,0.85));
+    color: white;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+}
+
+.about-hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.about-hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.about-hero-tagline {
+    font-size: 1.5rem;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+}
+
+.about-quick-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.quick-stat {
+    background: rgba(255,255,255,0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 140px;
+    backdrop-filter: blur(5px);
+}
+
+.quick-stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.quick-stat-label {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+}
+
+/* About Story / Timeline Section */
+.about-story {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-story h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0057B7, #FFD700);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    flex: 0 0 120px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0057B7;
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 0 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.timeline-detail {
+    font-size: 0.95rem;
+    color: #666;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Mission & Values Section */
+.about-mission-values {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mission-box, .vision-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.mission-box {
+    border-left: 5px solid #0057B7;
+}
+
+.vision-box {
+    border-left: 5px solid #FFD700;
+}
+
+.mission-box h2, .vision-box h2 {
+    font-size: 2rem;
+    color: #0057B7;
+    margin-bottom: 1.5rem;
+}
+
+.mission-statement, .vision-statement {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.values-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.value-icon-large {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.value-ukr {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #666;
+}
+
+.value-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* About Programs Section */
+.about-programs {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-programs h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 15px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.program-card:hover {
+    border-color: #0057B7;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.program-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.program-card h3 {
+    font-size: 1.3rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.program-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.program-target {
+    font-size: 0.9rem;
+    color: #666;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Leadership Section */
+.leadership {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+}
+
+.leadership h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+}
+
+.chairperson-video {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+.chairperson-info {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.chairperson-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 5px solid #0057B7;
+    box-shadow: 0 4px 15px rgba(0,87,183,0.2);
+}
+
+.chairperson-photo-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 5px solid #0057B7;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.chairperson-info h3 {
+    font-size: 1.5rem;
+    color: #0057B7;
+    margin-bottom: 0.5rem;
+}
+
+.chairperson-info .role {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.chairperson-info .tenure {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.video-wrapper {
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-bottom: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.video-caption {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.governance-structure {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    border-left: 5px solid #0057B7;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.governance-structure h3 {
+    font-size: 1.8rem;
+    color: #0057B7;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.governance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.governance-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.governance-item strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #0057B7;
+    margin-bottom: 0.5rem;
+}
+
+.governance-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.founding-note {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Legal Section */
+.about-legal {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-legal h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.legal-card {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 15px;
+}
+
+.legal-card h3 {
+    font-size: 1.5rem;
+    color: #0057B7;
+    margin-bottom: 1.5rem;
+}
+
+.legal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.legal-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.legal-table th,
+.legal-table td {
+    padding: 1rem 0.5rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.legal-table th {
+    font-weight: 600;
+    color: #333;
+    width: 40%;
+}
+
+.legal-table td {
+    color: #555;
+}
+
+.copy-value {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #0057B7;
+    font-weight: 600;
+}
+
+.copy-btn-small {
+    background: #0057B7;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s;
+}
+
+.copy-btn-small:hover {
+    background: #004494;
+}
+
+.legal-list {
+    list-style: none;
+}
+
+.legal-list li {
+    padding: 0.75rem 0;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.legal-list li:last-child {
+    border-bottom: none;
+}
+
+/* About Impact Section */
+.about-impact {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #0057B7 0%, #4A90E2 100%);
+    color: white;
+}
+
+.about-impact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-impact .section-intro {
+    color: rgba(255,255,255,0.9);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.impact-stat {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+}
+
+.impact-stat:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.impact-stat.highlight {
+    background: #FFD700;
+    color: #333;
+}
+
+.impact-stat.highlight .impact-number {
+    color: #0057B7;
+}
+
+.impact-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.impact-stat:not(.highlight) .impact-number {
+    color: #FFD700;
+}
+
+.impact-label {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* About CTA Section */
+.about-cta {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+}
+
+.about-cta h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cta-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    display: block;
+}
+
+.cta-card:hover {
+    background: #0057B7;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.cta-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.cta-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* About Contact Section */
+.about-contact {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 15px;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    color: #0057B7;
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-card p {
+    color: #555;
+}
+
+/* Active Nav Link */
+.nav-links a.active {
+    color: #0057B7;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #FFD700;
+    border-radius: 2px;
+}
+
+/* About Page Responsive */
+@media (max-width: 1024px) {
+    .chairperson-video {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .chairperson-info {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-hero-tagline {
+        font-size: 1.2rem;
+    }
+    
+    .about-quick-stats {
+        gap: 1rem;
+    }
+    
+    .quick-stat {
+        min-width: 120px;
+        padding: 0.75rem 1rem;
+    }
+    
+    .quick-stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .timeline-year {
+        text-align: left;
+        padding-left: 50px;
+    }
+    
+    .timeline-content {
+        margin: 1rem 0 1rem 50px;
+    }
+    
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-box, .vision-box {
+        padding: 2rem;
+    }
+    
+    .values-grid,
+    .programs-grid,
+    .governance-grid,
+    .impact-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .legal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .legal-table th,
+    .legal-table td {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    
+    .legal-table th {
+        padding-top: 1rem;
+        border-bottom: none;
+    }
+    
+    .governance-structure {
+        padding: 2rem 1.5rem;
+    }
+    
+    .about-story h2,
+    .values-heading,
+    .about-programs h2,
+    .leadership h2,
+    .about-legal h2,
+    .about-impact h2,
+    .about-cta h2,
+    .about-contact h2 {
+        font-size: 2rem;
+    }
+    
+    .chairperson-photo-placeholder,
+    .chairperson-info img {
+        width: 150px;
+        height: 150px;
+    }
+}
