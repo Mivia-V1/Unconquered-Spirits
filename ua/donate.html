@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    
+    <!-- SEO Meta Tags -->
+    <title>Допомогти - Нескорені духом | Пряма допомога Україні</title>
+    <meta name="description" content="Пожертвуйте на Нескорені духом. 100% волонтерська організація. Кожна гривня йде безпосередньо на їжу, ліки та підтримку мобільності для українців, які потребують допомоги.">
+    
+    <!-- Canonical & Language Alternates -->
+    <link rel="canonical" href="https://undauntedspirits.org/ua/donate.html">
+    <link rel="alternate" hreflang="en" href="https://undauntedspirits.org/donate.html">
+    <link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/donate.html">
+    <link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/donate.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Допомогти - Нескорені духом">
+    <meta property="og:description" content="100% волонтерська. Кожна пожертва йде безпосередньо на допомогу.">
+    <meta property="og:url" content="https://undauntedspirits.org/ua/donate.html">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .donate-hero {
+            background: linear-gradient(135deg, #0057B7 0%, #003d82 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .donate-hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .donate-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .donate-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .trust-banner {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+        
+        .trust-item {
+            text-align: center;
+        }
+        
+        .trust-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0057B7;
+        }
+        
+        .trust-item .label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .payment-section {
+            margin-bottom: 3rem;
+        }
+        
+        .payment-section h2 {
+            color: #0057B7;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #FFD700;
+        }
+        
+        .bank-details {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .bank-header {
+            background: #0057B7;
+            color: white;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .bank-header .currency {
+            background: #FFD700;
+            color: #0057B7;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        
+        .bank-body {
+            padding: 1.5rem;
+        }
+        
+        .detail-row {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .detail-value {
+            font-size: 1rem;
+            color: #333;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            background: #f8f9fa;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .detail-value.highlight {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0057B7;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: background 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #003d82;
+        }
+        
+        .copy-btn.copied {
+            background: #28a745;
+        }
+        
+        .bank-section-title {
+            font-weight: 600;
+            color: #0057B7;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .bank-section-title:first-of-type {
+            margin-top: 0;
+        }
+        
+        .important-note {
+            background: #e8f4fd;
+            border-left: 4px solid #0057B7;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .important-note h4 {
+            color: #0057B7;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .important-note p {
+            margin: 0;
+            color: #333;
+        }
+        
+        .impact-reminder {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+        
+        .impact-reminder h3 {
+            color: #0057B7;
+            margin-bottom: 1rem;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .impact-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .impact-item .amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0057B7;
+        }
+        
+        .impact-item .desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .other-ways {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+        }
+        
+        .other-ways h3 {
+            color: #0057B7;
+            margin-bottom: 1rem;
+        }
+        
+        .other-ways p {
+            color: #666;
+        }
+        
+        .contact-link {
+            color: #0057B7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .donate-hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .donate-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .donate-content {
+                padding: 2rem 1rem;
+            }
+            
+            .trust-banner {
+                gap: 1.5rem;
+            }
+            
+            .trust-item .number {
+                font-size: 1.5rem;
+            }
+            
+            .detail-value {
+                font-size: 0.85rem;
+                padding-right: 4rem;
+            }
+            
+            .copy-btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/ua/" class="logo">
+                <img src="../images/logo.png" alt="Логотип Нескорені Духом" class="logo-icon">
+                <div>
+                    <div class="logo-text">Нескорені духом</div>
+                    <div class="logo-text-small">Заснована 2018, Тернопіль</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/ua/">Головна</a></li>
+                <li><a href="/ua/#about">Про нас</a></li>
+                <li><a href="/ua/#projects">Проєкти</a></li>
+                <li><a href="/ua/#contact">Контакти</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/donate.html" class="lang-switch" title="Switch to English">
+                    <span class="inactive-lang">EN</span> | UA
+                </a>
+                <a href="#bank-transfer" class="donate-btn-nav">Допомогти</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="donate-hero">
+        <h1>Кожна пожертва стає прямою допомогою</h1>
+        <p>Ми 100% волонтерська організація. Це означає, що кожна гривня, яку ви даєте, йде безпосередньо на їжу, ліки та підтримку — не на зарплати чи накладні витрати.</p>
+    </section>
+
+    <div class="donate-content">
+        <div class="trust-banner">
+            <div class="trust-item">
+                <div class="number">100%</div>
+                <div class="label">Волонтерська</div>
+            </div>
+            <div class="trust-item">
+                <div class="number">₴0</div>
+                <div class="label">Адмін витрат</div>
+            </div>
+            <div class="trust-item">
+                <div class="number">1,500+</div>
+                <div class="label">Людей допомогли</div>
+            </div>
+            <div class="trust-item">
+                <div class="number">7</div>
+                <div class="label">Років роботи</div>
+            </div>
+        </div>
+
+        <section class="payment-section" id="bank-transfer">
+            <h2>💳 Банківський переказ (USD)</h2>
+            
+            <div class="bank-details">
+                <div class="bank-header">
+                    <span>Міжнародний банківський переказ</span>
+                    <span class="currency">USD $</span>
+                </div>
+                
+                <div class="bank-body">
+                    <p class="bank-section-title">Бенефіціар (Одержувач)</p>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Назва організації</span>
+                        <div class="detail-value highlight">
+                            ГРОМАДСЬКА ОРГАНІЗАЦІЯ "НЕСКОРЕНІ ДУХОМ - ОСОБИ З ІНВАЛІДНІСТЮ"
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'ГРОМАДСЬКА ОРГАНІЗАЦІЯ \"НЕСКОРЕНІ ДУХОМ - ОСОБИ З ІНВАЛІДНІСТЮ\"')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Адреса</span>
+                        <div class="detail-value">
+                            ВУЛИЦЯ 15 КВІТНЯ, БУДИНОК 3, МІСТО ТЕРНОПІЛЬ, ТЕРНОПІЛЬСЬКА ОБЛ., 46023, УКРАЇНА
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'VULYTSIA 15 KVITNIA, BUDYNOK 3, MISTO TERNOPIL, TERNOPILSKA OBL., 46023, UKRAINE')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Номер рахунку (IBAN)</span>
+                        <div class="detail-value highlight">
+                            UA613077700000026009711238199
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA613077700000026009711238199')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <p class="bank-section-title">Банк одержувача</p>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Назва банку</span>
+                        <div class="detail-value">
+                            JSC "ACCENT-BANK", Ukraine
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'JSC \"ACCENT-BANK\", Ukraine')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">SWIFT код</span>
+                        <div class="detail-value highlight">
+                            UKCBUAUK
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <p class="bank-section-title">Банк-кореспондент</p>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Назва банку</span>
+                        <div class="detail-value">
+                            PCJSB «PIVDENNYI», Ukraine
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'PCJSB «PIVDENNYI», Ukraine')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Рахунок</span>
+                        <div class="detail-value">
+                            UA27 3282090000016001010041124
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA273282090000016001010041124')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">SWIFT код</span>
+                        <div class="detail-value">
+                            PIVDUA22
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'PIVDUA22')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <p class="bank-section-title">Банк-посередник</p>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Назва банку</span>
+                        <div class="detail-value">
+                            THE BANK OF NEW YORK MELLON, New York, USA
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'THE BANK OF NEW YORK MELLON, New York, USA')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Рахунок</span>
+                        <div class="detail-value">
+                            8900319313
+                            <button class="copy-btn" onclick="copyToClipboard(this, '8900319313')">Копіювати</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">SWIFT код</span>
+                        <div class="detail-value">
+                            IRVTUS3N
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'IRVTUS3N')">Копіювати</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="important-note">
+                <h4>📋 Призначення платежу</h4>
+                <p>Будь ласка, вкажіть <strong>"Благодійна пожертва"</strong> або <strong>"Гуманітарна допомога"</strong> у полі призначення платежу.</p>
+            </div>
+        </section>
+
+        <div class="impact-reminder">
+            <h3>Куди йде ваша пожертва</h3>
+            <p>Кожна гривня фінансує реальні матеріали, доставлені місцевими волонтерами.</p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="amount">$10</div>
+                    <div class="desc">Засоби гігієни для сім'ї</div>
+                </div>
+                <div class="impact-item">
+                    <div class="amount">$25</div>
+                    <div class="desc">Аптечка для передової</div>
+                </div>
+                <div class="impact-item">
+                    <div class="amount">$50</div>
+                    <div class="desc">Ходунки для ветерана</div>
+                </div>
+                <div class="impact-item">
+                    <div class="amount">$500</div>
+                    <div class="desc">Інвалідний візок</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-ways">
+            <h3>Інші способи допомогти</h3>
+            <p>Надаєте перевагу іншому способу оплати? Ми працюємо над додаванням нових варіантів. Тим часом, будь ласка, <a href="mailto:neskorenidukhom@ukr.net" class="contact-link">зв'яжіться з нами</a> і ми знайдемо рішення, яке вам підійде.</p>
+            <p style="margin-top: 1rem;"><strong>Email:</strong> <a href="mailto:neskorenidukhom@ukr.net" class="contact-link">neskorenidukhom@ukr.net</a></p>
+            <p><strong>Телефон:</strong> <a href="tel:+380987070628" class="contact-link">+380 98 707 0628</a></p>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Нескорені духом</h3>
+                <p>100% волонтерська з 2018 року. Доставляємо пряму допомогу українцям з інвалідністю, ветеранам та переміщеним сім'ям.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Швидкі посилання</h3>
+                <ul>
+                    <li><a href="/ua/#about">Про нас</a></li>
+                    <li><a href="/ua/#projects">Поточні проєкти</a></li>
+                    <li><a href="/ua/#contact">Контакти</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <p><strong>Місцезнаходження:</strong><br>Тернопіль, Україна</p>
+                <p><strong>Електронна пошта:</strong><br><a href="mailto:neskorenidukhom@ukr.net">neskorenidukhom@ukr.net</a></p>
+                <p><strong>Телефон:</strong><br><a href="tel:+380987070628">+380 98 707 0628</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                &copy; 2025 Нескорені духом (Undaunted Spirits) - Громадська організація<br>
+                Зареєстровано в Україні під ЄДРПОУ 42717428 | Код неприбутковості 0032<br>
+                Email: <a href="mailto:neskorenidukhom@ukr.net" style="color: #FFD700;">neskorenidukhom@ukr.net</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(button, text) {
+            navigator.clipboard.writeText(text).then(function() {
+                const originalText = button.textContent;
+                button.textContent = 'Скопійовано!';
+                button.classList.add('copied');
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
+
