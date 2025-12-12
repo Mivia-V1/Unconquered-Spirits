@@ -279,7 +279,9 @@ Footer Dark:     #1a1a1a
 - [x] Donation page with bank transfer details
 - [x] Brand TOV copy alignment (Three-Yes Test passed)
 - [x] All donate buttons linked to donation page
-- [ ] Add real social media links
+- [x] Add Facebook link (https://www.facebook.com/profile.php?id=61581930663291)
+- [ ] Add Instagram link
+- [ ] Add YouTube link
 - [ ] Add LiqPay/Fondy card payments
 - [ ] Configure neskoreni.org redirect
 - [ ] Set up Google Analytics
