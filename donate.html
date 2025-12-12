@@ -174,6 +174,63 @@
             background: #28a745;
         }
         
+        .copy-all-btn {
+            width: 100%;
+            background: #0057B7;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        
+        .copy-all-btn:hover {
+            background: #003d82;
+        }
+        
+        .copy-all-btn.copied {
+            background: #28a745;
+        }
+        
+        .full-details {
+            margin-top: 1rem;
+        }
+        
+        .full-details summary {
+            cursor: pointer;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-weight: 500;
+            color: #0057B7;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .full-details summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .full-details summary::before {
+            content: "▶";
+            font-size: 0.75rem;
+            transition: transform 0.2s;
+        }
+        
+        .full-details[open] summary::before {
+            transform: rotate(90deg);
+        }
+        
+        .full-details summary:hover {
+            background: #e9ecef;
+        }
+        
         .bank-section-title {
             font-weight: 600;
             color: #0057B7;
@@ -355,114 +412,152 @@
         <section class="payment-section" id="bank-transfer">
             <h2>💳 Bank Transfer (USD)</h2>
             
-            <div class="bank-details">
+            <!-- QUICK REFERENCE - What most banks need -->
+            <div class="bank-details" style="margin-bottom: 1.5rem;">
                 <div class="bank-header">
-                    <span>International Wire Transfer</span>
+                    <span>Quick Reference — All You Need</span>
                     <span class="currency">USD $</span>
                 </div>
                 
                 <div class="bank-body">
-                    <p class="bank-section-title">Beneficiary (Recipient)</p>
+                    <p style="color: #666; margin-bottom: 1rem; font-size: 0.95rem;">Most US and Australian banks only need these 4 fields:</p>
                     
                     <div class="detail-row">
-                        <span class="detail-label">Organization Name</span>
+                        <span class="detail-label">Recipient Name</span>
                         <div class="detail-value highlight">
-                            ГРОМАДСЬКА ОРГАНІЗАЦІЯ "НЕСКОРЕНІ ДУХОМ - ОСОБИ З ІНВАЛІДНІСТЮ"
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'ГРОМАДСЬКА ОРГАНІЗАЦІЯ \"НЕСКОРЕНІ ДУХОМ - ОСОБИ З ІНВАЛІДНІСТЮ\"')">Copy</button>
+                            GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM')">Copy</button>
                         </div>
                     </div>
                     
                     <div class="detail-row">
-                        <span class="detail-label">Address</span>
-                        <div class="detail-value">
-                            VULYTSIA 15 KVITNIA, BUDYNOK 3, MISTO TERNOPIL, TERNOPILSKA OBL., 46023, UKRAINE
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'VULYTSIA 15 KVITNIA, BUDYNOK 3, MISTO TERNOPIL, TERNOPILSKA OBL., 46023, UKRAINE')">Copy</button>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <span class="detail-label">Account Number (IBAN)</span>
+                        <span class="detail-label">IBAN / Account Number</span>
                         <div class="detail-value highlight">
                             UA613077700000026009711238199
                             <button class="copy-btn" onclick="copyToClipboard(this, 'UA613077700000026009711238199')">Copy</button>
                         </div>
                     </div>
                     
-                    <p class="bank-section-title">Beneficiary Bank</p>
-                    
                     <div class="detail-row">
-                        <span class="detail-label">Bank Name</span>
-                        <div class="detail-value">
-                            JSC "ACCENT-BANK", Ukraine
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'JSC \"ACCENT-BANK\", Ukraine')">Copy</button>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <span class="detail-label">SWIFT Code</span>
+                        <span class="detail-label">Bank SWIFT/BIC Code</span>
                         <div class="detail-value highlight">
                             UKCBUAUK
                             <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Copy</button>
                         </div>
                     </div>
                     
-                    <p class="bank-section-title">Correspondent Bank</p>
-                    
                     <div class="detail-row">
-                        <span class="detail-label">Bank Name</span>
+                        <span class="detail-label">Reference / Description</span>
                         <div class="detail-value">
-                            PCJSB «PIVDENNYI», Ukraine
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'PCJSB «PIVDENNYI», Ukraine')">Copy</button>
+                            Charitable donation
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'Charitable donation')">Copy</button>
                         </div>
                     </div>
                     
-                    <div class="detail-row">
-                        <span class="detail-label">Account</span>
-                        <div class="detail-value">
-                            UA27 3282090000016001010041124
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA273282090000016001010041124')">Copy</button>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <span class="detail-label">SWIFT Code</span>
-                        <div class="detail-value">
-                            PIVDUA22
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'PIVDUA22')">Copy</button>
-                        </div>
-                    </div>
-                    
-                    <p class="bank-section-title">Intermediary Bank</p>
-                    
-                    <div class="detail-row">
-                        <span class="detail-label">Bank Name</span>
-                        <div class="detail-value">
-                            THE BANK OF NEW YORK MELLON, New York, USA
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'THE BANK OF NEW YORK MELLON, New York, USA')">Copy</button>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <span class="detail-label">Account</span>
-                        <div class="detail-value">
-                            8900319313
-                            <button class="copy-btn" onclick="copyToClipboard(this, '8900319313')">Copy</button>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-row">
-                        <span class="detail-label">SWIFT Code</span>
-                        <div class="detail-value">
-                            IRVTUS3N
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'IRVTUS3N')">Copy</button>
-                        </div>
-                    </div>
+                    <button class="copy-all-btn" onclick="copyAllEssential()">📋 Copy All Essential Details</button>
                 </div>
             </div>
             
-            <div class="important-note">
-                <h4>📋 Payment Reference</h4>
-                <p>Please include <strong>"Charitable donation"</strong> or <strong>"Humanitarian aid"</strong> in the payment description/reference field.</p>
+            <!-- FULL DETAILS - Expandable -->
+            <details class="full-details">
+                <summary>📄 Show Full Bank Details (if your bank requires more)</summary>
+                
+                <div class="bank-details" style="margin-top: 1rem; border-radius: 0 0 12px 12px;">
+                    <div class="bank-body">
+                        <p class="bank-section-title">Beneficiary (Recipient)</p>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Full Organization Name (Ukrainian)</span>
+                            <div class="detail-value">
+                                ГРОМАДСЬКА ОРГАНІЗАЦІЯ "НЕСКОРЕНІ ДУХОМ - ОСОБИ З ІНВАЛІДНІСТЮ"
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'ГРОМАДСЬКА ОРГАНІЗАЦІЯ \"НЕСКОРЕНІ ДУХОМ - ОСОБИ З ІНВАЛІДНІСТЮ\"')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Address</span>
+                            <div class="detail-value">
+                                15 Kvitnia Street, Building 3, Ternopil, 46023, Ukraine
+                                <button class="copy-btn" onclick="copyToClipboard(this, '15 Kvitnia Street, Building 3, Ternopil, 46023, Ukraine')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <p class="bank-section-title">Beneficiary Bank</p>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Bank Name</span>
+                            <div class="detail-value">
+                                JSC "ACCENT-BANK", Ukraine
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'JSC ACCENT-BANK, Ukraine')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">SWIFT Code</span>
+                            <div class="detail-value">
+                                UKCBUAUK
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <p class="bank-section-title">Correspondent Bank</p>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Bank Name</span>
+                            <div class="detail-value">
+                                PCJSB PIVDENNYI, Ukraine
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'PCJSB PIVDENNYI, Ukraine')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Account</span>
+                            <div class="detail-value">
+                                UA273282090000016001010041124
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'UA273282090000016001010041124')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">SWIFT Code</span>
+                            <div class="detail-value">
+                                PIVDUA22
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'PIVDUA22')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <p class="bank-section-title">Intermediary Bank (US Correspondent)</p>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Bank Name</span>
+                            <div class="detail-value">
+                                THE BANK OF NEW YORK MELLON, New York, USA
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'THE BANK OF NEW YORK MELLON, New York, USA')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Account</span>
+                            <div class="detail-value">
+                                8900319313
+                                <button class="copy-btn" onclick="copyToClipboard(this, '8900319313')">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">SWIFT Code</span>
+                            <div class="detail-value">
+                                IRVTUS3N
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'IRVTUS3N')">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            
+            <div class="important-note" style="margin-top: 1.5rem;">
+                <h4>💡 Tip for Donors</h4>
+                <p>International wire transfers typically cost $15-45 in fees. For smaller donations, consider using <strong>Wise (TransferWise)</strong> or <strong>PayPal</strong> for lower fees—<a href="mailto:neskorenidukhom@ukr.net" class="contact-link">contact us</a> for these options.</p>
             </div>
         </section>
 
@@ -541,6 +636,28 @@
                 }, 2000);
             }).catch(function(err) {
                 console.error('Could not copy text: ', err);
+            });
+        }
+        
+        function copyAllEssential() {
+            const details = `INTERNATIONAL WIRE TRANSFER - USD
+            
+Recipient: GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM
+IBAN: UA613077700000026009711238199
+Bank SWIFT: UKCBUAUK
+Reference: Charitable donation
+
+Bank: JSC ACCENT-BANK, Ukraine`;
+            
+            navigator.clipboard.writeText(details).then(function() {
+                const btn = document.querySelector('.copy-all-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ All Details Copied!';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 3000);
             });
         }
     </script>
