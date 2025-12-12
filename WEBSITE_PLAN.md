@@ -23,13 +23,14 @@
   - Annual reports and transparency documents
   - Registration and legal information
   
-- [ ] **Donate Page** (CRITICAL)
-  - Multiple payment methods (PayPal, Stripe, local Ukrainian payment systems)
-  - Recurring donation options
-  - Project-specific donation targeting
-  - Impact calculator
-  - Tax-deductible information
-  - Transparent fund allocation breakdown
+- [x] **Donate Page** ✅ COMPLETE (December 12, 2025)
+  - Bank wire transfer with A-Bank SWIFT details
+  - Quick reference section (4 essential fields)
+  - Full bank details in expandable section
+  - Copy-to-clipboard for all fields
+  - "Copy All" button for one-click copying
+  - Bilingual (EN/UA)
+  - **Note:** PayPal/Stripe not available in Ukraine; LiqPay/Fondy planned for card payments
 
 - [ ] **Projects Page**
   - Current active projects (expandable from homepage)

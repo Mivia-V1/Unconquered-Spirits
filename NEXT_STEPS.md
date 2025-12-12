@@ -148,38 +148,36 @@ All images have been added:
 
 ### Week 3: Donation Integration
 
-**CRITICAL for fundraising success!**
+**✅ PARTIALLY COMPLETE - Bank Transfer Live!**
 
-1. **Choose Payment Processor(s)**
-   
-   **For International Donors:**
-   - **Stripe:** https://stripe.com
-     - Sign up for nonprofit account
-     - Get API keys
-     - 2.9% + $0.30 per transaction
-   
-   - **PayPal:** https://www.paypal.com/nonprofit
-     - Apply for PayPal for Nonprofits (reduced fees)
-     - Set up donation button
-     - 2.89% + $0.49 per transaction
-   
-   **For Ukrainian Donors:**
-   - **LiqPay (monobank):** https://www.liqpay.ua
-   - **Fondy:** https://fondy.eu
-   - **WayForPay:** https://wayforpay.com
+#### Completed (December 12, 2025):
+- [x] Donation page created (`/donate.html` and `/ua/donate.html`)
+- [x] A-Bank SWIFT transfer details with copy-to-clipboard
+- [x] All donate buttons linked to donation page
+- [x] Mobile-optimized design
+- [x] Bilingual support
 
-2. **Implement Donation Forms**
-   - One-time donation option
-   - Recurring/monthly donations
-   - Project-specific targeting
-   - Thank you page/email
-   - Donation receipts
+#### Important Discovery:
+> **PayPal Business and Stripe are NOT available for Ukrainian nonprofits.**
+> Wise cannot receive payments to Ukraine business accounts.
 
-3. **Test Thoroughly**
-   - Use test mode first
-   - Try different amounts
-   - Test on mobile devices
-   - Check email confirmations
+#### Next Steps for Card Payments:
+
+**For International Donors (card payments):**
+- [ ] **LiqPay** - Requires PrivatBank business account
+  - Accepts international Visa/Mastercard
+  - [liqpay.ua/en](https://www.liqpay.ua/en)
+- [ ] **Fondy** - Ukrainian payment gateway
+  - Accepts international cards
+  - [fondy.eu](https://fondy.eu/)
+
+**For Ukrainian Donors:**
+- [ ] **Monobank Jar** - Easy setup, popular in Ukraine
+- [ ] **PrivatBank** - Direct card payments
+
+**Current Status:**
+- Bank wire transfer: ✅ Working
+- Card payments: 🔄 Pending (need LiqPay or Fondy setup)
 
 ### Week 4: Additional Pages
 
@@ -468,4 +466,4 @@ Your website foundation is solid. The next steps are:
 ---
 
 **Created:** November 23, 2025  
-**Last Updated:** December 5, 2025
+**Last Updated:** December 12, 2025

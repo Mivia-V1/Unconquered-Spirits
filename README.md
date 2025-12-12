@@ -23,7 +23,9 @@ Official bilingual website for the Undaunted Spirits public organization, suppor
 **Current Phase:** Full Website Launch Ready  
 **English Homepage:** Complete ✅  
 **Ukrainian Homepage:** Complete ✅  
-**Bilingual Structure:** Separate pages for each language ✅
+**Bilingual Structure:** Separate pages for each language ✅  
+**Donation Page:** Complete ✅ (Bank transfer with SWIFT details)  
+**Brand TOV:** Fully aligned ✅
 
 ---
 
@@ -43,15 +45,16 @@ neskoreni.org                  → Redirects to undauntedspirits.org/ua/
 ```
 NGO/
 ├── index.html                 # English homepage
+├── donate.html                # English donation page (SWIFT bank transfer)
 ├── ua/
-│   └── index.html             # Ukrainian homepage (Українська)
+│   ├── index.html             # Ukrainian homepage (Українська)
+│   └── donate.html            # Ukrainian donation page
 ├── css/
 │   └── styles.css             # Shared stylesheet (one file for both languages)
 ├── js/
 │   └── main.js                # Shared JavaScript (one file for both languages)
 ├── images/
 │   ├── community/             # Community photos
-│   │   └── mariya-handmade-socks.jpg
 │   ├── projects/              # Project images
 │   └── team/                  # Team member photos
 ├── pages/                     # Additional pages (future)
@@ -61,10 +64,13 @@ NGO/
 ├── subtitles/                 # Video subtitles
 ├── _redirects                 # Cloudflare/Netlify redirect rules
 ├── README.md                  # This file
+├── AGENTS.md                  # AI agent development guidelines
+├── BRAND-TOV.md               # Brand narrative & tone of voice
 ├── WEBSITE_PLAN.md            # Comprehensive development plan
 ├── NEXT_STEPS.md              # Development roadmap
-├── DEPLOY-COMING-SOON.md      # Coming soon deployment guide
-└── index-coming-soon.html     # Backup coming soon page
+├── DEPLOYMENT-GUIDE.md        # Cloudflare deployment guide
+├── SECURITY-PLAN.md           # Security analysis and plan
+└── index-coming-soon.html     # Coming soon page (production branch)
 ```
 
 ---
@@ -76,19 +82,21 @@ NGO/
 - ✅ **Responsive design** (mobile, tablet, desktop)
 - ✅ **Mobile alignment tuned** (story carousel stacks, images use aspect-ratio)
 - ✅ **Professional navigation** with language switcher
-- ✅ **Hero section** with call-to-action
-- ✅ **Impact statistics** (200+ members, 7 years, 1,500+ people)
-- ✅ **Mission & values section**
+- ✅ **Hero section** with call-to-action (Brand TOV aligned)
+- ✅ **Impact statistics** (100% volunteer, $0 admin, 1,500+ people, 7 years)
+- ✅ **Mission & values section** (concrete, unique values)
 - ✅ **Project showcase** with progress bars
+- ✅ **Donation page** with A-Bank SWIFT details and copy-to-clipboard
 - ✅ **Donation impact examples** ($10-$500)
 - ✅ **Community stories carousel** (featuring Mariya Gomzyak)
 - ✅ **How to help section** (Donate, Volunteer, Membership, Share)
 - ✅ **Full footer** with contact info & links
 - ✅ **SEO optimized** (hreflang, Open Graph, structured data)
 - ✅ **Smooth scrolling** for anchor links
+- ✅ **Brand TOV compliance** (Three-Yes Test, concrete language)
 
 ### Planned Features
-- 🔄 Donation integration (Stripe, PayPal, LiqPay)
+- 🔄 LiqPay/Fondy card payment integration (PayPal/Stripe not available in Ukraine)
 - 🔄 Contact form with email notifications
 - 🔄 News/Blog section
 - 🔄 Member portal
@@ -96,6 +104,7 @@ NGO/
 - 🔄 Event calendar
 - 🔄 Resource center
 - 🔄 Real social media links
+- 🔄 Monobank Jar for Ukrainian donors
 
 ---
 
@@ -104,8 +113,11 @@ NGO/
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
 - **SEO:** hreflang tags, JSON-LD structured data, Open Graph
 - **Version Control:** Git
-- **Hosting:** Cloudflare Pages (recommended)
-- **Future Payment:** Stripe, PayPal, LiqPay
+- **Hosting:** Cloudflare Pages
+- **Current Payment:** Bank wire transfer (A-Bank SWIFT)
+- **Future Payment:** LiqPay, Fondy (Ukrainian processors)
+
+> **Note:** PayPal Business and Stripe are not available for Ukrainian nonprofits. Wise cannot receive payments to Ukraine business accounts.
 
 ---
 
@@ -205,6 +217,7 @@ Configure `neskoreni.org` to redirect to `undauntedspirits.org/ua/`:
 | To Update | English File | Ukrainian File |
 |-----------|--------------|----------------|
 | Homepage | `/index.html` | `/ua/index.html` |
+| Donate Page | `/donate.html` | `/ua/donate.html` |
 | Styles | `/css/styles.css` | Same file! |
 | JavaScript | `/js/main.js` | Same file! |
 
@@ -263,8 +276,11 @@ Footer Dark:     #1a1a1a
 - [x] Project card images (4 projects with real photos)
 - [x] Mission section image (community gathering)
 - [x] Community stories carousel images (all 3 stories)
+- [x] Donation page with bank transfer details
+- [x] Brand TOV copy alignment (Three-Yes Test passed)
+- [x] All donate buttons linked to donation page
 - [ ] Add real social media links
-- [ ] Set up donation integration
+- [ ] Add LiqPay/Fondy card payments
 - [ ] Configure neskoreni.org redirect
 - [ ] Set up Google Analytics
 - [ ] Submit sitemap to Google Search Console
@@ -298,5 +314,5 @@ This website is created for Undaunted Spirits public organization. Content and b
 
 ---
 
-**Last Updated:** December 5, 2025  
-**Version:** 2.1.0
+**Last Updated:** December 12, 2025  
+**Version:** 2.2.0
