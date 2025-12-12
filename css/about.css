@@ -1,0 +1,425 @@
+/* ===========================================
+   About Page - Storytelling-First Design
+   Clean, warm, breathing room
+   =========================================== */
+
+/* Video Hero */
+.about-video-hero {
+    padding: 6rem 2rem 5rem;
+    background: #fafbfc;
+    text-align: center;
+}
+
+.video-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-intro {
+    font-size: 1rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.about-video-hero h1 {
+    font-size: 3.5rem;
+    color: #0057B7;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+}
+
+.hero-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-caption {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Story Section */
+.about-story-section {
+    padding: 6rem 2rem;
+    background: white;
+}
+
+.story-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.story-block {
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    border-left: 3px solid #FFD700;
+}
+
+.story-block:last-child {
+    margin-bottom: 0;
+}
+
+.story-year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0057B7;
+    margin-bottom: 0.5rem;
+}
+
+.story-block p:not(.story-year) {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* Impact Statement - Big & Bold */
+.about-impact-statement {
+    padding: 6rem 2rem;
+    background: #0057B7;
+    text-align: center;
+}
+
+.impact-statement-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.big-number {
+    font-size: 7rem;
+    font-weight: 800;
+    color: #FFD700;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.big-statement {
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.small-note {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+}
+
+/* What We Do */
+.about-what-we-do {
+    padding: 6rem 2rem;
+    background: white;
+}
+
+.what-we-do-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.what-we-do-content h2 {
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.do-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.do-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #fafbfc;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.do-item:hover {
+    background: #f0f7ff;
+    transform: translateX(5px);
+}
+
+.do-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.do-item strong {
+    font-size: 1.2rem;
+    color: #0057B7;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.do-item p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Trust Section */
+.about-trust {
+    padding: 6rem 2rem;
+    background: #fafbfc;
+}
+
+.trust-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.trust-content h2 {
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.trust-facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.trust-fact {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.trust-label {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.trust-value {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.copy-btn-inline {
+    background: #0057B7;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: all 0.3s;
+}
+
+.copy-btn-inline:hover {
+    background: #004494;
+}
+
+/* Legal Expandable */
+.legal-details {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.legal-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #0057B7;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legal-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.legal-details summary::before {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0057B7;
+}
+
+.legal-details[open] summary::before {
+    content: '−';
+}
+
+.legal-expanded {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.legal-expanded p {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.legal-expanded p:last-child {
+    margin-bottom: 0;
+}
+
+/* Simple CTA */
+.about-cta-simple {
+    padding: 6rem 2rem;
+    background: white;
+    text-align: center;
+}
+
+.cta-simple-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-simple-content h2 {
+    font-size: 2.5rem;
+    color: #0057B7;
+    margin-bottom: 1rem;
+}
+
+.cta-simple-content > p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    color: #0057B7;
+    border: 2px solid #0057B7;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: #0057B7;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-video-hero {
+        padding: 4rem 1.5rem 3rem;
+    }
+    
+    .about-video-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-video-container {
+        border-radius: 12px;
+    }
+    
+    .about-story-section,
+    .about-impact-statement,
+    .about-what-we-do,
+    .about-trust,
+    .about-cta-simple {
+        padding: 4rem 1.5rem;
+    }
+    
+    .story-content h2,
+    .what-we-do-content h2,
+    .trust-content h2,
+    .cta-simple-content h2 {
+        font-size: 2rem;
+    }
+    
+    .story-block p:not(.story-year) {
+        font-size: 1.1rem;
+    }
+    
+    .big-number {
+        font-size: 5rem;
+    }
+    
+    .big-statement {
+        font-size: 1.5rem;
+    }
+    
+    .trust-facts {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-video-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .big-number {
+        font-size: 4rem;
+    }
+    
+    .big-statement {
+        font-size: 1.3rem;
+    }
+    
+    .story-block {
+        padding-left: 1.5rem;
+    }
+}
+
