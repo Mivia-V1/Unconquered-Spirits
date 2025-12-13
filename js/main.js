@@ -227,41 +227,6 @@ window.addEventListener('resize', function() {
 });
 
 // ============================================
-// Mobile Menu Toggle
-// ============================================
-function toggleMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const overlay = document.querySelector('.mobile-overlay');
-    
-    if (hamburger) hamburger.classList.toggle('active');
-    if (navLinks) navLinks.classList.toggle('active');
-    if (overlay) overlay.classList.toggle('active');
-    
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = navLinks && navLinks.classList.contains('active') ? 'hidden' : '';
-}
-
-// Close mobile menu when clicking a nav link
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinksContainer = document.querySelector('.nav-links');
-            const overlay = document.querySelector('.mobile-overlay');
-            
-            if (window.innerWidth <= 768) {
-                if (hamburger) hamburger.classList.remove('active');
-                if (navLinksContainer) navLinksContainer.classList.remove('active');
-                if (overlay) overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    });
-});
-
-// ============================================
 // Smooth Scroll for Anchor Links
 // ============================================
 function initializeSmoothScroll() {

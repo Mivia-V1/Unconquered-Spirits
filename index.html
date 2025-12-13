@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9EL61JMC3"></script>
+    <!-- Google tag (gtag.js) - deferred for performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-P9EL61JMC3');
+      // Defer GA loading until after page is interactive
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var script = document.createElement('script');
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-P9EL61JMC3';
+          script.async = true;
+          document.head.appendChild(script);
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-P9EL61JMC3');
+        }, 2000); // Load GA 2 seconds after page load
+      });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
@@ -68,36 +78,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo">
-                <img src="images/logo.png" alt="Undaunted Spirits Logo" class="logo-icon">
-                <div>
-                    <div class="logo-text">Undaunted Spirits</div>
-                    <div class="logo-text-small">Est. 2018, Ternopil</div>
-                </div>
-            </a>
-            <div class="hamburger" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="/partners.html">Partners</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
-            <div class="nav-actions">
-                <a href="/ua/" class="lang-switch" title="Переключити на українську">
-                    EN | <span class="inactive-lang">UA</span>
-                </a>
-                <a href="/donate.html" class="donate-btn-nav">Donate</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation Component -->
+    <div id="nav-container"></div>
+    <script src="/js/nav.js"></script>
 
     <section class="hero">
         <div class="hero-content">
