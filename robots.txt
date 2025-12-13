@@ -1,0 +1,16 @@
+# Robots.txt for Undaunted Spirits
+# https://undauntedspirits.org
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://undauntedspirits.org/sitemap.xml
+
+# Block unnecessary files
+Disallow: /*.pdf$
+Disallow: /SWIFT*
+
+# Allow all crawlers to access all public content
+# We want maximum visibility for our nonprofit mission
+

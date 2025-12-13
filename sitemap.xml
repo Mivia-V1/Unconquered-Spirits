@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English Homepage -->
+  <url>
+    <loc>https://undauntedspirits.org/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Ukrainian Homepage -->
+  <url>
+    <loc>https://undauntedspirits.org/ua/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- English About Page -->
+  <url>
+    <loc>https://undauntedspirits.org/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/about.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Ukrainian About Page -->
+  <url>
+    <loc>https://undauntedspirits.org/ua/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/about.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- English Donate Page -->
+  <url>
+    <loc>https://undauntedspirits.org/donate.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/donate.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/donate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/donate.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Ukrainian Donate Page -->
+  <url>
+    <loc>https://undauntedspirits.org/ua/donate.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/donate.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/donate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/donate.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- English Partners Page -->
+  <url>
+    <loc>https://undauntedspirits.org/partners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/partners.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Ukrainian Partners Page -->
+  <url>
+    <loc>https://undauntedspirits.org/ua/partners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/partners.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- English Privacy Policy -->
+  <url>
+    <loc>https://undauntedspirits.org/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/privacy.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Ukrainian Privacy Policy -->
+  <url>
+    <loc>https://undauntedspirits.org/ua/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undauntedspirits.org/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://undauntedspirits.org/ua/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://undauntedspirits.org/privacy.html"/>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>
+
