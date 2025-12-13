@@ -342,6 +342,37 @@
             text-decoration: underline;
         }
         
+        .project-reference-banner {
+            background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+            color: #333;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: none;
+        }
+        
+        .project-reference-banner.visible {
+            display: block;
+        }
+        
+        .project-reference-banner h3 {
+            color: #0057B7;
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        .project-reference-banner .project-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .project-reference-banner p {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        
         @media (max-width: 768px) {
             .donate-hero {
                 padding: 3rem 1.5rem;
@@ -386,6 +417,13 @@
     </section>
 
     <div class="donate-content">
+        <!-- Project Reference Banner (shows when coming from a specific project) -->
+        <div class="project-reference-banner" id="project-banner">
+            <h3>🎯 You're donating to support:</h3>
+            <div class="project-name" id="project-name"></div>
+            <p>Please include this project name in your transfer reference</p>
+        </div>
+
         <div class="trust-banner">
             <div class="trust-item">
                 <div class="number">100%</div>
@@ -443,9 +481,9 @@
                     
                     <div class="detail-row">
                         <span class="detail-label">Reference / Description</span>
-                        <div class="detail-value">
-                            Charitable donation
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'Charitable donation', 'Reference')">Copy</button>
+                        <div class="detail-value" id="reference-value">
+                            <span id="reference-text">Charitable donation</span>
+                            <button class="copy-btn" id="reference-copy-btn" onclick="copyReference()">Copy</button>
                         </div>
                     </div>
                     
@@ -667,6 +705,52 @@ Bank: JSC ACCENT-BANK, Ukraine`;
                     btn.textContent = originalText;
                     btn.classList.remove('copied');
                 }, 3000);
+            });
+        }
+        
+        // Handle project reference from URL parameter
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectName = urlParams.get('project');
+            
+            if (projectName) {
+                // Show the project banner
+                const banner = document.getElementById('project-banner');
+                const nameElement = document.getElementById('project-name');
+                const referenceText = document.getElementById('reference-text');
+                
+                if (banner && nameElement) {
+                    banner.classList.add('visible');
+                    nameElement.textContent = projectName;
+                }
+                
+                // Update the reference field
+                if (referenceText) {
+                    referenceText.textContent = 'Donation: ' + projectName;
+                }
+            }
+        })();
+        
+        // Copy reference with dynamic project name
+        function copyReference() {
+            const referenceText = document.getElementById('reference-text');
+            const text = referenceText ? referenceText.textContent : 'Charitable donation';
+            const btn = document.getElementById('reference-copy-btn');
+            
+            navigator.clipboard.writeText(text).then(function() {
+                if (btn) {
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('copied');
+                    
+                    if (typeof trackCopyEvent !== 'undefined') {
+                        trackCopyEvent('Reference');
+                    }
+                    
+                    setTimeout(function() {
+                        btn.textContent = 'Copy';
+                        btn.classList.remove('copied');
+                    }, 2000);
+                }
             });
         }
     </script>
