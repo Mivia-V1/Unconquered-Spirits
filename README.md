@@ -56,9 +56,17 @@ NGO/
 │   ├── partners.html          # Ukrainian partners page
 │   └── privacy.html           # Ukrainian privacy policy
 ├── css/
-│   └── styles.css             # Shared stylesheet (one file for both languages)
+│   ├── styles.css             # Shared stylesheet (one file for both languages)
+│   └── about.css              # About page specific styles
 ├── js/
-│   └── main.js                # Shared JavaScript (one file for both languages)
+│   ├── main.js                # Shared JavaScript (one file for both languages)
+│   ├── nav.js                 # Navigation component (dynamic injection)
+│   ├── stats-ticker.js        # Weekly stats ticker component
+│   ├── community-feed.js      # Community updates feed component
+│   └── about.js               # About page specific JavaScript
+├── data/
+│   ├── weekly-stats.json      # Weekly activity statistics for ticker
+│   └── community-updates.json # Curated Facebook posts for community feed
 ├── images/
 │   ├── community/             # Community photos
 │   ├── projects/              # Project images
@@ -76,6 +84,10 @@ NGO/
 ├── NEXT_STEPS.md              # Development roadmap
 ├── DEPLOYMENT-GUIDE.md        # Cloudflare deployment guide
 ├── SECURITY-PLAN.md           # Security analysis and plan
+├── COMMUNITY-FEED-GUIDE.md    # Guide for updating community feed content
+├── FACEBOOK-CONTENT-PLAN.md   # Facebook content strategy
+├── sitemap.xml                # XML sitemap for SEO
+├── robots.txt                 # Search engine crawling rules
 └── index-coming-soon.html     # Coming soon page (production branch)
 ```
 
@@ -101,9 +113,12 @@ NGO/
 - ✅ **Full footer** with contact info & links
 - ✅ **Privacy Policy** (EN/UA) with GDPR-style rights
 - ✅ **Google Analytics** (GA4: G-P9EL61JMC3) with custom event tracking
-- ✅ **SEO optimized** (hreflang, Open Graph, structured data)
+- ✅ **Weekly stats ticker** - Scrolling display of weekly community impact
+- ✅ **Community feed** - Curated Facebook posts displayed on homepage
+- ✅ **SEO optimized** (hreflang, Open Graph, structured data, sitemap.xml)
 - ✅ **Smooth scrolling** for anchor links
 - ✅ **Brand TOV compliance** (Three-Yes Test, concrete language)
+- ✅ **Modular components** (nav.js, stats-ticker.js, community-feed.js)
 
 ### Planned Features
 - 🔄 LiqPay/Fondy card payment integration (PayPal/Stripe not available in Ukraine)
@@ -335,4 +350,4 @@ This website is created for Undaunted Spirits public organization. Content and b
 ---
 
 **Last Updated:** December 13, 2025  
-**Version:** 2.3.0
+**Version:** 2.4.0

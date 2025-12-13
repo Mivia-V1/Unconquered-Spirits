@@ -612,17 +612,23 @@
 - ✅ Portrait-focused image positioning (faces visible)
 - ✅ Logo image integrated in navigation
 
+**Recent Additions (December 2025):**
+- ✅ Weekly stats ticker - displays real-time community impact
+- ✅ Community feed - curated Facebook posts on homepage
+- ✅ Modular JS components (nav.js, stats-ticker.js, community-feed.js)
+- ✅ Data-driven content via JSON files for easy updates
+- ✅ sitemap.xml and robots.txt for SEO
+
 **Areas for Improvement:**
-- Donation functionality needs implementation
-- Real social media links
-- Analytics integration
-- Form functionality
+- LiqPay/Fondy card payment integration
+- Real social media links (Instagram, YouTube)
+- Contact form functionality
 - Real project data and progress updates
-- Add regular story rotation (per Facebook content plan) and social proof updates
+- Regular story rotation (per Facebook content plan)
 
 ---
 
-**Document Version:** 1.2  
-**Last Updated:** December 5, 2025  
+**Document Version:** 1.3  
+**Last Updated:** December 13, 2025  
 **Created By:** Development Team  
-**Next Review:** After Phase 1 completion
+**Next Review:** After card payment integration
