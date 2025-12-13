@@ -285,3 +285,57 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.stat-item, .project-card, .help-card').forEach(el => {
     observer.observe(el);
 });
+
+// ============================================
+// Share Story Functionality
+// ============================================
+function shareStory() {
+    const shareData = {
+        title: 'Undaunted Spirits - Help Ukraine',
+        text: 'Homes can be lost. Community remains. Support Undaunted Spirits - 100% volunteer-run, delivering essentials directly to Ukrainians in need.',
+        url: 'https://undauntedspirits.org'
+    };
+
+    // Try native Web Share API (works great on mobile)
+    if (navigator.share) {
+        navigator.share(shareData)
+            .then(() => {
+                // Track share event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'share', {
+                        'event_category': 'Social',
+                        'event_label': 'Native Share'
+                    });
+                }
+            })
+            .catch((err) => {
+                // User cancelled or error - fall back to copy
+                if (err.name !== 'AbortError') {
+                    copyShareLink();
+                }
+            });
+    } else {
+        // Fallback: show share options modal or copy link
+        copyShareLink();
+    }
+}
+
+function copyShareLink() {
+    const shareText = 'Homes can be lost. Community remains. Support Undaunted Spirits - 100% volunteer-run. https://undauntedspirits.org';
+    
+    navigator.clipboard.writeText(shareText).then(() => {
+        // Show confirmation
+        alert('Share message copied to clipboard! 📋\n\nPaste it on social media or send to friends.');
+        
+        // Track copy event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'share', {
+                'event_category': 'Social',
+                'event_label': 'Copy to Clipboard'
+            });
+        }
+    }).catch(() => {
+        // Fallback: open Facebook share
+        window.open('https://www.facebook.com/sharer/sharer.php?u=https://undauntedspirits.org', '_blank');
+    });
+}

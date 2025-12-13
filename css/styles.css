@@ -219,6 +219,9 @@ nav {
     font-size: 1.1rem;
     transition: all 0.3s;
     display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .btn-primary:hover {
