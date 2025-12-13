@@ -45,10 +45,16 @@ neskoreni.org                  → Redirects to undauntedspirits.org/ua/
 ```
 NGO/
 ├── index.html                 # English homepage
+├── about.html                 # English about page
 ├── donate.html                # English donation page (SWIFT bank transfer)
+├── partners.html              # English partners page
+├── privacy.html               # English privacy policy
 ├── ua/
 │   ├── index.html             # Ukrainian homepage (Українська)
-│   └── donate.html            # Ukrainian donation page
+│   ├── about.html             # Ukrainian about page
+│   ├── donate.html            # Ukrainian donation page
+│   ├── partners.html          # Ukrainian partners page
+│   └── privacy.html           # Ukrainian privacy policy
 ├── css/
 │   └── styles.css             # Shared stylesheet (one file for both languages)
 ├── js/
@@ -83,14 +89,18 @@ NGO/
 - ✅ **Mobile alignment tuned** (story carousel stacks, images use aspect-ratio)
 - ✅ **Professional navigation** with language switcher
 - ✅ **Hero section** with call-to-action (Brand TOV aligned)
-- ✅ **Impact statistics** (100% volunteer, $0 admin, 1,500+ people, 7 years)
+- ✅ **Impact statistics** (100% volunteer, $0 admin, 10,000+ people, 7 years)
 - ✅ **Mission & values section** (concrete, unique values)
 - ✅ **Project showcase** with progress bars
+- ✅ **About page** with chairperson video, timeline, and legal info
+- ✅ **Partners page** showcasing organizational partnerships
 - ✅ **Donation page** with A-Bank SWIFT details and copy-to-clipboard
 - ✅ **Donation impact examples** ($10-$500)
 - ✅ **Community stories carousel** (featuring Mariya Gomzyak)
 - ✅ **How to help section** (Donate, Volunteer, Membership, Share)
 - ✅ **Full footer** with contact info & links
+- ✅ **Privacy Policy** (EN/UA) with GDPR-style rights
+- ✅ **Google Analytics** (GA4: G-P9EL61JMC3)
 - ✅ **SEO optimized** (hreflang, Open Graph, structured data)
 - ✅ **Smooth scrolling** for anchor links
 - ✅ **Brand TOV compliance** (Three-Yes Test, concrete language)
@@ -111,6 +121,7 @@ NGO/
 ## 🛠️ Technology Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **Analytics:** Google Analytics 4 (GA4)
 - **SEO:** hreflang tags, JSON-LD structured data, Open Graph
 - **Version Control:** Git
 - **Hosting:** Cloudflare Pages
@@ -280,11 +291,14 @@ Footer Dark:     #1a1a1a
 - [x] Brand TOV copy alignment (Three-Yes Test passed)
 - [x] All donate buttons linked to donation page
 - [x] Add Facebook link (https://www.facebook.com/profile.php?id=61581930663291)
+- [x] Google Analytics 4 configured (G-P9EL61JMC3)
+- [x] Privacy Policy page (EN/UA)
+- [x] About page with video and legal info
+- [x] Partners page
 - [ ] Add Instagram link
 - [ ] Add YouTube link
 - [ ] Add LiqPay/Fondy card payments
 - [ ] Configure neskoreni.org redirect
-- [ ] Set up Google Analytics
 - [ ] Submit sitemap to Google Search Console
 
 ---
@@ -293,7 +307,7 @@ Footer Dark:     #1a1a1a
 
 **Undaunted Spirits (Нескорені духом)**
 
-- **Email:** neskorenidukhom@ukr.net
+- **Email:** info@undauntedspirits.org
 - **Phone:** +380 98 707 0628
 - **Location:** Ternopil, Ukraine
 
@@ -316,5 +330,5 @@ This website is created for Undaunted Spirits public organization. Content and b
 
 ---
 
-**Last Updated:** December 12, 2025  
-**Version:** 2.2.0
+**Last Updated:** December 13, 2025  
+**Version:** 2.3.0

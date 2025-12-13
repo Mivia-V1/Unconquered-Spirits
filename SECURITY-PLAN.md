@@ -104,14 +104,15 @@ X-Frame-Options: DENY
 **Note:** If you add libraries later, audit them for vulnerabilities
 
 ### 8. Privacy & Data Collection ⚠️ NEEDS POLICY
-**Current Status:** No analytics, no data collection
+**Current Status:** ✅ Google Analytics 4 installed (G-P9EL61JMC3)
 **Risks:**
-- GDPR non-compliance when analytics added
+- Privacy Policy page added (EN/UA) explaining data collection
 - No privacy policy visible
 
 **Recommendations:**
 - [ ] Create Privacy Policy page
-- [ ] Add cookie consent banner (when analytics added)
+- [x] Privacy Policy page created (December 13, 2025)
+- [ ] Add cookie consent banner (optional enhancement)
 - [ ] Document what data is collected
 - [ ] Provide contact for data requests
 
