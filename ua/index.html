@@ -84,36 +84,15 @@
         <div class="hero-content">
             <h1>Нескорені духом</h1>
             
-            <p class="hero-subtitle">Волонтери доставляють пряму допомогу в Україні.</p>
+            <p class="hero-subtitle">Ваші сусіди у Тернополі допомагають сусідам по всій Україні.</p>
             
             <p class="hero-description">
-                Місцеві волонтери доставляють їжу, медичні матеріали та засоби мобільності безпосередньо українцям, які потребують допомоги. Без бюрократії. Без зарплат. Лише допомога.
+                Ми — 23 волонтери: вчителі, водії, бабусі — доставляємо їжу, ліки та засоби мобільності безпосередньо сім'ям, які потребують допомоги. Без офісів. Без зарплат. Просто люди допомагають людям.
             </p>
             
             <div class="hero-cta">
-                <a href="/ua/donate.html" class="btn-primary">Пожертвувати зараз</a>
-                <a href="#projects" class="btn-secondary">Дивіться реальний вплив</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="impact-stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Волонтерська</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">₴0</div>
-                <div class="stat-label">Адмін витрат</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10 000+</div>
-                <div class="stat-label">Людей допомогли</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Років сили</div>
+                <a href="/ua/donate.html" class="btn-primary">Приєднуйтесь до нас</a>
+                <a href="#projects" class="btn-secondary">Дивіться куди йде допомога</a>
             </div>
         </div>
     </section>
@@ -159,6 +138,40 @@
             <img src="../images/community/babusias2.jpg" alt="Члени громади збираються разом">
         </div>
     </section>
+
+    <!-- Цього тижня у нашій громаді -->
+    <section class="community-feed-section">
+        <h3 class="community-section-title">Цього тижня у нашій громаді</h3>
+        
+        <!-- Прокручуваний тикер статистики -->
+        <div class="stats-ticker">
+            <div class="stats-ticker-track">
+                <div class="stats-ticker-content">
+                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Їжа</span>
+                    <span class="stats-ticker-item">🏠 <strong>3</strong> Житло</span>
+                    <span class="stats-ticker-item">💊 <strong>8</strong> Медичне</span>
+                    <span class="stats-ticker-item">🦽 <strong>2</strong> Візки</span>
+                    <span class="stats-ticker-item">🧴 <strong>15</strong> Гігієна</span>
+                    <span class="stats-ticker-item">👕 <strong>24</strong> Одяг</span>
+                </div>
+                <div class="stats-ticker-content" aria-hidden="true">
+                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Їжа</span>
+                    <span class="stats-ticker-item">🏠 <strong>3</strong> Житло</span>
+                    <span class="stats-ticker-item">💊 <strong>8</strong> Медичне</span>
+                    <span class="stats-ticker-item">🦽 <strong>2</strong> Візки</span>
+                    <span class="stats-ticker-item">🧴 <strong>15</strong> Гігієна</span>
+                    <span class="stats-ticker-item">👕 <strong>24</strong> Одяг</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Історії з Facebook -->
+        <div class="community-feed-container" id="community-feed">
+            <!-- Динамічний контент завантажується з data/community-updates.json -->
+            <p style="text-align: center; color: #888;">Завантаження історій...</p>
+        </div>
+    </section>
+    <script src="../js/community-feed.js" defer></script>
 
     <section class="featured-projects" id="projects">
         <div class="section-header">
@@ -244,41 +257,9 @@
         </div>
     </section>
 
-    <section class="donation-impact" id="donate">
-        <div class="impact-content">
-            <h2>Кожна пожертва стає прямою допомогою</h2>
-            
-            <p style="font-size: 1.15rem; color: #666; margin-bottom: 2rem;">
-                Ми 100% волонтерська організація. Це означає, що кожна гривня, яку ви даєте, йде безпосередньо на їжу, ліки та підтримку — не на зарплати чи накладні витрати.
-            </p>
-            
-            <div class="impact-examples">
-                <div class="impact-example">
-                    <div class="impact-amount">$10</div>
-                    <div class="impact-description">Мило, зубна паста та засоби гігієни для сім'ї з чотирьох осіб</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$25</div>
-                    <div class="impact-description">Повна аптечка, доставлена військовим на передову</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$50</div>
-                    <div class="impact-description">Ходунки або тростина для ветерана, який відновлюється після поранення</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$100</div>
-                    <div class="impact-description">Місячний запас ліків для літньої людини, яка живе сама</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$500</div>
-                    <div class="impact-description">Інвалідний візок — незалежність та мобільність відновлені</div>
-                </div>
-            </div>
-            <a href="/ua/donate.html" class="btn-primary" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Пожертвувати зараз</a>
-        </div>
-    </section>
+    <!-- Голоси нашої громади перенесено на сторінку Про нас -->
 
-    <section class="community-stories">
+    <section class="community-stories" style="display: none;">
         <div class="section-header">
             <h2>Голоси нашої громади</h2>
             <p>Справжні історії від наших волонтерів та людей, яким ми допомагаємо</p>
@@ -396,10 +377,12 @@
         </div>
     </section>
 
+    <!-- Волонтерський огляд перенесено на сторінку Про нас -->
+
     <section class="how-to-help">
         <div class="section-header">
-            <h2>Як ви можете допомогти</h2>
-            <p>Кожна дія створює реальний, вимірюваний вплив</p>
+            <h2>Станьте частиною нашої родини</h2>
+            <p class="handwritten-accent">Кожна рука робить різницю</p>
         </div>
         <div class="help-grid">
             <div class="help-card">

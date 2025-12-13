@@ -86,36 +86,15 @@
         <div class="hero-content">
             <h1>Undaunted Spirits</h1>
             
-            <p class="hero-subtitle">Volunteers delivering direct help in Ukraine.</p>
+            <p class="hero-subtitle">Your neighbors in Ternopil, helping neighbors across Ukraine.</p>
             
             <p class="hero-description">
-                Local volunteers delivering food, medical supplies, and mobility support directly to Ukrainians in need. No bureaucracy. No salaries. Just help.
+                We're 23 volunteers—teachers, drivers, grandmothers—delivering food, medicine, and mobility equipment directly to families in need. No offices. No salaries. Just people helping people.
             </p>
             
             <div class="hero-cta">
-                <a href="/donate.html" class="btn-primary">Donate Now</a>
-                <a href="#projects" class="btn-secondary">See Real Impact</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="impact-stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Volunteer-Run</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">$0</div>
-                <div class="stat-label">Admin Costs</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10,000+</div>
-                <div class="stat-label">People Helped</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Years Strong</div>
+                <a href="/donate.html" class="btn-primary">Join Our Family</a>
+                <a href="#projects" class="btn-secondary">See Where Help Goes</a>
             </div>
         </div>
     </section>
@@ -161,6 +140,40 @@
             <img src="images/community/babusias2.jpg" alt="Community members gathering together">
         </div>
     </section>
+
+    <!-- This Week In Our Community -->
+    <section class="community-feed-section">
+        <h3 class="community-section-title">This week in our community</h3>
+        
+        <!-- Scrolling Stats Ticker -->
+        <div class="stats-ticker">
+            <div class="stats-ticker-track">
+                <div class="stats-ticker-content">
+                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Meals</span>
+                    <span class="stats-ticker-item">🏠 <strong>3</strong> Accommodation</span>
+                    <span class="stats-ticker-item">💊 <strong>8</strong> Medical</span>
+                    <span class="stats-ticker-item">🦽 <strong>2</strong> Wheelchairs</span>
+                    <span class="stats-ticker-item">🧴 <strong>15</strong> Sanitary</span>
+                    <span class="stats-ticker-item">👕 <strong>24</strong> Clothing</span>
+                </div>
+                <div class="stats-ticker-content" aria-hidden="true">
+                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Meals</span>
+                    <span class="stats-ticker-item">🏠 <strong>3</strong> Accommodation</span>
+                    <span class="stats-ticker-item">💊 <strong>8</strong> Medical</span>
+                    <span class="stats-ticker-item">🦽 <strong>2</strong> Wheelchairs</span>
+                    <span class="stats-ticker-item">🧴 <strong>15</strong> Sanitary</span>
+                    <span class="stats-ticker-item">👕 <strong>24</strong> Clothing</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Facebook Stories -->
+        <div class="community-feed-container" id="community-feed">
+            <!-- Dynamic content loads here from data/community-updates.json -->
+            <p style="text-align: center; color: #888;">Loading stories...</p>
+        </div>
+    </section>
+    <script src="js/community-feed.js" defer></script>
 
     <section class="featured-projects" id="projects">
         <div class="section-header">
@@ -246,41 +259,9 @@
         </div>
     </section>
 
-    <section class="donation-impact" id="donate">
-        <div class="impact-content">
-            <h2>Every Donation Becomes Direct Help</h2>
-            
-            <p style="font-size: 1.15rem; color: #666; margin-bottom: 2rem;">
-                We're 100% volunteer-run. That means every dollar you give goes directly to food, medicine, and support—not to salaries or overhead.
-            </p>
-            
-            <div class="impact-examples">
-                <div class="impact-example">
-                    <div class="impact-amount">$10</div>
-                    <div class="impact-description">Soap, toothpaste, and hygiene items for a family of four</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$25</div>
-                    <div class="impact-description">A complete first aid kit delivered to troops on the front line</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$50</div>
-                    <div class="impact-description">A walker or cane for a veteran recovering from injury</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$100</div>
-                    <div class="impact-description">One month of medicine for an elderly person living alone</div>
-                </div>
-                <div class="impact-example">
-                    <div class="impact-amount">$500</div>
-                    <div class="impact-description">A wheelchair—independence and mobility restored</div>
-                </div>
-            </div>
-            <a href="/donate.html" class="btn-primary" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem 3rem;">Donate Now</a>
-        </div>
-    </section>
+    <!-- Voices from Our Community moved to About page -->
 
-    <section class="community-stories">
+    <section class="community-stories" style="display: none;">
         <div class="section-header">
             <h2>Voices from Our Community</h2>
             <p>Real stories from our volunteers and the people we serve</p>
@@ -398,10 +379,12 @@
         </div>
     </section>
 
+    <!-- Volunteer Spotlight moved to About page -->
+
     <section class="how-to-help">
         <div class="section-header">
-            <h2>How You Can Help</h2>
-            <p>Every action creates real, measurable impact</p>
+            <h2>Be Part of Our Family</h2>
+            <p class="handwritten-accent">Every hand makes a difference</p>
         </div>
         <div class="help-grid">
             <div class="help-card">

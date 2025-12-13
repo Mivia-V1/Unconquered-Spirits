@@ -1,0 +1,111 @@
+{
+  "lastUpdated": "2025-12-13",
+  "weekOf": "December 9-13, 2025",
+  "facebookPage": "https://www.facebook.com/profile.php?id=61581930663291",
+  "posts": [
+    {
+      "id": 1,
+      "image": "images/community/babusias2.jpg",
+      "title": {
+        "en": "Winter supplies for displaced family",
+        "ua": "Зимові речі для переміщеної родини"
+      },
+      "preview": {
+        "en": "Today our volunteers delivered warm blankets and winter clothing to a family who fled from Kherson.",
+        "ua": "Сьогодні наші волонтери доставили теплі ковдри та зимовий одяг родині, яка втекла з Херсону."
+      },
+      "fullText": {
+        "en": "Today our volunteers delivered warm blankets and winter clothing to a family of 5 who fled from Kherson three months ago. The children - ages 4, 7, and 12 - now have warm jackets for the winter. Thank you to our supporters in Australia who made this possible! 💙💛",
+        "ua": "Сьогодні наші волонтери доставили теплі ковдри та зимовий одяг родині з 5 осіб, яка втекла з Херсону три місяці тому. Діти - 4, 7 та 12 років - тепер мають теплі куртки на зиму. Дякуємо нашим підтримувачам з Австралії, які зробили це можливим! 💙💛"
+      },
+      "date": "2025-12-12",
+      "fbPostUrl": null,
+      "stats": {
+        "emoji": "🧥",
+        "count": 5,
+        "label": {
+          "en": "people helped",
+          "ua": "людям допомогли"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "image": "images/community/elderly-woman1.jpg",
+      "title": {
+        "en": "Maria's new walker",
+        "ua": "Нові ходунки для Марії"
+      },
+      "preview": {
+        "en": "82-year-old Maria can now walk to the market again thanks to her new walker.",
+        "ua": "82-річна Марія тепер знову може ходити на ринок завдяки новим ходункам."
+      },
+      "fullText": {
+        "en": "82-year-old Maria has been unable to leave her apartment for 6 months after her old walker broke. Today, thanks to a donation from supporters overseas, we delivered a brand new walker to her door. She immediately wanted to test it - walking to the kitchen to make us tea! Her smile said everything. This is why we do what we do. 💙",
+        "ua": "82-річна Марія не могла вийти зі своєї квартири 6 місяців після того, як зламалися старі ходунки. Сьогодні, завдяки пожертві від підтримувачів з-за кордону, ми доставили їй нові ходунки прямо до дверей. Вона одразу захотіла їх випробувати - пішла на кухню заварити нам чай! Її посмішка сказала все. Ось чому ми робимо те, що робимо. 💙"
+      },
+      "date": "2025-12-10",
+      "fbPostUrl": null,
+      "stats": {
+        "emoji": "🚶",
+        "count": 1,
+        "label": {
+          "en": "walker delivered",
+          "ua": "ходунки доставлено"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "image": "images/community/kids-recieving-help1.jpg",
+      "title": {
+        "en": "Food packages for 12 families",
+        "ua": "Продуктові набори для 12 родин"
+      },
+      "preview": {
+        "en": "Our weekly food delivery reached 12 families with children in Ternopil today.",
+        "ua": "Наша щотижнева доставка їжі досягла 12 родин з дітьми у Тернополі сьогодні."
+      },
+      "fullText": {
+        "en": "Another successful delivery day! Our volunteers packed and delivered food packages to 12 families with children in Ternopil. Each package contains rice, pasta, oil, canned goods, and fresh vegetables. Special thanks to volunteer Mykola who drove 3 hours to make all deliveries. Together we are stronger! 🇺🇦",
+        "ua": "Ще один успішний день доставки! Наші волонтери упакували та доставили продуктові набори 12 родинам з дітьми у Тернополі. Кожен набір містить рис, макарони, олію, консерви та свіжі овочі. Особлива подяка волонтеру Миколі, який їздив 3 години, щоб зробити всі доставки. Разом ми сильніші! 🇺🇦"
+      },
+      "date": "2025-12-09",
+      "fbPostUrl": null,
+      "stats": {
+        "emoji": "📦",
+        "count": 12,
+        "label": {
+          "en": "families fed",
+          "ua": "родин нагодовано"
+        }
+      }
+    }
+  ],
+  "quickStats": [
+    {
+      "emoji": "📦",
+      "count": 47,
+      "text": {
+        "en": "food packages this week",
+        "ua": "продуктових наборів цього тижня"
+      }
+    },
+    {
+      "emoji": "🦽",
+      "count": 2,
+      "text": {
+        "en": "wheelchairs delivered",
+        "ua": "візки доставлено"
+      }
+    },
+    {
+      "emoji": "💊",
+      "count": 8,
+      "text": {
+        "en": "medicine deliveries",
+        "ua": "доставок ліків"
+      }
+    }
+  ]
+}
