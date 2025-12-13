@@ -100,7 +100,7 @@ NGO/
 - ✅ **How to help section** (Donate, Volunteer, Membership, Share)
 - ✅ **Full footer** with contact info & links
 - ✅ **Privacy Policy** (EN/UA) with GDPR-style rights
-- ✅ **Google Analytics** (GA4: G-P9EL61JMC3)
+- ✅ **Google Analytics** (GA4: G-P9EL61JMC3) with custom event tracking
 - ✅ **SEO optimized** (hreflang, Open Graph, structured data)
 - ✅ **Smooth scrolling** for anchor links
 - ✅ **Brand TOV compliance** (Three-Yes Test, concrete language)
@@ -121,7 +121,11 @@ NGO/
 ## 🛠️ Technology Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Analytics:** Google Analytics 4 (GA4)
+- **Analytics:** Google Analytics 4 (GA4) with custom events
+  - `donate_button_click` - Tracks donation intent
+  - `copy_bank_details` - Tracks when users copy payment info
+  - `contact_click` - Tracks email/phone link clicks
+  - `social_click` - Tracks social media engagement
 - **SEO:** hreflang tags, JSON-LD structured data, Open Graph
 - **Version Control:** Git
 - **Hosting:** Cloudflare Pages
@@ -291,7 +295,7 @@ Footer Dark:     #1a1a1a
 - [x] Brand TOV copy alignment (Three-Yes Test passed)
 - [x] All donate buttons linked to donation page
 - [x] Add Facebook link (https://www.facebook.com/profile.php?id=61581930663291)
-- [x] Google Analytics 4 configured (G-P9EL61JMC3)
+- [x] Google Analytics 4 configured (G-P9EL61JMC3) with custom event tracking
 - [x] Privacy Policy page (EN/UA)
 - [x] About page with video and legal info
 - [x] Partners page

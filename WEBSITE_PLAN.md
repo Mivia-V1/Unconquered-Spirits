@@ -321,6 +321,13 @@
 ### Analytics ✅ CONFIGURED
 - Google Analytics 4 (G-P9EL61JMC3) - installed on all pages
 - Tracking: pageviews, user engagement, traffic sources
+- **Custom Events Implemented:**
+  - `donate_button_click` - All donate buttons across site
+  - `copy_bank_details` - Copy buttons on donate page (IBAN, SWIFT, etc.)
+  - `contact_click` - Email and phone link clicks
+  - `social_click` - Facebook/Instagram/YouTube clicks
+- Sitemap submitted to Google Search Console
+- robots.txt configured
 - Facebook Pixel
 - Donation conversion tracking
 - Heatmaps (Hotjar or Microsoft Clarity)
