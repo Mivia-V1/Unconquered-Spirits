@@ -141,29 +141,9 @@
 
     <!-- Цього тижня у нашій громаді -->
     <section class="community-feed-section">
-        <h3 class="community-section-title">Цього тижня у нашій громаді</h3>
-        
-        <!-- Прокручуваний тикер статистики -->
-        <div class="stats-ticker">
-            <div class="stats-ticker-track">
-                <div class="stats-ticker-content">
-                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Їжа</span>
-                    <span class="stats-ticker-item">🏠 <strong>3</strong> Житло</span>
-                    <span class="stats-ticker-item">💊 <strong>8</strong> Медичне</span>
-                    <span class="stats-ticker-item">🦽 <strong>2</strong> Візки</span>
-                    <span class="stats-ticker-item">🧴 <strong>15</strong> Гігієна</span>
-                    <span class="stats-ticker-item">👕 <strong>24</strong> Одяг</span>
-                </div>
-                <div class="stats-ticker-content" aria-hidden="true">
-                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Їжа</span>
-                    <span class="stats-ticker-item">🏠 <strong>3</strong> Житло</span>
-                    <span class="stats-ticker-item">💊 <strong>8</strong> Медичне</span>
-                    <span class="stats-ticker-item">🦽 <strong>2</strong> Візки</span>
-                    <span class="stats-ticker-item">🧴 <strong>15</strong> Гігієна</span>
-                    <span class="stats-ticker-item">👕 <strong>24</strong> Одяг</span>
-                </div>
-            </div>
-        </div>
+        <!-- Компонент тикера статистики - завантажує з data/ticker-stats.json -->
+        <div id="stats-ticker"></div>
+        <script src="../js/stats-ticker.js" defer></script>
         
         <!-- Історії з Facebook -->
         <div class="community-feed-container" id="community-feed">

@@ -143,29 +143,9 @@
 
     <!-- This Week In Our Community -->
     <section class="community-feed-section">
-        <h3 class="community-section-title">This week in our community</h3>
-        
-        <!-- Scrolling Stats Ticker -->
-        <div class="stats-ticker">
-            <div class="stats-ticker-track">
-                <div class="stats-ticker-content">
-                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Meals</span>
-                    <span class="stats-ticker-item">🏠 <strong>3</strong> Accommodation</span>
-                    <span class="stats-ticker-item">💊 <strong>8</strong> Medical</span>
-                    <span class="stats-ticker-item">🦽 <strong>2</strong> Wheelchairs</span>
-                    <span class="stats-ticker-item">🧴 <strong>15</strong> Sanitary</span>
-                    <span class="stats-ticker-item">👕 <strong>24</strong> Clothing</span>
-                </div>
-                <div class="stats-ticker-content" aria-hidden="true">
-                    <span class="stats-ticker-item">🍽️ <strong>47</strong> Meals</span>
-                    <span class="stats-ticker-item">🏠 <strong>3</strong> Accommodation</span>
-                    <span class="stats-ticker-item">💊 <strong>8</strong> Medical</span>
-                    <span class="stats-ticker-item">🦽 <strong>2</strong> Wheelchairs</span>
-                    <span class="stats-ticker-item">🧴 <strong>15</strong> Sanitary</span>
-                    <span class="stats-ticker-item">👕 <strong>24</strong> Clothing</span>
-                </div>
-            </div>
-        </div>
+        <!-- Stats Ticker Component - loads from data/ticker-stats.json -->
+        <div id="stats-ticker"></div>
+        <script src="js/stats-ticker.js" defer></script>
         
         <!-- Facebook Stories -->
         <div class="community-feed-container" id="community-feed">

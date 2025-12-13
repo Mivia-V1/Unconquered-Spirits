@@ -1,0 +1,58 @@
+{
+  "lastUpdated": "2025-12-13",
+  "title": {
+    "en": "This week in our community",
+    "ua": "Цього тижня у нашій громаді"
+  },
+  "stats": [
+    {
+      "emoji": "🍽️",
+      "value": 47,
+      "label": {
+        "en": "Meals",
+        "ua": "Їжа"
+      }
+    },
+    {
+      "emoji": "🏠",
+      "value": 3,
+      "label": {
+        "en": "Accommodation",
+        "ua": "Житло"
+      }
+    },
+    {
+      "emoji": "💊",
+      "value": 8,
+      "label": {
+        "en": "Medical",
+        "ua": "Медичне"
+      }
+    },
+    {
+      "emoji": "🦽",
+      "value": 2,
+      "label": {
+        "en": "Wheelchairs",
+        "ua": "Візки"
+      }
+    },
+    {
+      "emoji": "🧴",
+      "value": 15,
+      "label": {
+        "en": "Sanitary",
+        "ua": "Гігієна"
+      }
+    },
+    {
+      "emoji": "👕",
+      "value": 24,
+      "label": {
+        "en": "Clothing",
+        "ua": "Одяг"
+      }
+    }
+  ]
+}
+

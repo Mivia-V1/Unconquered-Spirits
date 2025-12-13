@@ -1,14 +1,51 @@
-# 📱 Community Feed Update Guide
+# 📱 Community Feed & Stats Ticker Update Guide
 
-This guide explains how to update the "This week in our community" section on the website using content from your Facebook posts.
+This guide explains how to update the "This week in our community" section on the website.
+
+The system has **two components**:
+1. **Stats Ticker** - Scrolling weekly numbers (meals, wheelchairs, etc.)
+2. **Story Cards** - Expandable Facebook story cards
 
 ---
 
-## 📁 File Location
+## 📁 File Locations
 
+### Stats Ticker (the scrolling numbers)
+```
+/data/ticker-stats.json
+```
+**To update weekly stats:** Just edit this one file!
+
+### Facebook Stories
 ```
 /data/community-updates.json
 ```
+
+---
+
+## 🎯 Quick Start: Update Weekly Stats
+
+**To update the scrolling stats ticker, edit `/data/ticker-stats.json`:**
+
+```json
+{
+  "lastUpdated": "2025-12-14",
+  "title": {
+    "en": "This week in our community",
+    "ua": "Цього тижня у нашій громаді"
+  },
+  "stats": [
+    { "emoji": "🍽️", "value": 52, "label": { "en": "Meals", "ua": "Їжа" } },
+    { "emoji": "🏠", "value": 4, "label": { "en": "Accommodation", "ua": "Житло" } },
+    { "emoji": "💊", "value": 10, "label": { "en": "Medical", "ua": "Медичне" } },
+    { "emoji": "🦽", "value": 3, "label": { "en": "Wheelchairs", "ua": "Візки" } },
+    { "emoji": "🧴", "value": 18, "label": { "en": "Sanitary", "ua": "Гігієна" } },
+    { "emoji": "👕", "value": 30, "label": { "en": "Clothing", "ua": "Одяг" } }
+  ]
+}
+```
+
+Just change the `value` numbers each week! Commit & push.
 
 ---
 
