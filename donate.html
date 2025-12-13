@@ -434,7 +434,7 @@
                         <span class="detail-label">Recipient Name</span>
                         <div class="detail-value highlight">
                             GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM')">Copy</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM', 'Recipient Name')">Copy</button>
                         </div>
                     </div>
                     
@@ -442,7 +442,7 @@
                         <span class="detail-label">IBAN / Account Number</span>
                         <div class="detail-value highlight">
                             UA613077700000026009711238199
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA613077700000026009711238199')">Copy</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA613077700000026009711238199', 'IBAN')">Copy</button>
                         </div>
                     </div>
                     
@@ -450,7 +450,7 @@
                         <span class="detail-label">Bank SWIFT/BIC Code</span>
                         <div class="detail-value highlight">
                             UKCBUAUK
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Copy</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK', 'SWIFT Code')">Copy</button>
                         </div>
                     </div>
                     
@@ -458,7 +458,7 @@
                         <span class="detail-label">Reference / Description</span>
                         <div class="detail-value">
                             Charitable donation
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'Charitable donation')">Copy</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'Charitable donation', 'Reference')">Copy</button>
                         </div>
                     </div>
                     
@@ -504,7 +504,7 @@
                             <span class="detail-label">SWIFT Code</span>
                             <div class="detail-value">
                                 UKCBUAUK
-                                <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Copy</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK', 'Bank SWIFT')">Copy</button>
                             </div>
                         </div>
                         
@@ -635,11 +635,17 @@
     </footer>
 
     <script>
-        function copyToClipboard(button, text) {
+        function copyToClipboard(button, text, fieldName) {
             navigator.clipboard.writeText(text).then(function() {
                 const originalText = button.textContent;
                 button.textContent = 'Copied!';
                 button.classList.add('copied');
+                
+                // Track the copy event in Google Analytics
+                if (typeof trackCopyEvent !== 'undefined') {
+                    trackCopyEvent(fieldName || 'Bank Details');
+                }
+                
                 setTimeout(function() {
                     button.textContent = originalText;
                     button.classList.remove('copied');
@@ -664,6 +670,12 @@ Bank: JSC ACCENT-BANK, Ukraine`;
                 const originalText = btn.textContent;
                 btn.textContent = '✓ All Details Copied!';
                 btn.classList.add('copied');
+                
+                // Track the copy all event in Google Analytics
+                if (typeof trackCopyEvent !== 'undefined') {
+                    trackCopyEvent('Copy All - Essential Details');
+                }
+                
                 setTimeout(function() {
                     btn.textContent = originalText;
                     btn.classList.remove('copied');

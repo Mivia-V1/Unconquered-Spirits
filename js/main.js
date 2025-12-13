@@ -7,7 +7,112 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel();
     initializeSmoothScroll();
+    initializeAnalyticsTracking();
 });
+
+// ============================================
+// Google Analytics Event Tracking
+// ============================================
+function initializeAnalyticsTracking() {
+    // Track Donate Button Clicks
+    trackDonateButtons();
+    
+    // Track Contact Link Clicks (email, phone)
+    trackContactClicks();
+    
+    // Track Social Media Clicks
+    trackSocialClicks();
+}
+
+// Track all donate button clicks
+function trackDonateButtons() {
+    const donateLinks = document.querySelectorAll('a[href*="donate"], .donate-btn-nav, .btn-primary[href*="donate"]');
+    
+    donateLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const buttonText = this.textContent.trim();
+            const pageLocation = window.location.pathname;
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'donate_button_click', {
+                    'event_category': 'Donation',
+                    'event_label': buttonText,
+                    'page_location': pageLocation
+                });
+            }
+        });
+    });
+}
+
+// Track email and phone link clicks
+function trackContactClicks() {
+    // Email clicks
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const email = this.getAttribute('href').replace('mailto:', '');
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'contact_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Email: ' + email,
+                    'contact_type': 'email'
+                });
+            }
+        });
+    });
+    
+    // Phone clicks
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const phone = this.getAttribute('href').replace('tel:', '');
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'contact_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Phone: ' + phone,
+                    'contact_type': 'phone'
+                });
+            }
+        });
+    });
+}
+
+// Track social media clicks
+function trackSocialClicks() {
+    const socialLinks = document.querySelectorAll('a[href*="facebook.com"], a[href*="instagram.com"], a[href*="youtube.com"]');
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const url = this.getAttribute('href');
+            let platform = 'unknown';
+            
+            if (url.includes('facebook')) platform = 'Facebook';
+            else if (url.includes('instagram')) platform = 'Instagram';
+            else if (url.includes('youtube')) platform = 'YouTube';
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'social_click', {
+                    'event_category': 'Social',
+                    'event_label': platform,
+                    'outbound_url': url
+                });
+            }
+        });
+    });
+}
+
+// Track copy to clipboard actions (called from donate page)
+function trackCopyEvent(fieldName) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'copy_bank_details', {
+            'event_category': 'Donation',
+            'event_label': fieldName,
+            'page_location': window.location.pathname
+        });
+    }
+}
 
 // ============================================
 // Carousel Functionality

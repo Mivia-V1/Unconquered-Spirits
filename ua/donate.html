@@ -434,7 +434,7 @@
                         <span class="detail-label">Ім'я одержувача</span>
                         <div class="detail-value highlight">
                             GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM')">Копіювати</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'GROMADSKA ORGANIZATSIYA NESKORENI DUKHOM', 'Recipient Name')">Копіювати</button>
                         </div>
                     </div>
                     
@@ -442,7 +442,7 @@
                         <span class="detail-label">IBAN / Номер рахунку</span>
                         <div class="detail-value highlight">
                             UA613077700000026009711238199
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA613077700000026009711238199')">Копіювати</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UA613077700000026009711238199', 'IBAN')">Копіювати</button>
                         </div>
                     </div>
                     
@@ -450,7 +450,7 @@
                         <span class="detail-label">SWIFT/BIC код банку</span>
                         <div class="detail-value highlight">
                             UKCBUAUK
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Копіювати</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK', 'SWIFT Code')">Копіювати</button>
                         </div>
                     </div>
                     
@@ -458,7 +458,7 @@
                         <span class="detail-label">Призначення платежу</span>
                         <div class="detail-value">
                             Благодійна пожертва
-                            <button class="copy-btn" onclick="copyToClipboard(this, 'Благодійна пожертва')">Копіювати</button>
+                            <button class="copy-btn" onclick="copyToClipboard(this, 'Благодійна пожертва', 'Reference')">Копіювати</button>
                         </div>
                     </div>
                     
@@ -504,7 +504,7 @@
                             <span class="detail-label">SWIFT код</span>
                             <div class="detail-value">
                                 UKCBUAUK
-                                <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK')">Копіювати</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this, 'UKCBUAUK', 'Bank SWIFT')">Копіювати</button>
                             </div>
                         </div>
                         
@@ -635,11 +635,17 @@
     </footer>
 
     <script>
-        function copyToClipboard(button, text) {
+        function copyToClipboard(button, text, fieldName) {
             navigator.clipboard.writeText(text).then(function() {
                 const originalText = button.textContent;
                 button.textContent = 'Скопійовано!';
                 button.classList.add('copied');
+                
+                // Track the copy event in Google Analytics
+                if (typeof trackCopyEvent !== 'undefined') {
+                    trackCopyEvent(fieldName || 'Bank Details');
+                }
+                
                 setTimeout(function() {
                     button.textContent = originalText;
                     button.classList.remove('copied');
@@ -664,6 +670,12 @@ SWIFT банку: UKCBUAUK
                 const originalText = btn.textContent;
                 btn.textContent = '✓ Всі реквізити скопійовано!';
                 btn.classList.add('copied');
+                
+                // Track the copy all event in Google Analytics
+                if (typeof trackCopyEvent !== 'undefined') {
+                    trackCopyEvent('Copy All - Essential Details');
+                }
+                
                 setTimeout(function() {
                     btn.textContent = originalText;
                     btn.classList.remove('copied');
