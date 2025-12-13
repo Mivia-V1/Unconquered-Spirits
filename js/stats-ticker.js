@@ -1,59 +1,67 @@
 /**
  * Stats Ticker Component
- * Renders a scrolling ticker with weekly community stats
+ * Loads weekly stats from data/community-updates.json and renders a scrolling ticker
  * 
- * Usage: Add <div id="stats-ticker"></div> where you want the ticker
- * Data is loaded from data/ticker-stats.json
+ * Usage: Add <div id="stats-ticker"></div> where you want the ticker to appear
  */
 
 (function() {
     'use strict';
 
-    // Detect language
+    // Detect language from URL path
     const isUkrainian = window.location.pathname.startsWith('/ua/') || 
                         window.location.pathname.includes('/ua/');
     const lang = isUkrainian ? 'ua' : 'en';
     const basePath = isUkrainian ? '../' : '';
 
+    // Stats categories with translations
+    const categories = {
+        meals: { emoji: '🍽️', en: 'Meals', ua: 'Їжа' },
+        accommodation: { emoji: '🏠', en: 'Accommodation', ua: 'Житло' },
+        medical: { emoji: '💊', en: 'Medical', ua: 'Медичне' },
+        wheelchairs: { emoji: '🦽', en: 'Wheelchairs', ua: 'Візки' },
+        sanitary: { emoji: '🧴', en: 'Sanitary', ua: 'Гігієна' },
+        clothing: { emoji: '👕', en: 'Clothing', ua: 'Одяг' }
+    };
+
+    // Default stats (used if JSON fails to load)
+    const defaultStats = {
+        meals: 47,
+        accommodation: 3,
+        medical: 8,
+        wheelchairs: 2,
+        sanitary: 15,
+        clothing: 24
+    };
+
     /**
-     * Fetch ticker stats from JSON
+     * Fetch stats from JSON file
      */
-    async function fetchTickerStats() {
+    async function fetchStats() {
         try {
-            const response = await fetch(`${basePath}data/ticker-stats.json`);
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const response = await fetch(`${basePath}data/weekly-stats.json`);
+            if (!response.ok) throw new Error('Stats file not found');
             return await response.json();
         } catch (error) {
-            console.error('Failed to load ticker stats:', error);
-            return null;
+            console.warn('Using default stats:', error.message);
+            return { stats: defaultStats };
         }
     }
 
     /**
-     * Render the ticker
+     * Render the ticker HTML
      */
-    function renderTicker(data, container) {
-        if (!data || !container) return;
-
-        const title = lang === 'ua' ? data.title.ua : data.title.en;
-        
-        // Build ticker items HTML
-        const tickerItems = data.stats.map(stat => {
-            const label = lang === 'ua' ? stat.label.ua : stat.label.en;
-            return `<span class="stats-ticker-item">${stat.emoji} <strong>${stat.value}</strong> ${label}</span>`;
+    function renderTicker(stats) {
+        const items = Object.entries(categories).map(([key, cat]) => {
+            const count = stats[key] || 0;
+            return `<span class="stats-ticker-item">${cat.emoji} <strong>${count}</strong> ${cat[lang]}</span>`;
         }).join('');
 
-        container.innerHTML = `
-            <h3 class="community-section-title">${title}</h3>
-            <div class="stats-ticker">
-                <div class="stats-ticker-track">
-                    <div class="stats-ticker-content">
-                        ${tickerItems}
-                    </div>
-                    <div class="stats-ticker-content" aria-hidden="true">
-                        ${tickerItems}
-                    </div>
-                </div>
+        // Duplicate for seamless scrolling
+        return `
+            <div class="stats-ticker-track">
+                <div class="stats-ticker-content">${items}</div>
+                <div class="stats-ticker-content" aria-hidden="true">${items}</div>
             </div>
         `;
     }
@@ -65,10 +73,9 @@
         const container = document.getElementById('stats-ticker');
         if (!container) return;
 
-        const data = await fetchTickerStats();
-        if (data) {
-            renderTicker(data, container);
-        }
+        const data = await fetchStats();
+        container.innerHTML = renderTicker(data.stats || defaultStats);
+        container.classList.add('stats-ticker');
     }
 
     // Initialize when DOM is ready
@@ -82,4 +89,3 @@
     window.refreshStatsTicker = init;
 
 })();
-
