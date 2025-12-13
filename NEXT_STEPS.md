@@ -18,23 +18,24 @@ The Undaunted Spirits website is now fully operational with:
 
 ## 📊 Weekly Maintenance Tasks
 
-### Update Weekly Stats (Every Monday)
-Edit `data/weekly-stats.json` with last week's numbers:
+### Update Weekly Stats (Every Monday) ⭐ Easy!
+**No coding required!** Just update the Google Sheet:
 
-```json
-{
-  "lastUpdated": "2025-12-16",
-  "weekOf": "December 9-15, 2025",
-  "stats": {
-    "meals": 47,
-    "accommodation": 3,
-    "medical": 8,
-    "wheelchairs": 2,
-    "sanitary": 15,
-    "clothing": 24
-  }
-}
-```
+📊 **Stats Sheet:** [Open Google Sheet](https://docs.google.com/spreadsheets/d/1your-sheet-id/edit)
+
+Simply update the numbers in Column B:
+| key | value |
+|-----|-------|
+| meals | 480 |
+| accommodation | 34 |
+| medical | 30 |
+| wheelchairs | 2 |
+| sanitary | 188 |
+| clothing | 300 |
+| lastUpdated | 2025-12-13 |
+| weekOf | December 9-13, 2025 |
+
+**Changes appear on the website within minutes!**
 
 ### Update Community Feed (Weekly)
 Follow the guide in `COMMUNITY-FEED-GUIDE.md` to add new Facebook posts to `data/community-updates.json`.

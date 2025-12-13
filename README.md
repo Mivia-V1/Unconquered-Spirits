@@ -65,7 +65,7 @@ NGO/
 │   ├── community-feed.js      # Community updates feed component
 │   └── about.js               # About page specific JavaScript
 ├── data/
-│   ├── weekly-stats.json      # Weekly activity statistics for ticker
+│   ├── weekly-stats.json      # Backup stats (Google Sheets is primary source)
 │   └── community-updates.json # Curated Facebook posts for community feed
 ├── images/
 │   ├── community/             # Community photos
@@ -113,7 +113,7 @@ NGO/
 - ✅ **Full footer** with contact info & links
 - ✅ **Privacy Policy** (EN/UA) with GDPR-style rights
 - ✅ **Google Analytics** (GA4: G-P9EL61JMC3) with custom event tracking
-- ✅ **Weekly stats ticker** - Scrolling display of weekly community impact
+- ✅ **Weekly stats ticker** - Scrolling display powered by Google Sheets (easy updates!)
 - ✅ **Community feed** - Curated Facebook posts displayed on homepage
 - ✅ **SEO optimized** (hreflang, Open Graph, structured data, sitemap.xml)
 - ✅ **Smooth scrolling** for anchor links
