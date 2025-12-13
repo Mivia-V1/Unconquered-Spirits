@@ -35,7 +35,7 @@ Official bilingual website for the Undaunted Spirits public organization, suppor
 undauntedspirits.org/          → English (default for international donors)
 undauntedspirits.org/ua/       → Ukrainian (Українська)
 
-neskoreni.org                  → Redirects to undauntedspirits.org/ua/
+neskoreni.org                  → Redirects to undauntedspirits.org/ua/ ✅ (Configured via Cloudflare Page Rules)
 ```
 
 ---
@@ -212,9 +212,9 @@ git push origin main
    - Add `undauntedspirits.org`
 
 ### Secondary Domain Redirect
-Configure `neskoreni.org` to redirect to `undauntedspirits.org/ua/`:
-- **When:** `neskoreni.org/*`
-- **Then:** Redirect to `https://undauntedspirits.org/ua/$1`
+**neskoreni.org redirect** ✅ Configured via Cloudflare Page Rules:
+- **URL Pattern:** `neskoreni.org/*`
+- **Forwarding URL:** `https://undauntedspirits.org/ua/$1`
 - **Status:** 301 (Permanent Redirect)
 
 ---
@@ -297,8 +297,8 @@ Footer Dark:     #1a1a1a
 - [x] Partners page
 - [ ] Add Instagram link
 - [ ] Add YouTube link
+- [x] Configure neskoreni.org redirect → Ukrainian site (/ua/)
 - [ ] Add LiqPay/Fondy card payments
-- [ ] Configure neskoreni.org redirect
 - [ ] Submit sitemap to Google Search Console
 
 ---

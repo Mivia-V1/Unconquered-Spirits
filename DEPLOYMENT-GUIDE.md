@@ -42,7 +42,7 @@
 |--------|---------|--------|
 | undauntedspirits.org | Primary (English default) | ✅ Connected |
 | www.undauntedspirits.org | WWW redirect | ✅ Connected |
-| neskoreni.org | Secondary (Ukrainian) | 🔄 Redirect to /ua/ |
+| neskoreni.org | Secondary (Ukrainian) | ✅ Redirects to /ua/ (Page Rule configured) |
 
 ---
 
